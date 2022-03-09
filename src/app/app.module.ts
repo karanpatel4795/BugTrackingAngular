@@ -22,7 +22,6 @@ import { ListProjectComponent } from './admin/list-project/list-project.componen
 import { EditProjectComponent } from './admin/edit-project/edit-project.component';
 import { AdminSlidebarComponent } from './admin/admin-slidebar/admin-slidebar.component';
 import { AdminComponent } from './admin/admin/admin.component';
-import { FooterComponent } from './admin/footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,8 +39,7 @@ import { FooterComponent } from './admin/footer/footer.component';
     ListProjectComponent,
     EditProjectComponent,
     AdminSlidebarComponent,
-    AdminComponent,
-    FooterComponent
+    AdminComponent
   ],
   imports: [
     BrowserModule,

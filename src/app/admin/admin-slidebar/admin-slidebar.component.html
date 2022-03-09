@@ -1,151 +1,316 @@
-<div class="app-sidebar colored">
-    <div class="sidebar-header">
-        <a class="header-brand" href="index.html">
-            <div class="logo-img">
-               <img src="src/img/brand-white.svg" class="header-brand-img" alt="lavalite"> 
-            </div>
-            <span class="text">ThemeKit</span>
-        </a>
-        <button type="button" class="nav-toggle"><i data-toggle="expanded" class="ik ik-toggle-right toggle-icon"></i></button>
-        <button id="sidebarClose" class="nav-close"><i class="ik ik-x"></i></button>
+<aside id="leftsidebar" class="sidebar">
+    <div class="navbar-brand">
+        <button class="btn-menu ls-toggle-btn" type="button"><i class="zmdi zmdi-menu"></i></button>
+        <a href="index.html"><img src="assets/images/BS_Logo.png" width="50" alt="BugTracking"><span class="m-l-10">BugTracking</span></a>
     </div>
-    
-    <div class="sidebar-content ps ps--active-y">
-        <div class="nav-container">
-            <nav id="main-menu-navigation" class="navigation-main">
-                <div class="nav-lavel">Navigation</div>
-                <div class="nav-item active">
-                    <a href="index.html"><i class="ik ik-bar-chart-2"></i><span>Dashboard</span></a>
-                </div>
-                <div class="nav-item">
-                    <a href="pages/navbar.html"><i class="ik ik-menu"></i><span>Navigation</span> <span class="badge badge-success">New</span></a>
-                </div>
-                <div class="nav-item has-sub">
-                    <a href="javascript:void(0)"><i class="ik ik-layers"></i><span>Widgets</span> <span class="badge badge-danger">150+</span></a>
-                    <div class="submenu-content">
-                        <a href="pages/widgets.html" class="menu-item">Basic</a>
-                        <a href="pages/widget-statistic.html" class="menu-item">Statistic</a>
-                        <a href="pages/widget-data.html" class="menu-item">Data</a>
-                        <a href="pages/widget-chart.html" class="menu-item">Chart Widget</a>
+    <div class="menu">
+        <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: calc(100vh - 65px);"><ul class="list" style="overflow: hidden; width: auto; height: calc(100vh - 65px);">
+            <li>
+                <div class="user-info">
+                    <a class="image waves-effect waves-block" href="profile.html"><img src="assets/images/profile_av.jpg" alt="User"></a>
+                    <div class="detail">
+                        <h4>Michael</h4>
+                        <small>Super Admin</small>                        
                     </div>
                 </div>
-                <div class="nav-lavel">UI Element</div>
-                <div class="nav-item has-sub">
-                    <a href="#"><i class="ik ik-box"></i><span>Basic</span></a>
-                    <div class="submenu-content">
-                        <a href="pages/ui/alerts.html" class="menu-item">Alerts</a>
-                        <a href="pages/ui/badges.html" class="menu-item">Badges</a>
-                        <a href="pages/ui/buttons.html" class="menu-item">Buttons</a>
-                        <a href="pages/ui/navigation.html" class="menu-item">Navigation</a>
-                    </div>
-                </div>
-                <div class="nav-item has-sub">
-                    <a href="#"><i class="ik ik-gitlab"></i><span>Advance</span> <span class="badge badge-success">New</span></a>
-                    <div class="submenu-content">
-                        <a href="pages/ui/modals.html" class="menu-item">Modals</a>
-                        <a href="pages/ui/notifications.html" class="menu-item">Notifications</a>
-                        <a href="pages/ui/carousel.html" class="menu-item">Slider</a>
-                        <a href="pages/ui/range-slider.html" class="menu-item">Range Slider</a>
-                        <a href="pages/ui/rating.html" class="menu-item">Rating</a>
-                    </div>
-                </div>
-                <div class="nav-item has-sub">
-                    <a href="#"><i class="ik ik-package"></i><span>Extra</span></a>
-                    <div class="submenu-content">
-                        <a href="pages/ui/session-timeout.html" class="menu-item">Session Timeout</a>
-                    </div>
-                </div>
-                <div class="nav-item">
-                    <a href="pages/ui/icons.html"><i class="ik ik-command"></i><span>Icons</span></a>
-                </div>
-                <div class="nav-lavel">Forms</div>
-                <div class="nav-item has-sub">
-                    <a href="#"><i class="ik ik-edit"></i><span>Forms</span></a>
-                    <div class="submenu-content">
-                        <a href="pages/form-components.html" class="menu-item">Components</a>
-                        <a href="pages/form-addon.html" class="menu-item">Add-On</a>
-                        <a href="pages/form-advance.html" class="menu-item">Advance</a>
-                    </div>
-                </div>
-                <div class="nav-item">
-                    <a href="pages/form-picker.html"><i class="ik ik-terminal"></i><span>Form Picker</span> <span class="badge badge-success">New</span></a>
-                </div>
-
-                <div class="nav-lavel">Tables</div>
-                <div class="nav-item">
-                    <a href="pages/table-bootstrap.html"><i class="ik ik-credit-card"></i><span>Bootstrap Table</span></a>
-                </div>
-                <div class="nav-item">
-                    <a href="pages/table-datatable.html"><i class="ik ik-inbox"></i><span>Data Table</span></a>
-                </div>
-
-                <div class="nav-lavel">Charts</div>
-                <div class="nav-item has-sub">
-                    <a href="#"><i class="ik ik-pie-chart"></i><span>Charts</span> <span class="badge badge-success">New</span></a>
-                    <div class="submenu-content">
-                        <a href="pages/charts-chartist.html" class="menu-item active">Chartist</a>
-                        <a href="pages/charts-flot.html" class="menu-item">Flot</a>
-                        <a href="pages/charts-knob.html" class="menu-item">Knob</a>
-                        <a href="pages/charts-amcharts.html" class="menu-item">Amcharts</a>
-                    </div>
-                </div>
-
-                <div class="nav-lavel">Apps</div>
-                <div class="nav-item">
-                    <a href="pages/calendar.html"><i class="ik ik-calendar"></i><span>Calendar</span></a>
-                </div>
-                <div class="nav-item">
-                    <a href="pages/taskboard.html"><i class="ik ik-server"></i><span>Taskboard</span></a>
-                </div>
-
-                <div class="nav-lavel">Pages</div>
-
-                <div class="nav-item has-sub">
-                    <a href="#"><i class="ik ik-lock"></i><span>Authentication</span></a>
-                    <div class="submenu-content">
-                        <a href="pages/login.html" class="menu-item">Login</a>
-                        <a href="pages/register.html" class="menu-item">Register</a>
-                        <a href="pages/forgot-password.html" class="menu-item">Forgot Password</a>
-                    </div>
-                </div>
-                <div class="nav-item has-sub">
-                    <a href="#"><i class="ik ik-file-text"></i><span>Other</span></a>
-                    <div class="submenu-content">
-                        <a href="pages/profile.html" class="menu-item">Profile</a>
-                        <a href="pages/invoice.html" class="menu-item">Invoice</a>
-                    </div>
-                </div>
-                <div class="nav-item">
-                    <a href="pages/layouts.html"><i class="ik ik-layout"></i><span>Layouts</span><span class="badge badge-success">New</span></a>
-                </div>
-                <div class="nav-lavel">Other</div>
-                <div class="nav-item has-sub">
-                    <a href="javascript:void(0)"><i class="ik ik-list"></i><span>Menu Levels</span></a>
-                    <div class="submenu-content">
-                        <a href="javascript:void(0)" class="menu-item">Menu Level 2.1</a>
-                        <div class="nav-item has-sub">
-                            <a href="javascript:void(0)" class="menu-item">Menu Level 2.2</a>
-                            <div class="submenu-content">
-                                <a href="javascript:void(0)" class="menu-item">Menu Level 3.1</a>
-                            </div>
+            </li>
+            <li class="active open"><a href="index.html" class="toggled waves-effect waves-block"><i class="zmdi zmdi-home"></i><span>Dashboard</span></a></li>
+            <li><a href="javascript:void(0);" class="menu-toggle waves-effect waves-block"><i class="zmdi zmdi-apps"></i><span>App</span></a>
+                <ul class="ml-menu">
+                    <li><a href="mail-inbox.html" class=" waves-effect waves-block">Email</a></li>
+                    <li><a href="chat.html" class=" waves-effect waves-block">Chat Apps</a></li>
+                    <li><a href="events.html" class=" waves-effect waves-block">Calendar</a></li>
+                    <li><a href="contact.html" class=" waves-effect waves-block">Contact</a></li>                    
+                </ul>
+            </li>
+            <li> <a href="javascript:void(0);" class="menu-toggle waves-effect waves-block"><i class="zmdi zmdi-assignment"></i><span>Projects</span></a>
+                <ul class="ml-menu">
+                    <li><a href="project-list.html" class=" waves-effect waves-block">Projects List</a></li>
+                    <li><a href="taskboard.html" class=" waves-effect waves-block">Taskboard</a></li>
+                    <li><a href="ticket-list.html" class=" waves-effect waves-block">Ticket List</a></li>
+                    <li><a href="ticket-detail.html" class=" waves-effect waves-block">Ticket Detail</a></li>
+                </ul>
+            </li>
+            <li> <a href="javascript:void(0);" class="menu-toggle waves-effect waves-block"><i class="zmdi zmdi-folder"></i><span>File Manager</span></a>
+                <ul class="ml-menu">
+                    <li><a href="file-dashboard.html" class=" waves-effect waves-block">All File</a></li>
+                    <li><a href="file-documents.html" class=" waves-effect waves-block">Documents</a></li>
+                    <li><a href="file-images.html" class=" waves-effect waves-block">Images</a></li>
+                    <li><a href="file-media.html" class=" waves-effect waves-block">Media</a></li>
+                </ul>
+            </li>
+            <li> <a href="javascript:void(0);" class="menu-toggle waves-effect waves-block"><i class="zmdi zmdi-blogger"></i><span>Blog</span></a>
+                <ul class="ml-menu">
+                    <li><a href="blog-dashboard.html" class=" waves-effect waves-block">Dashboard</a></li>
+                    <li><a href="blog-post.html" class=" waves-effect waves-block">Blog Post</a></li>
+                    <li><a href="blog-list.html" class=" waves-effect waves-block">List View</a></li>
+                    <li><a href="blog-grid.html" class=" waves-effect waves-block">Grid View</a></li>
+                    <li><a href="blog-details.html" class=" waves-effect waves-block">Blog Details</a></li>
+                </ul>
+            </li>
+            <li><a href="javascript:void(0);" class="menu-toggle waves-effect waves-block"><i class="zmdi zmdi-shopping-cart"></i><span>Ecommerce</span></a>
+                <ul class="ml-menu">
+                    <li><a href="ec-dashboard.html" class=" waves-effect waves-block">Dashboard</a></li>
+                    <li><a href="ec-product.html" class=" waves-effect waves-block">Product</a></li>
+                    <li><a href="ec-product-List.html" class=" waves-effect waves-block">Product List</a></li>
+                    <li><a href="ec-product-detail.html" class=" waves-effect waves-block">Product detail</a></li>
+                </ul>
+            </li>
+            <li><a href="javascript:void(0);" class="menu-toggle waves-effect waves-block"><i class="zmdi zmdi-swap-alt"></i><span>Components</span></a>
+                <ul class="ml-menu">
+                    <li><a href="ui_kit.html" class=" waves-effect waves-block">Aero UI KIT</a></li>                    
+                    <li><a href="alerts.html" class=" waves-effect waves-block">Alerts</a></li>                    
+                    <li><a href="collapse.html" class=" waves-effect waves-block">Collapse</a></li>
+                    <li><a href="colors.html" class=" waves-effect waves-block">Colors</a></li>
+                    <li><a href="dialogs.html" class=" waves-effect waves-block">Dialogs</a></li>                    
+                    <li><a href="list-group.html" class=" waves-effect waves-block">List Group</a></li>
+                    <li><a href="media-object.html" class=" waves-effect waves-block">Media Object</a></li>
+                    <li><a href="modals.html" class=" waves-effect waves-block">Modals</a></li>
+                    <li><a href="notifications.html" class=" waves-effect waves-block">Notifications</a></li>                    
+                    <li><a href="progressbars.html" class=" waves-effect waves-block">Progress Bars</a></li>
+                    <li><a href="range-sliders.html" class=" waves-effect waves-block">Range Sliders</a></li>
+                    <li><a href="sortable-nestable.html" class=" waves-effect waves-block">Sortable &amp; Nestable</a></li>
+                    <li><a href="tabs.html" class=" waves-effect waves-block">Tabs</a></li>
+                    <li><a href="waves.html" class=" waves-effect waves-block">Waves</a></li>
+                </ul>
+            </li>
+            <li><a href="javascript:void(0);" class="menu-toggle waves-effect waves-block"><i class="zmdi zmdi-flower"></i><span>Font Icons</span></a>
+                <ul class="ml-menu">
+                    <li><a href="icons.html" class=" waves-effect waves-block">Material Icons</a></li>
+                    <li><a href="icons-themify.html" class=" waves-effect waves-block">Themify Icons</a></li>
+                    <li><a href="icons-weather.html" class=" waves-effect waves-block">Weather Icons</a></li>
+                </ul>
+            </li>
+            <li><a href="javascript:void(0);" class="menu-toggle waves-effect waves-block"><i class="zmdi zmdi-assignment"></i><span>Forms</span></a>
+                <ul class="ml-menu">
+                    <li><a href="basic-form-elements.html" class=" waves-effect waves-block">Basic Form</a></li>
+                    <li><a href="advanced-form-elements.html" class=" waves-effect waves-block">Advanced Form</a></li>
+                    <li><a href="form-examples.html" class=" waves-effect waves-block">Form Examples</a></li>
+                    <li><a href="form-validation.html" class=" waves-effect waves-block">Form Validation</a></li>
+                    <li><a href="form-wizard.html" class=" waves-effect waves-block">Form Wizard</a></li>
+                    <li><a href="form-editors.html" class=" waves-effect waves-block">Editors</a></li>
+                    <li><a href="form-upload.html" class=" waves-effect waves-block">File Upload</a></li>
+                    <li><a href="form-summernote.html" class=" waves-effect waves-block">Summernote</a></li>
+                </ul>
+            </li>
+            <li><a href="javascript:void(0);" class="menu-toggle waves-effect waves-block"><i class="zmdi zmdi-grid"></i><span>Tables</span></a>
+                <ul class="ml-menu">
+                    <li><a href="normal-tables.html" class=" waves-effect waves-block">Normal Tables</a></li>
+                    <li><a href="jquery-datatable.html" class=" waves-effect waves-block">Jquery Datatables</a></li>
+                    <li><a href="editable-table.html" class=" waves-effect waves-block">Editable Tables</a></li>
+                    <li><a href="footable.html" class=" waves-effect waves-block">Foo Tables</a></li>
+                    <li><a href="table-color.html" class=" waves-effect waves-block">Tables Color</a></li>
+                </ul>
+            </li>            
+            <li><a href="javascript:void(0);" class="menu-toggle waves-effect waves-block"><i class="zmdi zmdi-chart"></i><span>Charts</span></a>
+                <ul class="ml-menu">
+                    <li><a href="c3.html" class=" waves-effect waves-block">C3 Chart</a></li>
+                    <li><a href="morris.html" class=" waves-effect waves-block">Morris</a></li>
+                    <li><a href="flot.html" class=" waves-effect waves-block">Flot</a></li>
+                    <li><a href="chartjs.html" class=" waves-effect waves-block">ChartJS</a></li>
+                    <li><a href="sparkline.html" class=" waves-effect waves-block">Sparkline</a></li>
+                    <li><a href="jquery-knob.html" class=" waves-effect waves-block">Jquery Knob</a></li>
+                </ul>
+            </li>            
+            <li><a href="javascript:void(0);" class="menu-toggle waves-effect waves-block"><i class="zmdi zmdi-delicious"></i><span>Widgets</span></a>
+                <ul class="ml-menu">
+                    <li><a href="widgets-app.html" class=" waves-effect waves-block">Apps Widgets</a></li>
+                    <li><a href="widgets-data.html" class=" waves-effect waves-block">Data Widgets</a></li>
+                </ul>
+            </li>
+            <li><a href="javascript:void(0);" class="menu-toggle waves-effect waves-block"><i class="zmdi zmdi-lock"></i><span>Authentication</span></a>
+                <ul class="ml-menu">
+                    <li><a href="sign-in.html" class=" waves-effect waves-block">Sign In</a></li>
+                    <li><a href="sign-up.html" class=" waves-effect waves-block">Sign Up</a></li>
+                    <li><a href="forgot-password.html" class=" waves-effect waves-block">Forgot Password</a></li>
+                    <li><a href="404.html" class=" waves-effect waves-block">Page 404</a></li>
+                    <li><a href="500.html" class=" waves-effect waves-block">Page 500</a></li>
+                    <li><a href="page-offline.html" class=" waves-effect waves-block">Page Offline</a></li>
+                    <li><a href="locked.html" class=" waves-effect waves-block">Locked Screen</a></li>
+                </ul>
+            </li>
+            <li class="open_top"><a href="javascript:void(0);" class="menu-toggle waves-effect waves-block"><i class="zmdi zmdi-copy"></i><span>Sample Pages</span></a>
+                <ul class="ml-menu">
+                    <li><a href="blank.html" class=" waves-effect waves-block">Blank Page</a></li>
+                    <li><a href="image-gallery.html" class=" waves-effect waves-block">Image Gallery</a></li>
+                    <li><a href="profile.html" class=" waves-effect waves-block">Profile</a></li>
+                    <li><a href="timeline.html" class=" waves-effect waves-block">Timeline</a></li>
+                    <li><a href="pricing.html" class=" waves-effect waves-block">Pricing</a></li>
+                    <li><a href="invoices.html" class=" waves-effect waves-block">Invoices</a></li>
+                    <li><a href="invoices-list.html" class=" waves-effect waves-block">Invoices List</a></li>
+                    <li><a href="search-results.html" class=" waves-effect waves-block">Search Results</a></li>
+                </ul>
+            </li>
+            <li class="open_top"><a href="javascript:void(0);" class="menu-toggle waves-effect waves-block"><i class="zmdi zmdi-map"></i><span>Maps</span></a>
+                <ul class="ml-menu">
+                    <li><a href="google.html" class=" waves-effect waves-block">Google Map</a></li>
+                    <li><a href="yandex.html" class=" waves-effect waves-block">YandexMap</a></li>
+                    <li><a href="jvectormap.html" class=" waves-effect waves-block">jVectorMap</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="progress-container progress-primary m-t-10">
+                    <span class="progress-badge">Traffic this Month</span>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" style="width: 67%;">
+                            <span class="progress-value">67%</span>
                         </div>
-                        <a href="javascript:void(0)" class="menu-item">Menu Level 2.3</a>
                     </div>
                 </div>
-                <div class="nav-item">
-                    <a href="javascript:void(0)" class="disabled"><i class="ik ik-slash"></i><span>Disabled Menu</span></a>
+                <div class="progress-container progress-info">
+                    <span class="progress-badge">Server Load</span>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="86" aria-valuemin="0" aria-valuemax="100" style="width: 86%;">
+                            <span class="progress-value">86%</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="nav-item">
-                    <a href="javascript:void(0)"><i class="ik ik-award"></i><span>Sample Page</span></a>
+            </li>
+        </ul><div class="slimScrollBar" style="background: rgb(238, 238, 238); width: 1px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 3px; z-index: 99; right: 1px; height: 356.89px;"></div><div class="slimScrollRail" style="width: 1px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 0px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div></div>
+    </div>
+</aside>
+<aside id="rightsidebar" class="right-sidebar">
+    <ul class="nav nav-tabs sm">
+        <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#setting"><i class="zmdi zmdi-settings zmdi-hc-spin"></i></a></li>
+        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#chat"><i class="zmdi zmdi-comments"></i></a></li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane active" id="setting">
+            <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: calc(100vh - 70px);"><div class="slim_scroll" style="overflow: hidden; width: auto; height: calc(100vh - 70px);">
+                <div class="card">
+                    <h6>Theme Option</h6>
+                    <div class="light_dark">
+                        <div class="radio">
+                            <input type="radio" name="radio1" id="lighttheme" value="light" checked="">
+                            <label for="lighttheme">Light Mode</label>
+                        </div>
+                        <div class="radio mb-0">
+                            <input type="radio" name="radio1" id="darktheme" value="dark">
+                            <label for="darktheme">Dark Mode</label>
+                        </div>
+                    </div>
                 </div>
-                <div class="nav-lavel">Support</div>
-                <div class="nav-item">
-                    <a href="javascript:void(0)"><i class="ik ik-monitor"></i><span>Documentation</span></a>
+                <div class="card">
+                    <h6>Color Skins</h6>
+                    <ul class="choose-skin list-unstyled">
+                        <li data-theme="purple"><div class="purple"></div></li>                   
+                        <li data-theme="blue"><div class="blue"></div></li>
+                        <li data-theme="cyan"><div class="cyan"></div></li>
+                        <li data-theme="green"><div class="green"></div></li>
+                        <li data-theme="orange"><div class="orange"></div></li>
+                        <li data-theme="blush" class="active"><div class="blush"></div></li>
+                    </ul>                    
                 </div>
-                <div class="nav-item">
-                    <a href="javascript:void(0)"><i class="ik ik-help-circle"></i><span>Submit Issue</span></a>
+                <div class="card">
+                    <h6>General Settings</h6>
+                    <ul class="setting-list list-unstyled">
+                        <li>
+                            <div class="checkbox">
+                                <input id="checkbox1" type="checkbox">
+                                <label for="checkbox1">Report Panel Usage</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="checkbox">
+                                <input id="checkbox2" type="checkbox" checked="">
+                                <label for="checkbox2">Email Redirect</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="checkbox">
+                                <input id="checkbox3" type="checkbox" checked="">
+                                <label for="checkbox3">Notifications</label>
+                            </div>                        
+                        </li>
+                        <li>
+                            <div class="checkbox">
+                                <input id="checkbox4" type="checkbox">
+                                <label for="checkbox4">Auto Updates</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="checkbox">
+                                <input id="checkbox5" type="checkbox" checked="">
+                                <label for="checkbox5">Offline</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="checkbox">
+                                <input id="checkbox6" type="checkbox" checked="">
+                                <label for="checkbox6">Location Permission</label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>                
+            </div><div class="slimScrollBar" style="background: rgba(0, 0, 0, 0.4); width: 2px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 3px; z-index: 99; right: 1px; height: 593px;"></div><div class="slimScrollRail" style="width: 2px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 0px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div></div>                
+        </div>       
+        <div class="tab-pane right_chat" id="chat">
+            <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: calc(100vh - 70px);"><div class="slim_scroll" style="overflow: hidden; width: auto; height: calc(100vh - 70px);">
+                <div class="card">
+                    <ul class="list-unstyled">
+                        <li class="online">
+                            <a href="javascript:void(0);">
+                                <div class="media">
+                                    <img class="media-object " src="assets/images/xs/avatar4.jpg" alt="">
+                                    <div class="media-body">
+                                        <span class="name">Sophia <small class="float-right">11:00AM</small></span>
+                                        <span class="message">There are many variations of passages of Lorem Ipsum available</span>
+                                        <span class="badge badge-outline status"></span>
+                                    </div>
+                                </div>
+                            </a>                            
+                        </li>
+                        <li class="online">
+                            <a href="javascript:void(0);">
+                                <div class="media">
+                                    <img class="media-object " src="assets/images/xs/avatar5.jpg" alt="">
+                                    <div class="media-body">
+                                        <span class="name">Grayson <small class="float-right">11:30AM</small></span>
+                                        <span class="message">All the Lorem Ipsum generators on the</span>
+                                        <span class="badge badge-outline status"></span>
+                                    </div>
+                                </div>
+                            </a>                            
+                        </li>
+                        <li class="offline">
+                            <a href="javascript:void(0);">
+                                <div class="media">
+                                    <img class="media-object " src="assets/images/xs/avatar2.jpg" alt="">
+                                    <div class="media-body">
+                                        <span class="name">Isabella <small class="float-right">11:31AM</small></span>
+                                        <span class="message">Contrary to popular belief, Lorem Ipsum</span>
+                                        <span class="badge badge-outline status"></span>
+                                    </div>
+                                </div>
+                            </a>                            
+                        </li>
+                        <li class="me">
+                            <a href="javascript:void(0);">
+                                <div class="media">
+                                    <img class="media-object " src="assets/images/xs/avatar1.jpg" alt="">
+                                    <div class="media-body">
+                                        <span class="name">John <small class="float-right">05:00PM</small></span>
+                                        <span class="message">It is a long established fact that a reader</span>
+                                        <span class="badge badge-outline status"></span>
+                                    </div>
+                                </div>
+                            </a>                            
+                        </li>
+                        <li class="online">
+                            <a href="javascript:void(0);">
+                                <div class="media">
+                                    <img class="media-object " src="assets/images/xs/avatar3.jpg" alt="">
+                                    <div class="media-body">
+                                        <span class="name">Alexander <small class="float-right">06:08PM</small></span>
+                                        <span class="message">Richard McClintock, a Latin professor</span>
+                                        <span class="badge badge-outline status"></span>
+                                    </div>
+                                </div>
+                            </a>                            
+                        </li>                        
+                    </ul>
                 </div>
-            </nav>
+            </div><div class="slimScrollBar" style="background: rgba(0, 0, 0, 0.4); width: 2px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 3px; z-index: 99; right: 1px;"></div><div class="slimScrollRail" style="width: 2px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 0px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div></div>
         </div>
-    <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; height: 603px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 253px;"></div></div></div>
-</div>
+    </div>
+</aside>
