@@ -1,0 +1,20 @@
+<app-admin-header></app-admin-header>
+
+
+FirstName : <input type="text" [(ngModel)]="firstName"/><br><br>
+Email : <input type="text" [(ngModel)]="email"/><br><br>
+Password : <input type="password" [(ngModel)]="password"/><br><br>
+
+Gender :   Male <input type="radio" [(ngModel)]="gender" name="gender" value="male"/>
+           Female <input type="radio" [(ngModel)]="gender" name="gender" value="female"/>
+
+          <br><br> 
+
+Role :  <select [(ngModel)]="role">
+                <option *ngFor="let role of roles"   value="{{role._id}}" > {{role.roleName}} </option>
+        </select>
+
+          <br><br>
+Contact Number : <input type="text" [(ngModel)]="contactNumber"/><br><br>
+           
+           <button  (click)="addUser()" >Add User</button>
