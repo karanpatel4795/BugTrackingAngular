@@ -18,11 +18,11 @@ export class AddRoleComponent implements OnInit {
   addRole(){
     let role = {roleName:this.roleName} 
     this.roleService.addRole(role).subscribe(resp=>{
-      console.log(resp);
+      //console.log(resp);
       if(resp.status == 200){
         //navigate list role 
-        this.toastrService.success("",resp.msg,{timeOut:3000})
-        this.router.navigateByUrl("/listrole")
+       // this.toastrService.success("",resp.msg,{timeOut:3000})
+        this.router.navigateByUrl("/admin/listrole")
       }else{
 
       }

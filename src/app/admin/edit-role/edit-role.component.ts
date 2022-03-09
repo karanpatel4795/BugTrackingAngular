@@ -19,16 +19,16 @@ export class EditRoleComponent implements OnInit {
       this.getRoleByRoleId() 
   }
 
-
   getRoleByRoleId(){
     this.roleService.getRoleById(this.roleId).subscribe(resp=>{
       this.roleName = resp.data.roleName 
+      console.log(resp);
+      
 
     })
   }
 
   updateRole(){
-  //  alert(this.roleId+" "+this.roleName)
     let role = {
       roleId : this.roleId,
       roleName : this.roleName
@@ -36,7 +36,7 @@ export class EditRoleComponent implements OnInit {
     this.roleService.updateRole(role).subscribe(resp=>{
       if(resp.status == 200){
           this.tsService.success("",resp.msg,{timeOut:3000})
-          this.router.navigateByUrl("/listrole")
+          this.router.navigateByUrl("/admin/listrole")
         }else{
         this.tsService.error("",resp.msg,{timeOut:3000})
       }

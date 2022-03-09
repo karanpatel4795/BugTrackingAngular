@@ -24,7 +24,7 @@ export class RoleService {
     return this.httpClient.delete("http://localhost:3000/roles/"+roleId)
   }
   getRoleById(roleId:any):Observable<any>{
-    return this.httpClient.get("http://localhost:3000/roles"+roleId)
+    return this.httpClient.get("http://localhost:3000/roles/"+roleId)
   }
   updateRole(role:any):Observable<any>{
     return this.httpClient.put("http://localhost:3000/roles",role)
@@ -36,7 +36,7 @@ export class RoleService {
     return this.httpClient.delete("http://localhost:3000/users/"+userId)
   }
   getUserById(userId:any):Observable<any>{
-    return this.httpClient.get("http://localhost:3000/users"+userId)
+    return this.httpClient.get("http://localhost:3000/users/"+userId)
   }
   updateUser(user:any):Observable<any>{
     return this.httpClient.put("http://localhost:3000/users",user)

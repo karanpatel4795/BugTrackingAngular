@@ -5,17 +5,13 @@
                 <div class="col-lg-7 col-md-6 col-sm-12">
                     <h2>List Roles</h2>
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a routerLink="/admin/listrole"><i
+                        <li class="breadcrumb-item"><a routerLink="/admin/admin-dashboard"><i
                                     class="zmdi zmdi-home"></i>Home</a></li>
-                        <!-- <li class="breadcrumb-item"><a href="javascript:void(0);">Tables</a></li> -->
+                        <li class="breadcrumb-item"><a href="javascript:void(0);">Roles</a></li>
                         <li class="breadcrumb-item active">List Roles</li>
                     </ul>
                     <button class="btn btn-primary btn-icon mobile_menu" type="button"><i
                             class="zmdi zmdi-sort-amount-desc"></i></button>
-                </div>
-                <div class="col-lg-5 col-md-6 col-sm-12">
-                    <button class="btn btn-primary btn-icon float-right right_icon_toggle_btn" type="button"><i
-                            class="zmdi zmdi-arrow-right"></i></button>
                 </div>
             </div>
         </div>
@@ -26,19 +22,6 @@
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="header">
-                            <!-- <h2><strong>Basic</strong> Examples </h2>
-                             <ul class="header-dropdown">
-                                <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more"></i> </a>
-                                    <ul class="dropdown-menu dropdown-menu-right slideUp">
-                                        <li><a href="javascript:void(0);">Action</a></li>
-                                        <li><a href="javascript:void(0);">Another action</a></li>
-                                        <li><a href="javascript:void(0);">Something else</a></li>
-                                    </ul>
-                                </li>
-                                <li class="remove">
-                                    <a role="button" class="boxs-close"><i class="zmdi zmdi-close"></i></a>
-                                </li>
-                            </ul> -->
                         </div>
                         <div class="body">
                             <div class="table-responsive">
@@ -80,24 +63,27 @@
                                                             aria-label="Position: activate to sort column ascending"
                                                             style="width: 227.094px;">Role Name</th>
                                                         <th class="sorting" tabindex="0"
-                                                            aria-controls="DataTables_Table_0" rowspan="1" colspan="2"
+                                                            aria-controls="DataTables_Table_0" rowspan="1" colspan="1"
                                                             aria-label="Office: activate to sort column ascending"
                                                             style="width: 99.0156px;;">Action</th>
-                                                            <th class="sorting" tabindex="0"
+                                                        <th class="sorting" tabindex="0"
                                                             aria-controls="DataTables_Table_0" rowspan="1" colspan="1"
                                                             aria-label="Office: activate to sort column ascending"
                                                             style="width: 99.0156px;;">Status</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    <tr role="row" class="odd"  *ngFor="let role of roles, let i = index">
+                                                    <tr role="row" class="odd"
+                                                        *ngFor="let role of roles, let i = index">
                                                         <td class="sorting_1">{{i+1}}</td>
                                                         <td>{{role.roleName}}</td>
-                                                        <td (click)="editRole(role._id)">Edit</td>
-                                                        <td (click)="deleteRole(role._id)">Delete</td>
+                                                        <td><button class="btn btn-primary"
+                                                                (click)="editRole(role._id)">Edit</button><button
+                                                                class="btn btn-danger"
+                                                                (click)="deleteRole(role._id)">Delete</button></td>
                                                         <td>Active</td>
                                                     </tr>
-                
+
                                                 </tbody>
                                             </table>
                                         </div>
@@ -110,12 +96,12 @@
                                         <div class="col-sm-12 col-md-7">
                                             <div class="dataTables_paginate paging_simple_numbers"
                                                 id="DataTables_Table_0_paginate">
-                                                <ul class="pagination">
+                                                <ul class="pagination"> 
                                                     <li class="paginate_button page-item previous disabled"
                                                         id="DataTables_Table_0_previous"><a routerLink="#"
                                                             aria-controls="DataTables_Table_0" data-dt-idx="0"
                                                             tabindex="0" class="page-link">Previous</a></li>
-                                                    <!-- <li class="paginate_button page-item active"><a href="#"
+                                                <!--    <li class="paginate_button page-item active"><a href="#"
                                                             aria-controls="DataTables_Table_0" data-dt-idx="1"
                                                             tabindex="0" class="page-link">1</a></li>
                                                     <li class="paginate_button page-item "><a href="#"

@@ -29,7 +29,7 @@ export class ListRoleComponent implements OnInit {
   }
   
   editRole(roleId:any){
-    this.route.navigateByUrl("/editrole/"+roleId)
+    this.route.navigateByUrl("/admin/editrole/"+roleId)
   }
   getAllRoles(){
     this.roleService.getAllRoles().subscribe(resp=>{

@@ -1,4 +1,36 @@
-<app-admin-header></app-admin-header>
-RoleName : <input type="text" [(ngModel)]="roleName" />
-<br>
-<input type="button" value="AddRole" (click)="addRole()" />
+<section class="content">
+    <div class="body_scroll">
+        <div class="block-header">
+            <div class="row">
+                <div class="col-lg-7 col-md-6 col-sm-12">
+                    <h2>Add Role</h2>
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a routerLink="/admin/admin-dashboard"><i
+                                    class="zmdi zmdi-home"></i>Home</a></li>
+                        <li class="breadcrumb-item"><a href="javascript:void(0);">Role</a></li>
+                        <li class="breadcrumb-item active">Add Role</li>
+                    </ul>
+                    <button class="btn btn-primary btn-icon mobile_menu" type="button"><i
+                            class="zmdi zmdi-sort-amount-desc"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <!-- Vertical Layout -->
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="card">
+                        <div class="body">
+                            <div class="form-group">
+                                <input type="text" class="form-control" [(ngModel)]="roleName" placeholder="Role Name">
+                            </div>
+                            <button type="button" (click)="addRole()"
+                                class="btn btn-raised btn-primary btn-round waves-effect">Add Role</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
