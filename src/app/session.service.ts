@@ -15,11 +15,10 @@ export class SessionService {
 
     //any user can be add 
     addUser(user:any):Observable<any>{
-      //node api 
-      return this.httpClient.post("http://localhost:3000/users",user)
+        return this.httpClient.post("http://localhost:3000/users",user)
     }
 
-    authenticate(user:any):Observable<any>{
+    authentication(user:any):Observable<any>{
      return this.httpClient.post("http://localhost:3000/login",user) 
     }
     //this will add only customer 

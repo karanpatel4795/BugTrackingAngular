@@ -29,11 +29,14 @@ export class ListProjectComponent implements OnInit {
   }
   
   editProject(projectId:any){
-    this.route.navigateByUrl("/editproject/"+projectId)
+    this.route.navigateByUrl("/admin/editproject/"+projectId)
   }
   getAllProject(){
     this.roleService.getAllProject().subscribe(resp=>{
       this.projects =  resp.data
+      //console.log(resp);
+      //console.log(this.projects);
+      
     }) 
   }
 

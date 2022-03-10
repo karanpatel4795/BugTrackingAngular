@@ -24,7 +24,8 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/assets/Login/images/icons/favicon.ico"
             ],
             "styles": [
               "src/styles.css",
@@ -33,6 +34,7 @@
               "src/assets/plugins/charts-c3/plugin.css",
               "src/assets/plugins/morrisjs/morris.min.css",
               "src/assets/css/style.min.css"
+
             ],
             "scripts": [
               "src/assets/bundles/libscripts.bundle.js",

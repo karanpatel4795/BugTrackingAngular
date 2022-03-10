@@ -19,18 +19,20 @@ export class LoginComponent implements OnInit {
 
   login() {
     let user = { email: this.email, password: this.password }
-    this.sessionService.authenticate(user).subscribe(resp => {
+    this.sessionService.authentication(user).subscribe(resp => {
+     console.log(resp);
+     
       if (resp.status == 200) {
         this.tsService.success("", resp.msg, { timeOut: 3000 })
-        // console.log(resp);
+         console.log(resp);
         if (resp.data.role.roleName.toLowerCase() == "admin") { 
-          this.router.navigateByUrl("/admin-dashboard")
+          this.router.navigateByUrl("/admin/admin-dashboard")
         } else if (resp.data.role.roleName.toLowerCase() == "project manager") {
-          this.router.navigateByUrl("/home")
+          this.router.navigateByUrl("")
         } else if (resp.data.role.roleName.toLowerCase() == "tester") {
-          this.router.navigateByUrl("/vendor-dashboard")
+          this.router.navigateByUrl("")
         } else if (resp.data.role.roleName.toLowerCase() == "developer") {
-          this.router.navigateByUrl("/vendor-dashboard")
+          this.router.navigateByUrl("")
         }
          else {
 
