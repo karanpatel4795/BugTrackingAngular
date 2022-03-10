@@ -50,4 +50,7 @@ export class RoleService {
   deleteProject(projectId:any):Observable<any>{
     return this.httpClient.delete("http://localhost:3000/projects/"+projectId)
   }  
+  getotp():Observable<any>{
+    return this.httpClient.get("http://localhost:3000/roles")
+  }
 }

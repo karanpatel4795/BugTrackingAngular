@@ -7,23 +7,19 @@ import { Observable } from 'rxjs';
 })
 export class SessionService {
 
-  constructor(private httpClient:HttpClient) { }
+  constructor(private httpClient: HttpClient) { }
 
-
-    //api calling 
-    //HttpClient --> method       
-
-    //any user can be add 
-    addUser(user:any):Observable<any>{
-        return this.httpClient.post("http://localhost:3000/users",user)
-    }
-
-    authentication(user:any):Observable<any>{
-     return this.httpClient.post("http://localhost:3000/login",user) 
-    }
-    //this will add only customer 
-    /* saveCustomer(user:any):Observable<any>{
-      return this.httpClient.post("http://localhost:3000/savecustomer",user)
-      
-    } */
+  addUser(user: any): Observable<any> {
+    return this.httpClient.post("http://localhost:3000/users", user)
   }
+
+  authentication(user: any): Observable<any> {
+    return this.httpClient.post("http://localhost:3000/login", user)
+  }
+
+  sendOTP(user: any): Observable<any> {
+    return this.httpClient.post("http://localhost:3000/sendotp", user)
+  }
+  
+
+}
