@@ -34,6 +34,7 @@ export class ListProjectComponent implements OnInit {
   getAllProject(){
     this.roleService.getAllProject().subscribe(resp=>{
       this.projects =  resp.data
+      
       //console.log(resp);
       //console.log(this.projects);
       

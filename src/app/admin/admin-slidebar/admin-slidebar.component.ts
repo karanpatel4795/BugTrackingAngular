@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./admin-slidebar.component.css']
 })
 export class AdminSlidebarComponent implements OnInit {
-
+  firstName: string = ""
   constructor() { }
 
   ngOnInit(): void {
+    this.firstName = localStorage.getItem("firstName") as string
   }
 
 }

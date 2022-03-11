@@ -53,4 +53,7 @@ export class RoleService {
   getotp():Observable<any>{
     return this.httpClient.get("http://localhost:3000/roles")
   }
+  getAllManager():Observable<any>{
+    return this.httpClient.get("http://localhost:3000/managers")
+  }
 }

@@ -20,6 +20,8 @@ export class SessionService {
   sendOTP(user: any): Observable<any> {
     return this.httpClient.post("http://localhost:3000/sendotp", user)
   }
-  
+  otpVerification(user:any):Observable<any>{
+    return this.httpClient.post("http://localhost:3000/otpVerification",user)
+  }
 
 }

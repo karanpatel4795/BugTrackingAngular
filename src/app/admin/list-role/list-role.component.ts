@@ -11,6 +11,7 @@ import { RoleService } from '../role.service';
 export class ListRoleComponent implements OnInit {
 
   roles:Array<any> = []
+  status:string=""
   constructor(private roleService:RoleService, private toastrService:ToastrService, private route:Router) { }
 
   ngOnInit(): void {
@@ -35,7 +36,10 @@ export class ListRoleComponent implements OnInit {
     this.roleService.getAllRoles().subscribe(resp=>{
      // console.log(resp);
        this.roles =  resp.data 
-    }) 
+       if(resp.data.isActive==true){
+         this.status="Active"
+       } 
+    })
   }
 
 }

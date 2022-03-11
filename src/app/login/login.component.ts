@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
   login() {
     let user = { email: this.email, password: this.password }
     this.sessionService.authentication(user).subscribe(resp => {
-      console.log(resp);
+      //console.log(resp);
 
       if (resp.status == 200) {
         this.tsService.success("", resp.msg, { timeOut: 3000 })

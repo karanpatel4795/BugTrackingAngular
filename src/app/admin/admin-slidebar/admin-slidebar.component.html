@@ -7,10 +7,10 @@
         <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: calc(100vh - 65px);"><ul class="list" style="overflow: hidden; width: auto; height: calc(100vh - 65px);">
             <li>
                 <div class="user-info">
-                    <a class="image waves-effect waves-block" href="profile.html"><img src="assets/images/profile_av.jpg" alt="User"></a>
+                    <a class="image waves-effect waves-block" href="profile.html"><img src="./assets/images/profile_av.jpg" alt="User"></a>
                     <div class="detail">
-                        <h4>Michael</h4>
-                        <small>Super Admin</small>                        
+                        <h4>{{firstName}}</h4>
+                        <small>Admin</small>                        
                     </div>
                 </div>
             </li>
@@ -23,8 +23,8 @@
             </li>
             <li> <a href="javascript:void(0);" class="menu-toggle waves-effect waves-block"><i class="zmdi zmdi-assignment"></i><span>Projects</span></a>
                 <ul class="ml-menu">
-                    <li><a href="taskboard.html" class=" waves-effect waves-block">Add Project</a></li>
-                    <li><a href="project-list.html" class=" waves-effect waves-block">Projects List</a></li>
+                    <li><a routerLink="/admin/addproject" class=" waves-effect waves-block">Add Project</a></li>
+                    <li><a routerLink="/admin/listproject" class=" waves-effect waves-block">Projects List</a></li>
                     <li><a href="taskboard.html" class=" waves-effect waves-block">Taskboard</a></li>
                     <li><a href="ticket-list.html" class=" waves-effect waves-block">Ticket List</a></li>
                     <li><a href="ticket-detail.html" class=" waves-effect waves-block">Ticket Detail</a></li>
