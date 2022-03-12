@@ -41,19 +41,8 @@ export class RoleService {
   updateUser(user:any):Observable<any>{
     return this.httpClient.put("http://localhost:3000/users",user)
   }
-  addProject(project:any):Observable<any>{
-    return this.httpClient.post("http://localhost:3000/projects",project)
-  }
-  getAllProject():Observable<any>{
-    return this.httpClient.get("http://localhost:3000/projects")
-  }
-  deleteProject(projectId:any):Observable<any>{
-    return this.httpClient.delete("http://localhost:3000/projects/"+projectId)
-  }  
   getotp():Observable<any>{
     return this.httpClient.get("http://localhost:3000/roles")
   }
-  getAllManager():Observable<any>{
-    return this.httpClient.get("http://localhost:3000/managers")
-  }
+ 
 }

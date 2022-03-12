@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { ProjectService } from '../project.service';
 import { RoleService } from '../role.service';
 
 @Component({
@@ -11,13 +12,13 @@ import { RoleService } from '../role.service';
 export class ListProjectComponent implements OnInit {
 
   projects:Array<any> = []
-  constructor(private roleService:RoleService, private toastrService:ToastrService, private route:Router) { }
+  constructor(private projectService:ProjectService, private toastrService:ToastrService, private route:Router) { }
 
   ngOnInit(): void {
           this.getAllProject()
   }
   deleteProject(projectId:any){
-    this.roleService.deleteProject(projectId).subscribe(resp=>{
+    this.projectService.deleteProject(projectId).subscribe(resp=>{
       if(resp.status=200){
         this.toastrService.success("",resp.msg,{timeOut:3000})
         this.getAllProject()
@@ -32,7 +33,7 @@ export class ListProjectComponent implements OnInit {
     this.route.navigateByUrl("/admin/editproject/"+projectId)
   }
   getAllProject(){
-    this.roleService.getAllProject().subscribe(resp=>{
+    this.projectService.getAllProject().subscribe(resp=>{
       this.projects =  resp.data
       
       //console.log(resp);

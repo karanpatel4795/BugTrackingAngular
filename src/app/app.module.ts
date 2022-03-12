@@ -25,6 +25,9 @@ import { AdminComponent } from './admin/admin/admin.component';
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 import { ChangepasswordComponent } from './changepassword/changepassword.component';
 import { LogoutComponent } from './logout/logout.component';
+import { AddModuleComponent } from './admin/add-module/add-module.component';
+import { ListModuleComponent } from './admin/list-module/list-module.component';
+import { EditModuleComponent } from './admin/edit-module/edit-module.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,7 +48,10 @@ import { LogoutComponent } from './logout/logout.component';
     AdminComponent,
     ForgotpasswordComponent,
     ChangepasswordComponent,
-    LogoutComponent
+    LogoutComponent,
+    AddModuleComponent,
+    ListModuleComponent,
+    EditModuleComponent
   ],
   imports: [
     BrowserModule,

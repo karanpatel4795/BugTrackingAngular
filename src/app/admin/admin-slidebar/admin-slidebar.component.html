@@ -1,193 +1,250 @@
 <aside id="leftsidebar" class="sidebar">
     <div class="navbar-brand">
         <button class="btn-menu ls-toggle-btn" type="button"><i class="zmdi zmdi-menu"></i></button>
-        <a routerLink="/admin/admin-dashboard"><img src="assets/images/BS_Logo.png" width="50" alt="BugTracking"><span class="m-l-10">BugTracking</span></a>
+        <a routerLink="/admin/admin-dashboard"><img src="assets/images/BS_Logo.png" width="50" alt="BugTracking"><span
+                class="m-l-10">BugTracking</span></a>
     </div>
     <div class="menu">
-        <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: calc(100vh - 65px);"><ul class="list" style="overflow: hidden; width: auto; height: calc(100vh - 65px);">
-            <li>
-                <div class="user-info">
-                    <a class="image waves-effect waves-block" href="profile.html"><img src="./assets/images/profile_av.jpg" alt="User"></a>
-                    <div class="detail">
-                        <h4>{{firstName}}</h4>
-                        <small>Admin</small>                        
+        <div class="slimScrollDiv"
+            style="position: relative; overflow: hidden; width: auto; height: calc(100vh - 65px);">
+            <ul class="list" style="overflow: hidden; width: auto; height: calc(100vh - 65px);">
+                <li>
+                    <div class="user-info">
+                        <a class="image waves-effect waves-block" href="profile.html"><img
+                                src="./assets/images/profile_av.jpg" alt="User"></a>
+                        <div class="detail">
+                            <h4>{{firstName}}</h4>
+                            <small>Admin</small>
+                        </div>
                     </div>
-                </div>
-            </li>
-            <li class="open"><a routerLink="/admin/admin-dashboard" class="toggled waves-effect waves-block"><i class="zmdi zmdi-home"></i><span>Dashboard</span></a></li>
-            <li><a href="javascript:void(0);" class="menu-toggle waves-effect waves-block"><i class="zmdi zmdi-apps"></i><span>Roles</span></a>
-                <ul class="ml-menu">
-                    <li><a routerLink="/admin/addrole" class=" waves-effect waves-block">Add Role</a></li>
-                    <li><a routerLink="/admin/listrole" class=" waves-effect waves-block">Role List</a></li>
-                </ul>
-            </li>
-            <li> <a href="javascript:void(0);" class="menu-toggle waves-effect waves-block"><i class="zmdi zmdi-assignment"></i><span>Projects</span></a>
-                <ul class="ml-menu">
-                    <li><a routerLink="/admin/addproject" class=" waves-effect waves-block">Add Project</a></li>
-                    <li><a routerLink="/admin/listproject" class=" waves-effect waves-block">Projects List</a></li>
-                    <li><a href="taskboard.html" class=" waves-effect waves-block">Taskboard</a></li>
-                    <li><a href="ticket-list.html" class=" waves-effect waves-block">Ticket List</a></li>
-                    <li><a href="ticket-detail.html" class=" waves-effect waves-block">Ticket Detail</a></li>
-                </ul>
-            </li>
-           
-        
-           
-            
-    
-            <li><a href="javascript:void(0);" class="menu-toggle waves-effect waves-block"><i class="ti-user"></i><span>Users</span></a>
-                <ul class="ml-menu">
-                    <li><a href="basic-form-elements.html" class=" waves-effect waves-block">User List</a></li>
-                    <li><a href="advanced-form-elements.html" class=" waves-effect waves-block">Pending Approval</a></li>
-                    <li><a href="form-examples.html" class=" waves-effect waves-block">Form Examples</a></li>
-        
-                </ul>
-            </li>
-        </ul><div class="slimScrollBar" style="background: rgb(238, 238, 238); width: 1px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 3px; z-index: 99; right: 1px; height: 356.89px;"></div><div class="slimScrollRail" style="width: 1px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 0px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div></div>
+                </li>
+                <li class="open"><a routerLink="/admin/admin-dashboard" class="toggled waves-effect waves-block"><i
+                            class="zmdi zmdi-home"></i><span>Dashboard</span></a></li>
+                <li><a class="menu-toggle waves-effect waves-block"><i
+                            class="zmdi zmdi-apps"></i><span>Roles</span></a>
+                    <ul class="ml-menu">
+                        <li><a routerLink="/admin/addrole" class=" waves-effect waves-block">Add Role</a></li>
+                        <li><a routerLink="/admin/listrole" class=" waves-effect waves-block">Role List</a></li>
+                    </ul>
+                </li>
+                <li> <a class="menu-toggle waves-effect waves-block"><i
+                            class="zmdi zmdi-assignment"></i><span>Projects</span></a>
+                    <ul class="ml-menu">
+                        <li><a routerLink="/admin/addproject" class=" waves-effect waves-block">Add Project</a></li>
+                        <li><a routerLink="/admin/listproject" class=" waves-effect waves-block">Projects List</a></li>
+                    </ul>
+                </li>
+                <li> <a class="menu-toggle waves-effect waves-block"><i
+                            class="zmdi zmdi-assignment"></i><span>Modules</span></a>
+                    <ul class="ml-menu">
+                        <li><a routerLink="/admin/add-module" class=" waves-effect waves-block">Add Modules</a></li>
+                        <li><a routerLink="/admin/list-module" class=" waves-effect waves-block">Modules List</a></li>
+                    </ul>
+                </li>
+                <li> <a class="menu-toggle waves-effect waves-block"><i
+                            class="zmdi zmdi-assignment"></i><span>Task</span></a>
+                    <ul class="ml-menu">
+                        <li><a routerLink="/admin/addproject" class=" waves-effect waves-block">Add Task</a></li>
+                        <li><a routerLink="/admin/listproject" class=" waves-effect waves-block">Task List</a></li>
+                    </ul>
+                </li>
+
+                <li><a class="menu-toggle waves-effect waves-block"><i
+                            class="ti-user"></i><span>Users</span></a>
+                    <ul class="ml-menu">
+                        <li><a href="basic-form-elements.html" class=" waves-effect waves-block">User List</a></li>
+                        <li><a href="advanced-form-elements.html" class=" waves-effect waves-block">Pending Approval</a>
+                        </li>
+
+                    </ul>
+                </li>
+            </ul>
+            <div class="slimScrollBar"
+                style="background: rgb(238, 238, 238); width: 1px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 3px; z-index: 99; right: 1px; height: 356.89px;">
+            </div>
+            <div class="slimScrollRail"
+                style="width: 1px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 0px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;">
+            </div>
+        </div>
     </div>
 </aside>
 <aside id="rightsidebar" class="right-sidebar">
     <ul class="nav nav-tabs sm">
-        <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#setting"><i class="zmdi zmdi-settings zmdi-hc-spin"></i></a></li>
-        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#chat"><i class="zmdi zmdi-comments"></i></a></li>
+        <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#setting"><i
+                    class="zmdi zmdi-settings zmdi-hc-spin"></i></a></li>
+        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#chat"><i class="zmdi zmdi-comments"></i></a>
+        </li>
     </ul>
     <div class="tab-content">
         <div class="tab-pane active" id="setting">
-            <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: calc(100vh - 70px);"><div class="slim_scroll" style="overflow: hidden; width: auto; height: calc(100vh - 70px);">
-                <div class="card">
-                    <h6>Theme Option</h6>
-                    <div class="light_dark">
-                        <div class="radio">
-                            <input type="radio" name="radio1" id="lighttheme" value="light" checked="">
-                            <label for="lighttheme">Light Mode</label>
-                        </div>
-                        <div class="radio mb-0">
-                            <input type="radio" name="radio1" id="darktheme" value="dark">
-                            <label for="darktheme">Dark Mode</label>
+            <div class="slimScrollDiv"
+                style="position: relative; overflow: hidden; width: auto; height: calc(100vh - 70px);">
+                <div class="slim_scroll" style="overflow: hidden; width: auto; height: calc(100vh - 70px);">
+                    <div class="card">
+                        <h6>Theme Option</h6>
+                        <div class="light_dark">
+                            <div class="radio">
+                                <input type="radio" name="radio1" id="lighttheme" value="light" checked="">
+                                <label for="lighttheme">Light Mode</label>
+                            </div>
+                            <div class="radio mb-0">
+                                <input type="radio" name="radio1" id="darktheme" value="dark">
+                                <label for="darktheme">Dark Mode</label>
+                            </div>
                         </div>
                     </div>
+                    <div class="card">
+                        <h6>Color Skins</h6>
+                        <ul class="choose-skin list-unstyled">
+                            <li data-theme="purple">
+                                <div class="purple"></div>
+                            </li>
+                            <li data-theme="blue">
+                                <div class="blue"></div>
+                            </li>
+                            <li data-theme="cyan">
+                                <div class="cyan"></div>
+                            </li>
+                            <li data-theme="green">
+                                <div class="green"></div>
+                            </li>
+                            <li data-theme="orange">
+                                <div class="orange"></div>
+                            </li>
+                            <li data-theme="blush" class="active">
+                                <div class="blush"></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h6>General Settings</h6>
+                        <ul class="setting-list list-unstyled">
+                            <li>
+                                <div class="checkbox">
+                                    <input id="checkbox1" type="checkbox">
+                                    <label for="checkbox1">Report Panel Usage</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkbox">
+                                    <input id="checkbox2" type="checkbox" checked="">
+                                    <label for="checkbox2">Email Redirect</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkbox">
+                                    <input id="checkbox3" type="checkbox" checked="">
+                                    <label for="checkbox3">Notifications</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkbox">
+                                    <input id="checkbox4" type="checkbox">
+                                    <label for="checkbox4">Auto Updates</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkbox">
+                                    <input id="checkbox5" type="checkbox" checked="">
+                                    <label for="checkbox5">Offline</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkbox">
+                                    <input id="checkbox6" type="checkbox" checked="">
+                                    <label for="checkbox6">Location Permission</label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="card">
-                    <h6>Color Skins</h6>
-                    <ul class="choose-skin list-unstyled">
-                        <li data-theme="purple"><div class="purple"></div></li>                   
-                        <li data-theme="blue"><div class="blue"></div></li>
-                        <li data-theme="cyan"><div class="cyan"></div></li>
-                        <li data-theme="green"><div class="green"></div></li>
-                        <li data-theme="orange"><div class="orange"></div></li>
-                        <li data-theme="blush" class="active"><div class="blush"></div></li>
-                    </ul>                    
+                <div class="slimScrollBar"
+                    style="background: rgba(0, 0, 0, 0.4); width: 2px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 3px; z-index: 99; right: 1px; height: 593px;">
                 </div>
-                <div class="card">
-                    <h6>General Settings</h6>
-                    <ul class="setting-list list-unstyled">
-                        <li>
-                            <div class="checkbox">
-                                <input id="checkbox1" type="checkbox">
-                                <label for="checkbox1">Report Panel Usage</label>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="checkbox">
-                                <input id="checkbox2" type="checkbox" checked="">
-                                <label for="checkbox2">Email Redirect</label>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="checkbox">
-                                <input id="checkbox3" type="checkbox" checked="">
-                                <label for="checkbox3">Notifications</label>
-                            </div>                        
-                        </li>
-                        <li>
-                            <div class="checkbox">
-                                <input id="checkbox4" type="checkbox">
-                                <label for="checkbox4">Auto Updates</label>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="checkbox">
-                                <input id="checkbox5" type="checkbox" checked="">
-                                <label for="checkbox5">Offline</label>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="checkbox">
-                                <input id="checkbox6" type="checkbox" checked="">
-                                <label for="checkbox6">Location Permission</label>
-                            </div>
-                        </li>
-                    </ul>
-                </div>                
-            </div><div class="slimScrollBar" style="background: rgba(0, 0, 0, 0.4); width: 2px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 3px; z-index: 99; right: 1px; height: 593px;"></div><div class="slimScrollRail" style="width: 2px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 0px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div></div>                
-        </div>       
+                <div class="slimScrollRail"
+                    style="width: 2px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 0px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;">
+                </div>
+            </div>
+        </div>
         <div class="tab-pane right_chat" id="chat">
-            <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: calc(100vh - 70px);"><div class="slim_scroll" style="overflow: hidden; width: auto; height: calc(100vh - 70px);">
-                <div class="card">
-                    <ul class="list-unstyled">
-                        <li class="online">
-                            <a href="javascript:void(0);">
-                                <div class="media">
-                                    <img class="media-object " src="assets/images/xs/avatar4.jpg" alt="">
-                                    <div class="media-body">
-                                        <span class="name">Sophia <small class="float-right">11:00AM</small></span>
-                                        <span class="message">There are many variations of passages of Lorem Ipsum available</span>
-                                        <span class="badge badge-outline status"></span>
+            <div class="slimScrollDiv"
+                style="position: relative; overflow: hidden; width: auto; height: calc(100vh - 70px);">
+                <div class="slim_scroll" style="overflow: hidden; width: auto; height: calc(100vh - 70px);">
+                    <div class="card">
+                        <ul class="list-unstyled">
+                            <li class="online">
+                                <a href="javascript:void(0);">
+                                    <div class="media">
+                                        <img class="media-object " src="assets/images/xs/avatar4.jpg" alt="">
+                                        <div class="media-body">
+                                            <span class="name">Sophia <small class="float-right">11:00AM</small></span>
+                                            <span class="message">There are many variations of passages of Lorem Ipsum
+                                                available</span>
+                                            <span class="badge badge-outline status"></span>
+                                        </div>
                                     </div>
-                                </div>
-                            </a>                            
-                        </li>
-                        <li class="online">
-                            <a href="javascript:void(0);">
-                                <div class="media">
-                                    <img class="media-object " src="assets/images/xs/avatar5.jpg" alt="">
-                                    <div class="media-body">
-                                        <span class="name">Grayson <small class="float-right">11:30AM</small></span>
-                                        <span class="message">All the Lorem Ipsum generators on the</span>
-                                        <span class="badge badge-outline status"></span>
+                                </a>
+                            </li>
+                            <li class="online">
+                                <a href="javascript:void(0);">
+                                    <div class="media">
+                                        <img class="media-object " src="assets/images/xs/avatar5.jpg" alt="">
+                                        <div class="media-body">
+                                            <span class="name">Grayson <small class="float-right">11:30AM</small></span>
+                                            <span class="message">All the Lorem Ipsum generators on the</span>
+                                            <span class="badge badge-outline status"></span>
+                                        </div>
                                     </div>
-                                </div>
-                            </a>                            
-                        </li>
-                        <li class="offline">
-                            <a href="javascript:void(0);">
-                                <div class="media">
-                                    <img class="media-object " src="assets/images/xs/avatar2.jpg" alt="">
-                                    <div class="media-body">
-                                        <span class="name">Isabella <small class="float-right">11:31AM</small></span>
-                                        <span class="message">Contrary to popular belief, Lorem Ipsum</span>
-                                        <span class="badge badge-outline status"></span>
+                                </a>
+                            </li>
+                            <li class="offline">
+                                <a href="javascript:void(0);">
+                                    <div class="media">
+                                        <img class="media-object " src="assets/images/xs/avatar2.jpg" alt="">
+                                        <div class="media-body">
+                                            <span class="name">Isabella <small
+                                                    class="float-right">11:31AM</small></span>
+                                            <span class="message">Contrary to popular belief, Lorem Ipsum</span>
+                                            <span class="badge badge-outline status"></span>
+                                        </div>
                                     </div>
-                                </div>
-                            </a>                            
-                        </li>
-                        <li class="me">
-                            <a href="javascript:void(0);">
-                                <div class="media">
-                                    <img class="media-object " src="assets/images/xs/avatar1.jpg" alt="">
-                                    <div class="media-body">
-                                        <span class="name">John <small class="float-right">05:00PM</small></span>
-                                        <span class="message">It is a long established fact that a reader</span>
-                                        <span class="badge badge-outline status"></span>
+                                </a>
+                            </li>
+                            <li class="me">
+                                <a href="javascript:void(0);">
+                                    <div class="media">
+                                        <img class="media-object " src="assets/images/xs/avatar1.jpg" alt="">
+                                        <div class="media-body">
+                                            <span class="name">John <small class="float-right">05:00PM</small></span>
+                                            <span class="message">It is a long established fact that a reader</span>
+                                            <span class="badge badge-outline status"></span>
+                                        </div>
                                     </div>
-                                </div>
-                            </a>                            
-                        </li>
-                        <li class="online">
-                            <a href="javascript:void(0);">
-                                <div class="media">
-                                    <img class="media-object " src="assets/images/xs/avatar3.jpg" alt="">
-                                    <div class="media-body">
-                                        <span class="name">Alexander <small class="float-right">06:08PM</small></span>
-                                        <span class="message">Richard McClintock, a Latin professor</span>
-                                        <span class="badge badge-outline status"></span>
+                                </a>
+                            </li>
+                            <li class="online">
+                                <a href="javascript:void(0);">
+                                    <div class="media">
+                                        <img class="media-object " src="assets/images/xs/avatar3.jpg" alt="">
+                                        <div class="media-body">
+                                            <span class="name">Alexander <small
+                                                    class="float-right">06:08PM</small></span>
+                                            <span class="message">Richard McClintock, a Latin professor</span>
+                                            <span class="badge badge-outline status"></span>
+                                        </div>
                                     </div>
-                                </div>
-                            </a>                            
-                        </li>                        
-                    </ul>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div><div class="slimScrollBar" style="background: rgba(0, 0, 0, 0.4); width: 2px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 3px; z-index: 99; right: 1px;"></div><div class="slimScrollRail" style="width: 2px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 0px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div></div>
+                <div class="slimScrollBar"
+                    style="background: rgba(0, 0, 0, 0.4); width: 2px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 3px; z-index: 99; right: 1px;">
+                </div>
+                <div class="slimScrollRail"
+                    style="width: 2px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 0px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;">
+                </div>
+            </div>
         </div>
     </div>
 </aside>

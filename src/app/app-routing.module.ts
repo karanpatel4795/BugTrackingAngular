@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AddModuleComponent } from './admin/add-module/add-module.component';
 import { AddProjectComponent } from './admin/add-project/add-project.component';
 import { AddRoleComponent } from './admin/add-role/add-role.component';
 import { AddUserComponent } from './admin/add-user/add-user.component';
@@ -8,6 +9,7 @@ import { AdminComponent } from './admin/admin/admin.component';
 import { EditProjectComponent } from './admin/edit-project/edit-project.component';
 import { EditRoleComponent } from './admin/edit-role/edit-role.component';
 import { EditUserComponent } from './admin/edit-user/edit-user.component';
+import { ListModuleComponent } from './admin/list-module/list-module.component';
 import { ListProjectComponent } from './admin/list-project/list-project.component';
 import { ListRoleComponent } from './admin/list-role/list-role.component';
 import { ListUserComponent } from './admin/list-user/list-user.component';
@@ -37,7 +39,9 @@ const routes: Routes = [
       { path: "edituser/:userId", component: EditUserComponent },
       { path: "addproject", component: AddProjectComponent },
       { path: "listproject", component: ListProjectComponent },
-      { path: "editproject/:projectId", component: EditProjectComponent }
+      { path: "editproject/:projectId", component: EditProjectComponent },
+      {path:"add-module",component:AddModuleComponent},
+      {path:"list-module",component:ListModuleComponent}
     ]
   }
 ];

@@ -23,9 +23,7 @@ export class EditRoleComponent implements OnInit {
     this.roleService.getRoleById(this.roleId).subscribe(resp=>{
       this.roleName = resp.data.roleName 
       console.log(resp);
-      
-
-    })
+      })
   }
 
   updateRole(){
@@ -42,5 +40,4 @@ export class EditRoleComponent implements OnInit {
       }
     })
   }
-
 }
