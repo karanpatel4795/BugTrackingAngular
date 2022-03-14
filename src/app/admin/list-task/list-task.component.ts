@@ -34,8 +34,8 @@ export class ListTaskComponent implements OnInit {
     })
   }
 
-  editModule(moduleId: any) {
-    this.route.navigateByUrl("/admin/edit-task/" + moduleId)
+  editTask(taskId: any) {
+    this.route.navigateByUrl("/admin/edit-task/"+taskId)
   }
 
 }

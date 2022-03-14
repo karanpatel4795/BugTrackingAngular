@@ -10,6 +10,7 @@ import { AdminComponent } from './admin/admin/admin.component';
 import { EditModuleComponent } from './admin/edit-module/edit-module.component';
 import { EditProjectComponent } from './admin/edit-project/edit-project.component';
 import { EditRoleComponent } from './admin/edit-role/edit-role.component';
+import { EditTaskComponent } from './admin/edit-task/edit-task.component';
 import { EditUserComponent } from './admin/edit-user/edit-user.component';
 import { ListModuleComponent } from './admin/list-module/list-module.component';
 import { ListProjectComponent } from './admin/list-project/list-project.component';
@@ -43,11 +44,12 @@ const routes: Routes = [
       { path: "addproject", component: AddProjectComponent },
       { path: "listproject", component: ListProjectComponent },
       { path: "editproject/:projectId", component: EditProjectComponent },
-      {path:"add-module",component:AddModuleComponent},
-      {path:"list-module",component:ListModuleComponent},
-      { path: "edit-module/:moduleId", component:EditModuleComponent},
-      {path:"add-task",component:AddTaskComponent},
-      {path:"list-task",component:ListTaskComponent}
+      { path: "add-module", component: AddModuleComponent },
+      { path: "list-module", component: ListModuleComponent },
+      { path: "edit-module/:moduleId", component: EditModuleComponent },
+      { path: "add-task", component: AddTaskComponent },
+      { path: "list-task", component: ListTaskComponent },
+      { path: "edit-task/:taskId", component: EditTaskComponent }
     ]
   }
 ];

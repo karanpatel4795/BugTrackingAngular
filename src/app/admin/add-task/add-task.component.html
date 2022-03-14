@@ -27,7 +27,7 @@
                                 </div>
                                 <div class="col-lg-10 col-md-10 col-sm-8">
                                     <div class="form-group">
-                                        <select [(ngModel)]="projectId" class="form-control">
+                                        <select [(ngModel)]="projectId" class="form-control" id="projectName" (change)="getModulebyproject($event)">
                                             <option *ngFor="let p of project" value="{{p._id}}"> {{p.projectTitle}}
                                             </option>
                                         </select>

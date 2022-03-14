@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Route, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { Observable } from 'rxjs';
 import { ProjectService } from '../project.service';
 
 @Component({
@@ -25,14 +26,17 @@ export class AddTaskComponent implements OnInit {
     this.projectService.getAllProject().subscribe(resp => {
       this.project = resp.data
     })
-    this.projectService.getAllModule().subscribe(resp => {
-      this.module = resp.data
-    })
     this.projectService.getAllPriority().subscribe(resp => {
       this.priority = resp.data
     })
   }
-
+  getModulebyproject(event:any) {
+    const project = event.target.value;
+    console.log(project)
+    this.projectService.getModulebyproject(project).subscribe(resp => {
+      this.module = resp.data
+    })
+  }
   addTask() {
     let task = { taskName: this.taskName, description: this.description, totalTime: this.totalTime, projectId: this.projectId, moduleId: this.moduleId, priorityId: this.priorityId }
     console.log(task)
