@@ -23,7 +23,6 @@ export class ListModuleComponent implements OnInit {
   }
   deleteModule(moduleId: any) {
     this.projectService.deleteModule(moduleId).subscribe(resp => {
-     console.log(resp)
       if (resp.status = 200) {
         this.toastrService.success("", resp.msg, { timeOut: 3000 })
         this.getAllModules()

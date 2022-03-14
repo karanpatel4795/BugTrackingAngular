@@ -41,4 +41,19 @@ export class ProjectService {
   deleteModule(moduleId:any):Observable<any>{
     return this.httpClient.delete("http://localhost:3000/modules/"+moduleId)
   }  
+  getModuleById(moduleId:any):Observable<any>{
+    return this.httpClient.get("http://localhost:3000/modules/"+moduleId)
+  }
+  updateModule(module:any):Observable<any>{
+    return this.httpClient.put("http://localhost:3000/modules",module)
+  }
+  addTask(task:any):Observable<any>{
+    return this.httpClient.post("http://localhost:3000/tasks",task)
+  }
+  getAllTask():Observable<any>{
+    return this.httpClient.get("http://localhost:3000/tasks")
+  }
+  deleteTask(taskId:any):Observable<any>{
+    return this.httpClient.delete("http://localhost:3000/tasks/"+taskId)
+  }  
 }

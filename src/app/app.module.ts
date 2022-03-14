@@ -28,6 +28,8 @@ import { LogoutComponent } from './logout/logout.component';
 import { AddModuleComponent } from './admin/add-module/add-module.component';
 import { ListModuleComponent } from './admin/list-module/list-module.component';
 import { EditModuleComponent } from './admin/edit-module/edit-module.component';
+import { AddTaskComponent } from './admin/add-task/add-task.component';
+import { ListTaskComponent } from './admin/list-task/list-task.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,7 +53,9 @@ import { EditModuleComponent } from './admin/edit-module/edit-module.component';
     LogoutComponent,
     AddModuleComponent,
     ListModuleComponent,
-    EditModuleComponent
+    EditModuleComponent,
+    AddTaskComponent,
+    ListTaskComponent
   ],
   imports: [
     BrowserModule,
