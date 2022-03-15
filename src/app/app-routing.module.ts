@@ -21,6 +21,8 @@ import { ChangepasswordComponent } from './changepassword/changepassword.compone
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
+import { ProjectManagerDashboardComponent } from './projectManager/project-manager-dashboard/project-manager-dashboard.component';
+import { ProjectManagerComponent } from './projectManager/project-manager/project-manager.component';
 import { SignupComponent } from './signup/signup.component';
 
 
@@ -50,6 +52,11 @@ const routes: Routes = [
       { path: "add-task", component: AddTaskComponent },
       { path: "list-task", component: ListTaskComponent },
       { path: "edit-task/:taskId", component: EditTaskComponent }
+    ]
+  },
+  {
+    path: "project-manager", component: ProjectManagerComponent, children: [
+      { path: "project-manager-dashboard", component: ProjectManagerDashboardComponent }
     ]
   }
 ];

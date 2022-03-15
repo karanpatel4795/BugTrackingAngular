@@ -31,6 +31,10 @@ import { EditModuleComponent } from './admin/edit-module/edit-module.component';
 import { AddTaskComponent } from './admin/add-task/add-task.component';
 import { ListTaskComponent } from './admin/list-task/list-task.component';
 import { EditTaskComponent } from './admin/edit-task/edit-task.component';
+import { ProjectManagerDashboardComponent } from './projectManager/project-manager-dashboard/project-manager-dashboard.component';
+import { ProjectManagerComponent } from './projectManager/project-manager/project-manager.component';
+import { ProjectManagerHeaderComponent } from './projectManager/project-manager-header/project-manager-header.component';
+import { ProjectManagerSlidebarComponent } from './projectManager/project-manager-slidebar/project-manager-slidebar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -57,7 +61,11 @@ import { EditTaskComponent } from './admin/edit-task/edit-task.component';
     EditModuleComponent,
     AddTaskComponent,
     ListTaskComponent,
-    EditTaskComponent
+    EditTaskComponent,
+    ProjectManagerDashboardComponent,
+    ProjectManagerComponent,
+    ProjectManagerHeaderComponent,
+    ProjectManagerSlidebarComponent
   ],
   imports: [
     BrowserModule,

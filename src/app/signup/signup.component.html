@@ -1,11 +1,57 @@
-<h2>Signup</h2>
+<div class="authentication">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-sm-12">
+                <div class="card auth_form">
+                    <div class="header">
+                        <img class="logo" src="./assets/images/BS_Logo.png" alt="BugTrackingSystem"
+                            title="BugTrackingSystem">
+                        <h3>Sign Up </h3>
+                    </div>
+                    <div class="body">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" [(ngModel)]="firstName" placeholder="First Name">
 
-FirstName: <input type="text" [(ngModel)]="firstName"/><br>
-Email: <input type="text" [(ngModel)]="email"/>
-<br>
-password: <input type="password" [(ngModel)]="password"/>
-<br>
-<input type="button" value="Signup" (click)="adduser()">
-<br>
+                        </div>
+                        <!-- <div class="input-group mb-3">
+                            <div class="form-group">
+                                <select [(ngModel)]="role" placeholder="Role">
+                                    <option *ngFor="let r of roles" value="{{r._id}}"> {{r.roleName}}
+                                    </option>
+                                </select>
+                            </div>
+                        </div> -->
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" [(ngModel)]="email" placeholder="Email Id" required>
 
-<a routerLink="/login">Login</a>
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="password" class="form-control" [(ngModel)]="password" placeholder="Password" required>
+
+                        </div>
+                        <button type="button" (click)="adduser()"
+                            class="btn btn-primary btn-block waves-effect waves-light">SIGN UP</button>
+                        <br><br>
+                        <div class="checkbox">
+                            <div class="input-group-append">
+                                &nbsp;&nbsp;<span class=""><a class="forgot" title="SignIn">&nbsp;&nbsp;Already a User?
+                                        | <a routerLink="/login" class="forgot" title="SignIn">Signup
+                                            Here</a></a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright text-center">
+                    ©
+                    <script>document.write(new Date().getFullYear())</script>2022,
+                    <span><a>BugTrackingSystem</a></span>
+                </div>
+            </div>
+            <div class="col-lg-8 col-sm-12">
+                <div class="card">
+                    <img src="assets/images/signin.svg" alt="Sign In">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

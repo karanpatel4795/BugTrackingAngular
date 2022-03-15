@@ -1,0 +1,71 @@
+<aside id="leftsidebar" class="sidebar">
+    <div class="navbar-brand">
+        <button class="btn-menu ls-toggle-btn" type="button"><i class="zmdi zmdi-menu"></i></button>
+        <a routerLink="/admin/admin-dashboard"><img src="assets/images/BS_Logo.png" width="50" alt="BugTracking"><span
+                class="m-l-10">BugTracking</span></a>
+    </div>
+    <div class="menu">
+        <div class="slimScrollDiv"
+            style="position: relative; overflow: hidden; width: auto; height: calc(100vh - 65px);">
+            <ul class="list" style="overflow: hidden; width: auto; height: calc(100vh - 65px);">
+                <li>
+                    <div class="user-info">
+                        <a class="image waves-effect waves-block"><img
+                                src="./assets/images/profile_av.jpg"></a>
+                        <div class="detail">
+                            <h4>&nbsp;{{firstName}}</h4>
+                            <small>&nbsp;&nbsp;Project Manager</small>
+                        </div>
+                    </div>
+                </li>
+                <li class="open"><a routerLink="/project-manager/project-manager-dashboard" class="toggled waves-effect waves-block"><i
+                            class="zmdi zmdi-home"></i><span>Dashboard</span></a></li>
+                <li><a class="menu-toggle waves-effect waves-block"><i
+                            class="zmdi zmdi-apps"></i><span>Users</span></a>
+                    <ul class="ml-menu">
+                        <li><a routerLink="" class=" waves-effect waves-block">Add Developer / Tester</a></li>
+                        <li><a routerLink="" class=" waves-effect waves-block">User List</a></li>
+                    </ul>
+                </li>
+                <li> <a class="menu-toggle waves-effect waves-block"><i
+                            class="zmdi zmdi-assignment"></i><span>Projects</span></a>
+                    <ul class="ml-menu">
+                        <li><a routerLink="" class=" waves-effect waves-block">Projects List</a></li>
+                        <li><a routerLink="" class=" waves-effect waves-block">Pending Projects</a></li>
+                        <li><a routerLink="" class=" waves-effect waves-block">Completed Projects</a></li>
+                    </ul>
+                </li>
+                <li> <a class="menu-toggle waves-effect waves-block"><i
+                            class="zmdi zmdi-assignment"></i><span>Modules</span></a>
+                    <ul class="ml-menu">
+                        <li><a routerLink="" class=" waves-effect waves-block">Add Modules</a></li>
+                        <li><a routerLink="" class=" waves-effect waves-block">Modules List</a></li>
+                    </ul>
+                </li>
+                <li> <a class="menu-toggle waves-effect waves-block"><i
+                            class="zmdi zmdi-assignment"></i><span>Task</span></a>
+                    <ul class="ml-menu">
+                        <li><a routerLink="" class=" waves-effect waves-block">Add Task</a></li>
+                        <li><a routerLink="" class=" waves-effect waves-block">Task List</a></li>
+                    </ul>
+                </li>
+
+               
+            </ul>
+            <div class="slimScrollBar"
+                style="background: rgb(238, 238, 238); width: 1px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 3px; z-index: 99; right: 1px; height: 356.89px;">
+            </div>
+            <div class="slimScrollRail"
+                style="width: 1px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 0px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;">
+            </div>
+        </div>
+    </div>
+</aside>
+<aside id="rightsidebar" class="right-sidebar">
+    <ul class="nav nav-tabs sm">
+        <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#setting"><i
+                    class="zmdi zmdi-settings zmdi-hc-spin"></i></a></li>
+        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#chat"><i class="zmdi zmdi-comments"></i></a>
+        </li>
+    </ul>
+</aside>

@@ -16,7 +16,8 @@
                             </div>
                         </div>
                         <div class="input-group mb-3">
-                            <input type="password" class="form-control" [(ngModel)]="password" placeholder="Password" required>
+                            <input type="password" class="form-control" [(ngModel)]="password" placeholder="Password"
+                                required>
                             <div class="input-group-append">
                                 <span class="input-group-text"><i class="zmdi zmdi-lock"></i></span>
                             </div>
@@ -28,7 +29,16 @@
                                             Password?</i></a></span>
                             </div>
                         </div>
-                        <button type="button" (click)="login()" class="btn btn-primary btn-block waves-effect waves-light">SIGN IN</button>
+                        <button type="button" (click)="login()"
+                            class="btn btn-primary btn-block waves-effect waves-light">SIGN IN</button>
+                        <br><br>
+                        <div class="checkbox">
+                            <div class="input-group-append">
+                                &nbsp;&nbsp;<span class=""><a class="forgot" title="SignUP">&nbsp;&nbsp;Not a User? | <a
+                                                routerLink="/signup" class="forgot" title="SignUP">Signup
+                                                Here</a></a></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="copyright text-center">

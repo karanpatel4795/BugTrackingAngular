@@ -7,42 +7,44 @@ import { Observable } from 'rxjs';
 })
 export class RoleService {
 
-  constructor(private httpClient:HttpClient) { }
-  ngInit():void{
+  constructor(private httpClient: HttpClient) { }
+  ngInit(): void {
 
   }
-  addRole(role:any):Observable<any>{
+  addRole(role: any): Observable<any> {
     //console.log(role);
     //node API
-    return this.httpClient.post("http://localhost:3000/roles",role)
+    return this.httpClient.post("http://localhost:3000/roles", role)
 
-  }  
-  getAllRoles():Observable<any>{
+  }
+  getAllRoles(): Observable<any> {
     return this.httpClient.get("http://localhost:3000/roles")
   }
-  deleteRole(roleId:any):Observable<any>{
-    return this.httpClient.delete("http://localhost:3000/roles/"+roleId)
+  getRoles():Observable<any>{//devloper,tester
+    return this.httpClient.get("http://localhost:3000/role")
   }
-  getRoleById(roleId:any):Observable<any>{
-    return this.httpClient.get("http://localhost:3000/roles/"+roleId)
+  deleteRole(roleId: any): Observable<any> {
+    return this.httpClient.delete("http://localhost:3000/roles/" + roleId)
   }
-  updateRole(role:any):Observable<any>{
-    return this.httpClient.put("http://localhost:3000/roles",role)
+  getRoleById(roleId: any): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/roles/" + roleId)
   }
-  getAllUsers():Observable<any>{
+  updateRole(role: any): Observable<any> {
+    return this.httpClient.put("http://localhost:3000/roles", role)
+  }
+  getAllUsers(): Observable<any> {
     return this.httpClient.get("http://localhost:3000/users")
   }
-  deleteUser(userId:any):Observable<any>{
-    return this.httpClient.delete("http://localhost:3000/users/"+userId)
+  deleteUser(userId: any): Observable<any> {
+    return this.httpClient.delete("http://localhost:3000/users/" + userId)
   }
-  getUserById(userId:any):Observable<any>{
-    return this.httpClient.get("http://localhost:3000/users/"+userId)
+  getUserById(userId: any): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/users/" + userId)
   }
-  updateUser(user:any):Observable<any>{
-    return this.httpClient.put("http://localhost:3000/users",user)
+  updateUser(user: any): Observable<any> {
+    return this.httpClient.put("http://localhost:3000/users", user)
   }
-  getotp():Observable<any>{
+  getotp(): Observable<any> {
     return this.httpClient.get("http://localhost:3000/roles")
   }
- 
 }
