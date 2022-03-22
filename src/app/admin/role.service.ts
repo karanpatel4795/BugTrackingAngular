@@ -20,7 +20,7 @@ export class RoleService {
   getAllRoles(): Observable<any> {
     return this.httpClient.get("http://localhost:3000/roles")
   }
-  getRoles():Observable<any>{//devloper,tester
+  getRoles(): Observable<any> {//devloper,tester
     return this.httpClient.get("http://localhost:3000/role")
   }
   deleteRole(roleId: any): Observable<any> {
@@ -35,6 +35,9 @@ export class RoleService {
   getAllUsers(): Observable<any> {
     return this.httpClient.get("http://localhost:3000/users")
   }
+  getAllUser(): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/usersforProjectManager")
+  }
   deleteUser(userId: any): Observable<any> {
     return this.httpClient.delete("http://localhost:3000/users/" + userId)
   }
@@ -46,5 +49,14 @@ export class RoleService {
   }
   getotp(): Observable<any> {
     return this.httpClient.get("http://localhost:3000/roles")
+  }
+  disableUser(user: any): Observable<any> {
+    return this.httpClient.post("http://localhost:3000/disableuser", user)
+  }
+  getPendingUsers(): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/pendingusers")
+  }
+  approveUser(user: any): Observable<any> {
+    return this.httpClient.post("http://localhost:3000/approveUser", user)
   }
 }

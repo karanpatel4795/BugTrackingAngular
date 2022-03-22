@@ -13,20 +13,33 @@
                             <input type="text" class="form-control" [(ngModel)]="firstName" placeholder="First Name">
 
                         </div>
-                        <!-- <div class="input-group mb-3">
-                            <div class="form-group">
+                        <div class="input-group mb-3">
+                            <div class="">
                                 <select [(ngModel)]="role" placeholder="Role">
-                                    <option *ngFor="let r of roles" value="{{r._id}}"> {{r.roleName}}
-                                    </option>
+                                    <option value="6228efec12209b8603f2d882">Developer</option>
+                                    <option value="6228eff112209b8603f2d884">Tester</option>
                                 </select>
                             </div>
-                        </div> -->
+                        </div>
                         <div class="input-group mb-3">
-                            <input type="email" class="form-control" [(ngModel)]="email" placeholder="Email Id" required>
+                            <input type="email" class="form-control" [(ngModel)]="email" placeholder="Email Id"
+                                required>
 
                         </div>
                         <div class="input-group mb-3">
-                            <input type="password" class="form-control" [(ngModel)]="password" placeholder="Password" required>
+                            <label class="form-control">Gender: &nbsp;&nbsp;&nbsp;
+                                <input type="radio" class="" [(ngModel)]="gender" value="Male" required>&nbsp;Male
+                                &nbsp;&nbsp;&nbsp;
+                                <input type="radio" class="" [(ngModel)]="gender" value="Female" required>&nbsp;Female
+                            </label>
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" [(ngModel)]="contactNumber" placeholder="contact Number" required>
+
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="password" class="form-control" [(ngModel)]="password" placeholder="Password"
+                                required>
 
                         </div>
                         <button type="button" (click)="adduser()"

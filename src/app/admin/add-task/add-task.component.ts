@@ -32,14 +32,15 @@ export class AddTaskComponent implements OnInit {
   }
   getModulebyproject(event:any) {
     const project = event.target.value;
-    console.log(project)
+   // console.log(project)
     this.projectService.getModulebyproject(project).subscribe(resp => {
       this.module = resp.data
+     // console.log(this.module)
     })
   }
   addTask() {
     let task = { taskName: this.taskName, description: this.description, totalTime: this.totalTime, projectId: this.projectId, moduleId: this.moduleId, priorityId: this.priorityId }
-    console.log(task)
+   // console.log(task)
     this.projectService.addTask(task).subscribe(resp => {
       if (resp.status == 200) {
         this.toastrService.success("", resp.msg, { timeOut: 3000 })

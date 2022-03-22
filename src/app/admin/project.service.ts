@@ -51,7 +51,7 @@ export class ProjectService {
     return this.httpClient.put("http://localhost:3000/modules",module)
   }
   getModulebyproject(project:any):Observable<any>{
-    return this.httpClient.get("http://localhost:3000/modules/"+project)
+    return this.httpClient.get("http://localhost:3000/module/"+project)
   }
 
   //------------------------------- Task ----------------------------------
@@ -70,4 +70,8 @@ export class ProjectService {
   updateTask(task:any):Observable<any>{
     return this.httpClient.put("http://localhost:3000/tasks",task)
   } 
+  //-------------------- project Manager ------------------------
+  getAllProjects(projectManagerId:any):Observable<any>{
+    return this.httpClient.get("http://localhost:3000/getAllprojects/"+projectManagerId)
+  }
 }

@@ -11,16 +11,19 @@ import { EditModuleComponent } from './admin/edit-module/edit-module.component';
 import { EditProjectComponent } from './admin/edit-project/edit-project.component';
 import { EditRoleComponent } from './admin/edit-role/edit-role.component';
 import { EditTaskComponent } from './admin/edit-task/edit-task.component';
-import { EditUserComponent } from './admin/edit-user/edit-user.component';
 import { ListModuleComponent } from './admin/list-module/list-module.component';
 import { ListProjectComponent } from './admin/list-project/list-project.component';
 import { ListRoleComponent } from './admin/list-role/list-role.component';
 import { ListTaskComponent } from './admin/list-task/list-task.component';
 import { ListUserComponent } from './admin/list-user/list-user.component';
+import { PendingApprovalComponent } from './admin/pending-approval/pending-approval.component';
 import { ChangepasswordComponent } from './changepassword/changepassword.component';
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
+import { AddUsersComponent } from './projectManager/add-users/add-users.component';
+import { ListProjectsComponent } from './projectManager/list-projects/list-projects.component';
+import { ListUsersComponent } from './projectManager/list-users/list-users.component';
 import { ProjectManagerDashboardComponent } from './projectManager/project-manager-dashboard/project-manager-dashboard.component';
 import { ProjectManagerComponent } from './projectManager/project-manager/project-manager.component';
 import { SignupComponent } from './signup/signup.component';
@@ -42,7 +45,7 @@ const routes: Routes = [
       { path: "editrole/:roleId", component: EditRoleComponent },
       { path: "adduser", component: AddUserComponent },
       { path: "listuser", component: ListUserComponent },
-      { path: "edituser/:userId", component: EditUserComponent },
+      { path: "pending-approval", component: PendingApprovalComponent },
       { path: "addproject", component: AddProjectComponent },
       { path: "listproject", component: ListProjectComponent },
       { path: "editproject/:projectId", component: EditProjectComponent },
@@ -56,7 +59,10 @@ const routes: Routes = [
   },
   {
     path: "project-manager", component: ProjectManagerComponent, children: [
-      { path: "project-manager-dashboard", component: ProjectManagerDashboardComponent }
+      { path: "project-manager-dashboard", component: ProjectManagerDashboardComponent },
+      { path: "add-users", component: AddUsersComponent },
+      { path: "list-users", component: ListUsersComponent },
+      {path:"list-projects",component:ListProjectsComponent}
     ]
   }
 ];

@@ -16,6 +16,8 @@ export class SignupComponent implements OnInit {
   email:string=""
   password:string=""
   role:string=""
+  gender:string=""
+  contactNumber:string=""
   roles:Array<any>=[]
 
   constructor(private sessionService:SessionService,private roleService:RoleService,private toastrService:ToastrService, private route:Router){ }
@@ -26,7 +28,9 @@ export class SignupComponent implements OnInit {
     })
   }
   adduser(){
-    let user = {firstName:this.firstName,email:this.email,password:this.password,role:"6228efec12209b8603f2d882"}
+    let user = {firstName:this.firstName,email:this.email,password:this.password,role:this.role,gender:this.gender,contactNumber:this.contactNumber}
+    console.log(this.role);
+    
     this.sessionService.addUser(user).subscribe(resp=>{
       if(resp.status==-1){
       this.toastrService.error("",resp.msg,{timeOut:3000});

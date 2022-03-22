@@ -16,7 +16,6 @@ import { EditRoleComponent } from './admin/edit-role/edit-role.component';
 import { AddUserComponent } from './admin/add-user/add-user.component';
 import { ListUserComponent } from './admin/list-user/list-user.component';
 import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
-import { EditUserComponent } from './admin/edit-user/edit-user.component';
 import { AddProjectComponent } from './admin/add-project/add-project.component';
 import { ListProjectComponent } from './admin/list-project/list-project.component';
 import { EditProjectComponent } from './admin/edit-project/edit-project.component';
@@ -35,6 +34,11 @@ import { ProjectManagerDashboardComponent } from './projectManager/project-manag
 import { ProjectManagerComponent } from './projectManager/project-manager/project-manager.component';
 import { ProjectManagerHeaderComponent } from './projectManager/project-manager-header/project-manager-header.component';
 import { ProjectManagerSlidebarComponent } from './projectManager/project-manager-slidebar/project-manager-slidebar.component';
+import { PendingApprovalComponent } from './admin/pending-approval/pending-approval.component';
+import { AddUsersComponent } from './projectManager/add-users/add-users.component';
+import { ListUsersComponent } from './projectManager/list-users/list-users.component';
+import { ListProjectsComponent } from './projectManager/list-projects/list-projects.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,7 +51,6 @@ import { ProjectManagerSlidebarComponent } from './projectManager/project-manage
     AddUserComponent,
     ListUserComponent,
     AdminDashboardComponent,
-    EditUserComponent,
     AddProjectComponent,
     ListProjectComponent,
     EditProjectComponent,
@@ -65,7 +68,12 @@ import { ProjectManagerSlidebarComponent } from './projectManager/project-manage
     ProjectManagerDashboardComponent,
     ProjectManagerComponent,
     ProjectManagerHeaderComponent,
-    ProjectManagerSlidebarComponent
+    ProjectManagerSlidebarComponent,
+    PendingApprovalComponent,
+    AddUsersComponent,
+    ListUsersComponent,
+    ListProjectsComponent,
+   
   ],
   imports: [
     BrowserModule,

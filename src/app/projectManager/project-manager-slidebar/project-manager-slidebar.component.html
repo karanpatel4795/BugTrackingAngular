@@ -1,7 +1,7 @@
 <aside id="leftsidebar" class="sidebar">
     <div class="navbar-brand">
         <button class="btn-menu ls-toggle-btn" type="button"><i class="zmdi zmdi-menu"></i></button>
-        <a routerLink="/admin/admin-dashboard"><img src="assets/images/BS_Logo.png" width="50" alt="BugTracking"><span
+        <a routerLink="/project-manager/project-manager-dashboard"><img src="assets/images/BS_Logo.png" width="50" alt="BugTracking"><span
                 class="m-l-10">BugTracking</span></a>
     </div>
     <div class="menu">
@@ -14,7 +14,7 @@
                                 src="./assets/images/profile_av.jpg"></a>
                         <div class="detail">
                             <h4>&nbsp;{{firstName}}</h4>
-                            <small>&nbsp;&nbsp;Project Manager</small>
+                            <small>&nbsp;&nbsp;&nbsp;Project Manager</small>
                         </div>
                     </div>
                 </li>
@@ -23,34 +23,42 @@
                 <li><a class="menu-toggle waves-effect waves-block"><i
                             class="zmdi zmdi-apps"></i><span>Users</span></a>
                     <ul class="ml-menu">
-                        <li><a routerLink="" class=" waves-effect waves-block">Add Developer / Tester</a></li>
-                        <li><a routerLink="" class=" waves-effect waves-block">User List</a></li>
+                        <li><a routerLink="/project-manager/add-users" class=" waves-effect waves-block">Add Developer / Tester</a></li>
+                        <li><a routerLink="/project-manager/list-users" class=" waves-effect waves-block">User List</a></li>
                     </ul>
                 </li>
                 <li> <a class="menu-toggle waves-effect waves-block"><i
                             class="zmdi zmdi-assignment"></i><span>Projects</span></a>
                     <ul class="ml-menu">
-                        <li><a routerLink="" class=" waves-effect waves-block">Projects List</a></li>
-                        <li><a routerLink="" class=" waves-effect waves-block">Pending Projects</a></li>
-                        <li><a routerLink="" class=" waves-effect waves-block">Completed Projects</a></li>
+                        <li><a routerLink="/project-manager/list-projects" class=" waves-effect waves-block">Projects List</a></li>
+                        <li><a routerLink="/admin/addproject" class=" waves-effect waves-block">Pending Project</a></li>
+                        <li><a routerLink="/admin/addproject" class=" waves-effect waves-block">Completed Project</a></li>
                     </ul>
                 </li>
                 <li> <a class="menu-toggle waves-effect waves-block"><i
                             class="zmdi zmdi-assignment"></i><span>Modules</span></a>
                     <ul class="ml-menu">
-                        <li><a routerLink="" class=" waves-effect waves-block">Add Modules</a></li>
-                        <li><a routerLink="" class=" waves-effect waves-block">Modules List</a></li>
+                        <li><a routerLink="/admin/add-module" class=" waves-effect waves-block">Add Modules</a></li>
+                        <li><a routerLink="/admin/list-module" class=" waves-effect waves-block">Modules List</a></li>
                     </ul>
                 </li>
                 <li> <a class="menu-toggle waves-effect waves-block"><i
                             class="zmdi zmdi-assignment"></i><span>Task</span></a>
                     <ul class="ml-menu">
-                        <li><a routerLink="" class=" waves-effect waves-block">Add Task</a></li>
-                        <li><a routerLink="" class=" waves-effect waves-block">Task List</a></li>
+                        <li><a routerLink="/admin/add-task" class=" waves-effect waves-block">Add Task</a></li>
+                        <li><a routerLink="/admin/list-task" class=" waves-effect waves-block">Task List</a></li>
                     </ul>
                 </li>
 
-               
+                <li><a class="menu-toggle waves-effect waves-block"><i
+                            class="ti-user"></i><span>Users</span></a>
+                    <ul class="ml-menu">
+                        <li><a routerLink="/admin/listuser" class=" waves-effect waves-block">User List</a></li>
+                        <li><a routerLink="/admin/pending-approval" class=" waves-effect waves-block">Pending Approval</a>
+                        </li>
+
+                    </ul>
+                </li>
             </ul>
             <div class="slimScrollBar"
                 style="background: rgb(238, 238, 238); width: 1px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 3px; z-index: 99; right: 1px; height: 356.89px;">

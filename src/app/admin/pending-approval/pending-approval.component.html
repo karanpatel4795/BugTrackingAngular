@@ -1,0 +1,118 @@
+<section class="content">
+    <div class="body_scroll">
+        <div class="block-header">
+            <div class="row">
+                <div class="col-lg-7 col-md-6 col-sm-12">
+                    <h2>Pending Approvals </h2>
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a routerLink="/admin/admin-dashboard"><i
+                                    class="zmdi zmdi-home"></i>Home</a></li>
+                        <li class="breadcrumb-item"><a href="javascript:void(0);">Users</a></li>
+                        <li class="breadcrumb-item active">Pending Approvals</li>
+                    </ul>
+                    <button class="btn btn-primary btn-icon mobile_menu" type="button"><i
+                            class="zmdi zmdi-sort-amount-desc"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="row clearfix">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="body">
+                        <div class="table-responsive">
+                            <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-6">
+                                        <div class="dataTables_length" id="DataTables_Table_0_length"><label>Show
+                                                <select name="DataTables_Table_0_length"
+                                                    aria-controls="DataTables_Table_0"
+                                                    class="form-control form-control-sm">
+                                                    <option value="10">10</option>
+                                                    <option value="25">25</option>
+                                                    <option value="50">50</option>
+                                                    <option value="100">100</option>
+                                                </select> entries</label></div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-6">
+                                        <div id="DataTables_Table_0_filter" class="dataTables_filter">
+                                            <label>Search:<input type="search" class="form-control form-control-sm"
+                                                    placeholder="" aria-controls="DataTables_Table_0"></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <table
+                                            class="table table-bordered table-striped table-hover js-basic-example dataTable"
+                                            id="DataTables_Table_0" role="grid"
+                                            aria-describedby="DataTables_Table_0_info">
+                                            <thead>
+                                                <tr role="row">
+                                                    <th class="sorting_asc" tabindex="0"
+                                                        aria-controls="DataTables_Table_0" rowspan="1" colspan="1"
+                                                        aria-sort="ascending"
+                                                        aria-label="Name: activate to sort column descending"
+                                                        style="width: 50.203px;"> Sr.</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0"
+                                                        rowspan="1" colspan="1"
+                                                        aria-label="Position: activate to sort column ascending"
+                                                        style="width: 90.203px;"> User Name</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0"
+                                                        rowspan="1" colspan="1"
+                                                        aria-label="Office: activate to sort column ascending"
+                                                        style="width: 100px;">Email</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0"
+                                                        rowspan="1" colspan="1"
+                                                        aria-label="Age: activate to sort column ascending"
+                                                        style="width: 35.0781px;">Gender</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0"
+                                                        rowspan="1" colspan="1"
+                                                        aria-label="Start date: activate to sort column ascending"
+                                                        style="width: 100.0938px;">Role</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0"
+                                                        rowspan="1" colspan="1"
+                                                        aria-label="Start date: activate to sort column ascending"
+                                                        style="width: 200.0938px;">Action</th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody>
+                                                <tr *ngFor="let user of pendingusers, let i = index">
+                                                    <td>{{i+1}}</td>
+                                                    <td>{{user.firstName}}</td>
+                                                    <td>{{user.email}}</td>
+                                                    <td>{{user.gender}}</td>
+                                                    <td>{{user.role.roleName}}</td>
+                                                    <td><button class="btn btn-success" (click)="approvalUser(user._id)">
+                                                            Approve </button>&nbsp;<button class="btn btn-danger"
+                                                            (click)="deleteUser(user._id)"> Delete </button></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-7">
+                                        <div class="dataTables_paginate paging_simple_numbers"
+                                            id="DataTables_Table_0_paginate">
+                                            <ul class="pagination">
+                                                <li class="paginate_button page-item previous disabled"
+                                                    id="DataTables_Table_0_previous"><a href="#"
+                                                        aria-controls="DataTables_Table_0" data-dt-idx="0" tabindex="0"
+                                                        class="page-link">Previous</a></li>
+                                                <li class="paginate_button page-item next" id="DataTables_Table_0_next">
+                                                    <a aria-controls="DataTables_Table_0" data-dt-idx="7" tabindex="0"
+                                                        class="page-link">Next</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
