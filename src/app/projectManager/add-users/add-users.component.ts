@@ -32,6 +32,7 @@ export class AddUsersComponent implements OnInit {
       }
       else{
         this.toastrService.success("",resp.msg,{timeOut:3000});
+        this.route.navigateByUrl("/project-manager/list-users")
       }
     })
   }

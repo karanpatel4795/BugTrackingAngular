@@ -12,6 +12,7 @@ import { EditProjectComponent } from './admin/edit-project/edit-project.componen
 import { EditRoleComponent } from './admin/edit-role/edit-role.component';
 import { EditTaskComponent } from './admin/edit-task/edit-task.component';
 import { ListModuleComponent } from './admin/list-module/list-module.component';
+import { ListProjectTeamComponent } from './admin/list-project-team/list-project-team.component';
 import { ListProjectComponent } from './admin/list-project/list-project.component';
 import { ListRoleComponent } from './admin/list-role/list-role.component';
 import { ListTaskComponent } from './admin/list-task/list-task.component';
@@ -21,9 +22,14 @@ import { ChangepasswordComponent } from './changepassword/changepassword.compone
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
+import { AddModulesComponent } from './projectManager/add-modules/add-modules.component';
 import { AddUsersComponent } from './projectManager/add-users/add-users.component';
+import { CompletedProjectsComponent } from './projectManager/completed-projects/completed-projects.component';
+import { EditModulesComponent } from './projectManager/edit-modules/edit-modules.component';
+import { ListModulesComponent } from './projectManager/list-modules/list-modules.component';
 import { ListProjectsComponent } from './projectManager/list-projects/list-projects.component';
 import { ListUsersComponent } from './projectManager/list-users/list-users.component';
+import { PendingProjectsComponent } from './projectManager/pending-projects/pending-projects.component';
 import { ProjectManagerDashboardComponent } from './projectManager/project-manager-dashboard/project-manager-dashboard.component';
 import { ProjectManagerComponent } from './projectManager/project-manager/project-manager.component';
 import { SignupComponent } from './signup/signup.component';
@@ -54,7 +60,8 @@ const routes: Routes = [
       { path: "edit-module/:moduleId", component: EditModuleComponent },
       { path: "add-task", component: AddTaskComponent },
       { path: "list-task", component: ListTaskComponent },
-      { path: "edit-task/:taskId", component: EditTaskComponent }
+      { path: "edit-task/:taskId", component: EditTaskComponent },
+      { path: "list-projectTeam", component:ListProjectTeamComponent },
     ]
   },
   {
@@ -62,7 +69,12 @@ const routes: Routes = [
       { path: "project-manager-dashboard", component: ProjectManagerDashboardComponent },
       { path: "add-users", component: AddUsersComponent },
       { path: "list-users", component: ListUsersComponent },
-      {path:"list-projects",component:ListProjectsComponent}
+      {path:"list-projects",component:ListProjectsComponent},
+      {path:"pending-projects",component:PendingProjectsComponent},
+      {path:"completed-projects",component:CompletedProjectsComponent},
+      { path: "add-modules", component:AddModulesComponent },
+      { path: "list-modules", component: ListModulesComponent },
+      { path: "edit-modules/:modulesId", component:EditModulesComponent}
     ]
   }
 ];

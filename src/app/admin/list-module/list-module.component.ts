@@ -19,6 +19,8 @@ export class ListModuleComponent implements OnInit {
   getAllModules() {
     this.projectService.getAllModule().subscribe(resp => {
       this.modules = resp.data
+      console.log(resp);
+      
     })
   }
   deleteModule(moduleId: any) {

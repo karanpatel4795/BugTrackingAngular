@@ -33,10 +33,11 @@ export class ListProjectsComponent implements OnInit {
   }
   getAllProject() {
     this.projectManagerId = localStorage.getItem("userId") as string
-    console.log(this.projectManagerId);
-    
+    //console.log(this.projectManagerId);
+        
     this.projectService.getAllProjects(this.projectManagerId).subscribe(resp => {
       this.projects = resp.data
+      console.log(resp);
     })
   }
 

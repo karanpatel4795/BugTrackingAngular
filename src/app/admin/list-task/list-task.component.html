@@ -72,11 +72,11 @@
                                                     <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0"
                                                         rowspan="1" colspan="1"
                                                         aria-label="Start date: activate to sort column ascending"
-                                                        style="width: 125.0938px;">Estimate Hours</th>
+                                                        style="width: 80.0938px;">Estimate Hours</th>
                                                     <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0"
                                                         rowspan="1" colspan="1"
                                                         aria-label="Start date: activate to sort column ascending"
-                                                        style="width: 135.0938px;">Action</th>
+                                                        style="width: 140.0938px;">Action</th>
                                                     <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0"
                                                         rowspan="1" colspan="1"
                                                         aria-label="Salary: activate to sort column ascending"
@@ -92,9 +92,9 @@
                                                     <td>{{task.description}}</td>
                                                     <td>{{task.priorityId.priorityName}}</td>
                                                     <td>{{task.totalTime}}</td>
-                                                    <td><button class="btn btn-primary"
-                                                            (click)="editTask(task._id)">Edit</button>&nbsp;<button
-                                                            class="btn btn-danger"
+                                                    <td><button class="btn btn-primary" style="width: 100%;"
+                                                            (click)="editTask(task._id)">Edit</button><button
+                                                            class="btn btn-danger" style="width: 100%;"
                                                             (click)="deleteTask(task._id)">Delete</button></td>
                                                     <td>{{task.statusId.statusName}}</td>
                                                 </tr>

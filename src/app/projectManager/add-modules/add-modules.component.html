@@ -1,0 +1,100 @@
+<section class="content">
+    <div class="body_scroll">
+        <div class="block-header">
+            <div class="row">
+                <div class="col-lg-7 col-md-6 col-sm-12">
+                    <h2>Add Project</h2>
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a routerLink="/admin/admin-dashboard"><i
+                                    class="zmdi zmdi-home"></i>Home</a></li>
+                        <li class="breadcrumb-item"><a href="javascript:void(0);">Module</a></li>
+                        <li class="breadcrumb-item active">Add Module</li>
+                    </ul>
+                    <button class="btn btn-primary btn-icon mobile_menu" type="button"><i
+                            class="zmdi zmdi-sort-amount-desc"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="row clearfix">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="card">
+                    <div class="body">
+                        <div class="form-horizontal">
+
+                            <div class="row clearfix">
+                                <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
+                                    <label for="email_address_2">Project Name</label>
+                                </div>
+                                <div class="col-lg-10 col-md-10 col-sm-8">
+                                    <div class="form-group">
+                                        <select [(ngModel)]="projectId" class="form-control">
+                                            <option *ngFor="let p of project" value="{{p._id}}"> {{p.projectTitle}}
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row clearfix">
+                                <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
+                                    <label for="email_address_2">Module Name</label>
+                                </div>
+                                <div class="col-lg-10 col-md-10 col-sm-8">
+                                    <div class="form-group">
+                                        <input type="text" id="email_address_2" [(ngModel)]="moduleName"
+                                            class="form-control" placeholder="Enter Module Name">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row clearfix">
+                                <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
+                                    <label for="email_address_2">Module Description</label>
+                                </div>
+                                <div class="col-lg-10 col-md-10 col-sm-8">
+                                    <div class="form-group">
+                                        <textarea id="email_address_2" [(ngModel)]="description" class="form-control"
+                                            class="form-control" placeholder="Enter Module Descripation"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row clearfix">
+                            <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
+                                <label for="email_address_2">Estimate Time</label>
+                            </div>
+                            <div class="col-lg-10 col-md-10 col-sm-8">
+                                <div class="form-group">
+                                    <input type="te" id="email_address_2" [(ngModel)]="estimatedTime"
+                                        class="form-control" placeholder="Enter Estimate Time (IN Minutes)">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row clearfix">
+                            <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
+                                <label for="email_address_2">Priority</label>
+                            </div>
+                            <div class="col-lg-10 col-md-10 col-sm-8">
+                                <div class="form-group">
+                                    <select [(ngModel)]="priorityId" class="form-control">
+                                        <option *ngFor="let p of priority" value="{{p._id}}"> {{p.priorityName}}
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row clearfix">
+                            <div class="col-sm-8 offset-sm-2">
+                                <button type="button" (click)="addModule()"
+                                    class="btn btn-raised btn-primary btn-round waves-effect">Add Module</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -38,6 +38,12 @@ import { PendingApprovalComponent } from './admin/pending-approval/pending-appro
 import { AddUsersComponent } from './projectManager/add-users/add-users.component';
 import { ListUsersComponent } from './projectManager/list-users/list-users.component';
 import { ListProjectsComponent } from './projectManager/list-projects/list-projects.component';
+import { PendingProjectsComponent } from './projectManager/pending-projects/pending-projects.component';
+import { CompletedProjectsComponent } from './projectManager/completed-projects/completed-projects.component';
+import { ListModulesComponent } from './projectManager/list-modules/list-modules.component';
+import { EditModulesComponent } from './projectManager/edit-modules/edit-modules.component';
+import { AddModulesComponent } from './projectManager/add-modules/add-modules.component';
+import { ListProjectTeamComponent } from './admin/list-project-team/list-project-team.component';
 
 @NgModule({
   declarations: [
@@ -73,6 +79,12 @@ import { ListProjectsComponent } from './projectManager/list-projects/list-proje
     AddUsersComponent,
     ListUsersComponent,
     ListProjectsComponent,
+    PendingProjectsComponent,
+    CompletedProjectsComponent,
+    ListModulesComponent,
+    EditModulesComponent,
+    AddModulesComponent,
+    ListProjectTeamComponent,
    
   ],
   imports: [

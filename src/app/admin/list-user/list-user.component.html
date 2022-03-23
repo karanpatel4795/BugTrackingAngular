@@ -76,7 +76,7 @@
                                                     <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0"
                                                         rowspan="1" colspan="1"
                                                         aria-label="Start date: activate to sort column ascending"
-                                                        style="width: 170.0938px;">Action</th>
+                                                        style="width: 200.0938px;">Action</th>
                                                 </tr>
                                             </thead>
 
@@ -88,8 +88,8 @@
                                                     <td>{{user.gender}}</td>
                                                     <td>{{user.role.roleName}}</td>
                                                     <td>{{user.status}}</td>
-                                                    <td><button class="btn btn-primary" (click)="disableUser(user._id)">
-                                                            Disable </button>&nbsp;<button class="btn btn-danger"
+                                                    <td><button class="btn btn-primary" style="width: 48%;" (click)="disableUser(user._id)">
+                                                            Disable </button><button class="btn btn-danger" style="width: 48%;"
                                                             (click)="deleteUser(user._id)"> Delete </button></td>
                                                 </tr>
                                             </tbody>

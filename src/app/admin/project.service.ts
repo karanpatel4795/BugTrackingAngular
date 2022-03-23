@@ -74,4 +74,13 @@ export class ProjectService {
   getAllProjects(projectManagerId:any):Observable<any>{
     return this.httpClient.get("http://localhost:3000/getAllprojects/"+projectManagerId)
   }
+  getAllPendingProject(projectManagerId:any):Observable<any>{
+    return this.httpClient.get("http://localhost:3000/getAllPendingProject/"+projectManagerId)
+  }
+  getAllCompletedProject(projectManagerId:any):Observable<any>{
+    return this.httpClient.get("http://localhost:3000/getAllCompletedProject/"+projectManagerId)
+  }
+  getAllModulesForProjectManager(projectManagerId:any):Observable<any>{
+    return this.httpClient.get("http://localhost:3000/getAllModulesForProjectManager/"+projectManagerId)
+  }
 }

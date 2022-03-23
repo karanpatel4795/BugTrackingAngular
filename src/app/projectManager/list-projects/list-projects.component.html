@@ -55,16 +55,16 @@
                                                         style="width: 139.203px;"> Project Name</th>
                                                     <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0"
                                                         rowspan="1" colspan="1"
-                                                        aria-label="Position: activate to sort column ascending"
-                                                        style="width: 90.203px;">Project Team Name</th>
-                                                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0"
-                                                        rowspan="1" colspan="1"
                                                         aria-label="Office: activate to sort column ascending"
                                                         style="width: 200px;">Description</th>
                                                     <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0"
                                                         rowspan="1" colspan="1"
                                                         aria-label="Age: activate to sort column ascending"
                                                         style="width: 35.0781px;">Technology</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0"
+                                                        rowspan="1" colspan="1"
+                                                        aria-label="Age: activate to sort column ascending"
+                                                        style="width: 75.0781px;">Start Date</th>
                                                     <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0"
                                                         rowspan="1" colspan="1"
                                                         aria-label="Start date: activate to sort column ascending"
@@ -83,14 +83,16 @@
                                             <tbody>
                                                 <tr *ngFor="let project of projects">
                                                     <td>{{project.projectTitle}}</td>
-                                                    <td></td>
                                                     <td>{{project.description}}</td>
                                                     <td>{{project.technology}}</td>
+                                                    <td>{{project.startDate}}</td>
                                                     <td>{{project.estimatedHours}}</td>
                                                     <td><button class="btn btn-primary"
                                                             (click)="editProject(project._id)">Edit</button>&nbsp;<button
-                                                            class="btn btn-danger"
-                                                            (click)="deleteProject(project._id)" disabled>Delete</button></td>
+                                                            class="btn btn-danger" (click)="deleteProject(project._id)"
+                                                            disabled>Delete</button>&nbsp;<button
+                                                            class="btn btn-success"
+                                                            (click)="deleteProject(project._id)" disabled>View Team</button></td>
                                                     <td>{{project.statusId.statusName}}</td>
                                                 </tr>
                                             </tbody>

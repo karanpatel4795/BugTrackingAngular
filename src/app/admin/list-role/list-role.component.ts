@@ -10,35 +10,49 @@ import { RoleService } from '../role.service';
 })
 export class ListRoleComponent implements OnInit {
 
-  roles:Array<any> = []
-  status:string=""
-  constructor(private roleService:RoleService, private toastrService:ToastrService, private route:Router) { }
+  roles: Array<any> = []
+  status: string = ""
+  constructor(private roleService: RoleService, private toastrService: ToastrService, private route: Router) { }
 
   ngOnInit(): void {
-          this.getAllRoles()
+    this.getAllRoles()
   }
-  deleteRole(roleId:any){
-    this.roleService.deleteRole(roleId).subscribe(resp=>{
-      if(resp.status=200){
-        this.toastrService.success("",resp.msg,{timeOut:3000})
+  deleteRole(roleId: any) {
+    this.roleService.deleteRole(roleId).subscribe(resp => {
+      if (resp.status = 200) {
+        this.toastrService.success("", resp.msg, { timeOut: 3000 })
         this.getAllRoles()
       }
-      else{
-        this.toastrService.error("",resp.msg,{timeOut:3000})
+      else {
+        this.toastrService.error("", resp.msg, { timeOut: 3000 })
       }
     })
   }
-  
-  editRole(roleId:any){
-    this.route.navigateByUrl("/admin/editrole/"+roleId)
+  changeStatus(roleId: any) {
+    this.roleService.changeStatus(roleId).subscribe(resp => {
+      if (resp.status = 200) {
+        this.toastrService.success("", resp.msg, { timeOut: 3000 })
+        this.getAllRoles()
+      }
+      else {
+        this.toastrService.error("", resp.msg, { timeOut: 3000 })
+      }
+    })
   }
-  getAllRoles(){
-    this.roleService.getAllRoles().subscribe(resp=>{
-     // console.log(resp);
-       this.roles =  resp.data 
-       if(resp.data.isActive==true){
-         this.status="Active"
-       } 
+
+  editRole(roleId: any) {
+    this.route.navigateByUrl("/admin/editrole/" + roleId)
+  }
+  getAllRoles() {
+    this.roleService.getAllRoles().subscribe(resp => {
+      console.log(resp);
+      this.roles = resp.data
+      if (resp.data.isActive == true) {
+        this.status = "Active"
+      }
+      else if (resp.data.isActive == false) {
+        this.status = "In-Active"
+      }
     })
   }
 

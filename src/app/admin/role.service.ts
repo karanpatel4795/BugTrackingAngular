@@ -26,6 +26,9 @@ export class RoleService {
   deleteRole(roleId: any): Observable<any> {
     return this.httpClient.delete("http://localhost:3000/roles/" + roleId)
   }
+  changeStatus(roleId: any): Observable<any> {
+    return this.httpClient.delete("http://localhost:3000/roleStatus/" + roleId)
+  }
   getRoleById(roleId: any): Observable<any> {
     return this.httpClient.get("http://localhost:3000/roles/" + roleId)
   }
