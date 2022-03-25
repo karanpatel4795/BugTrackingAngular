@@ -44,6 +44,10 @@ import { ListModulesComponent } from './projectManager/list-modules/list-modules
 import { EditModulesComponent } from './projectManager/edit-modules/edit-modules.component';
 import { AddModulesComponent } from './projectManager/add-modules/add-modules.component';
 import { ListProjectTeamComponent } from './admin/list-project-team/list-project-team.component';
+import { PendingProjectComponent } from './admin/pending-project/pending-project.component';
+import { CompletedProjectComponent } from './admin/completed-project/completed-project.component';
+import { ChangePasswordComponent } from './change-password/change-password.component';
+import { ForgotPasswordComponent } from './admin/forgot-password/forgot-password.component';
 
 @NgModule({
   declarations: [
@@ -85,6 +89,10 @@ import { ListProjectTeamComponent } from './admin/list-project-team/list-project
     EditModulesComponent,
     AddModulesComponent,
     ListProjectTeamComponent,
+    PendingProjectComponent,
+    CompletedProjectComponent,
+    ChangePasswordComponent,
+    ForgotPasswordComponent,
    
   ],
   imports: [

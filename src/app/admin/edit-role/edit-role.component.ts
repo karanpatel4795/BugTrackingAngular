@@ -19,6 +19,7 @@ export class EditRoleComponent implements OnInit {
       this.getRoleByRoleId() 
   }
 
+  
   getRoleByRoleId(){
     this.roleService.getRoleById(this.roleId).subscribe(resp=>{
       this.roleName = resp.data.roleName 

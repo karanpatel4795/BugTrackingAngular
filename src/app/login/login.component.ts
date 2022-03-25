@@ -25,9 +25,10 @@ export class LoginComponent implements OnInit {
       if (resp.status == 200) {
         this.tsService.success("", resp.msg, { timeOut: 3000 })
         //console.log(resp);
-        console.log(resp.data.role.roleName)
+        //console.log(resp.data.role.roleName)
         localStorage.setItem("userId", resp.data._id)
         localStorage.setItem("firstName", resp.data.firstName)
+        localStorage.setItem("email", resp.data.email)
 
         if (resp.data.role.roleName.toLowerCase() == "admin") {
           this.router.navigateByUrl("/admin/admin-dashboard")

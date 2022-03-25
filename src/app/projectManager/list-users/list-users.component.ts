@@ -45,7 +45,7 @@ export class ListUsersComponent implements OnInit {
 
   getAllUser() {
     this.roleService.getAllUser().subscribe(resp => {
-      console.log(resp);
+      //console.log(resp);
       this.users = resp.data
     })
   }

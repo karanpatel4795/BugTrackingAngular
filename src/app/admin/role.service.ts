@@ -62,4 +62,8 @@ export class RoleService {
   approveUser(user: any): Observable<any> {
     return this.httpClient.post("http://localhost:3000/approveUser", user)
   }
+  updatePassword(password: any): Observable<any> {
+    return this.httpClient.put("http://localhost:3000/changePassword", password)
+  }
+  
 }

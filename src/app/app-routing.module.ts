@@ -7,10 +7,12 @@ import { AddTaskComponent } from './admin/add-task/add-task.component';
 import { AddUserComponent } from './admin/add-user/add-user.component';
 import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
 import { AdminComponent } from './admin/admin/admin.component';
+import { CompletedProjectComponent } from './admin/completed-project/completed-project.component';
 import { EditModuleComponent } from './admin/edit-module/edit-module.component';
 import { EditProjectComponent } from './admin/edit-project/edit-project.component';
 import { EditRoleComponent } from './admin/edit-role/edit-role.component';
 import { EditTaskComponent } from './admin/edit-task/edit-task.component';
+import { ForgotPasswordComponent } from './admin/forgot-password/forgot-password.component';
 import { ListModuleComponent } from './admin/list-module/list-module.component';
 import { ListProjectTeamComponent } from './admin/list-project-team/list-project-team.component';
 import { ListProjectComponent } from './admin/list-project/list-project.component';
@@ -18,6 +20,8 @@ import { ListRoleComponent } from './admin/list-role/list-role.component';
 import { ListTaskComponent } from './admin/list-task/list-task.component';
 import { ListUserComponent } from './admin/list-user/list-user.component';
 import { PendingApprovalComponent } from './admin/pending-approval/pending-approval.component';
+import { PendingProjectComponent } from './admin/pending-project/pending-project.component';
+import { ChangePasswordComponent } from './change-password/change-password.component';
 import { ChangepasswordComponent } from './changepassword/changepassword.component';
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 import { LoginComponent } from './login/login.component';
@@ -61,7 +65,11 @@ const routes: Routes = [
       { path: "add-task", component: AddTaskComponent },
       { path: "list-task", component: ListTaskComponent },
       { path: "edit-task/:taskId", component: EditTaskComponent },
-      { path: "list-projectTeam", component:ListProjectTeamComponent },
+      { path: "list-projectTeam", component: ListProjectTeamComponent },
+      { path: "pending-project", component: PendingProjectComponent },
+      { path: "competed-project", component: CompletedProjectComponent },
+      { path: "change-password", component: ChangePasswordComponent },//panel -> change password
+      {path:"forgot-password",component:ForgotPasswordComponent}
     ]
   },
   {
@@ -69,12 +77,12 @@ const routes: Routes = [
       { path: "project-manager-dashboard", component: ProjectManagerDashboardComponent },
       { path: "add-users", component: AddUsersComponent },
       { path: "list-users", component: ListUsersComponent },
-      {path:"list-projects",component:ListProjectsComponent},
-      {path:"pending-projects",component:PendingProjectsComponent},
-      {path:"completed-projects",component:CompletedProjectsComponent},
-      { path: "add-modules", component:AddModulesComponent },
+      { path: "list-projects", component: ListProjectsComponent },
+      { path: "pending-projects", component: PendingProjectsComponent },
+      { path: "completed-projects", component: CompletedProjectsComponent },
+      { path: "add-modules", component: AddModulesComponent },
       { path: "list-modules", component: ListModulesComponent },
-      { path: "edit-modules/:modulesId", component:EditModulesComponent}
+      { path: "edit-modules/:modulesId", component: EditModulesComponent }
     ]
   }
 ];

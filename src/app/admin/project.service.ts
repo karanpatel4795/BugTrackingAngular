@@ -33,6 +33,12 @@ export class ProjectService {
   getAllPriority():Observable<any>{
     return this.httpClient.get("http://localhost:3000/priority")
   }
+  getAllPendingProjects():Observable<any>{
+    return this.httpClient.get("http://localhost:3000/pendingProjects")
+  }
+  getAllCompletedProjects():Observable<any>{
+    return this.httpClient.get("http://localhost:3000/completedProjects")
+  }
 
   //-------------------------- modules --------------------------------------
   addModule(module:any):Observable<any>{
