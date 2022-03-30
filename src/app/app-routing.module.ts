@@ -1,6 +1,7 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AddModuleComponent } from './admin/add-module/add-module.component';
+import { AddProjectTeamComponent } from './admin/add-project-team/add-project-team.component';
 import { AddProjectComponent } from './admin/add-project/add-project.component';
 import { AddRoleComponent } from './admin/add-role/add-role.component';
 import { AddTaskComponent } from './admin/add-task/add-task.component';
@@ -69,7 +70,9 @@ const routes: Routes = [
       { path: "pending-project", component: PendingProjectComponent },
       { path: "competed-project", component: CompletedProjectComponent },
       { path: "change-password", component: ChangePasswordComponent },//panel -> change password
-      {path:"forgot-password",component:ForgotPasswordComponent}
+      { path: "forgot-password", component: ForgotPasswordComponent },
+      { path: "add-projectTeam", component: AddProjectTeamComponent },
+      { path: "list-projectTeam", component: ListProjectTeamComponent }
     ]
   },
   {

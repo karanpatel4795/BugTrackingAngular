@@ -30,7 +30,7 @@ export class EditProjectComponent implements OnInit {
 
   getProjectById() {
     this.projectService.getProjectById(this.projectId).subscribe(resp => {
-      console.log(resp) 
+      //console.log(resp) 
       this.projectTitle = resp.data.projectTitle
       this.projectId = resp.data._id
        this.projectDescription = resp.data.description

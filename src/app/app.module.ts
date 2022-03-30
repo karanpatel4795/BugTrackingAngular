@@ -48,6 +48,7 @@ import { PendingProjectComponent } from './admin/pending-project/pending-project
 import { CompletedProjectComponent } from './admin/completed-project/completed-project.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { ForgotPasswordComponent } from './admin/forgot-password/forgot-password.component';
+import { AddProjectTeamComponent } from './admin/add-project-team/add-project-team.component';
 
 @NgModule({
   declarations: [
@@ -93,6 +94,7 @@ import { ForgotPasswordComponent } from './admin/forgot-password/forgot-password
     CompletedProjectComponent,
     ChangePasswordComponent,
     ForgotPasswordComponent,
+    AddProjectTeamComponent,
    
   ],
   imports: [

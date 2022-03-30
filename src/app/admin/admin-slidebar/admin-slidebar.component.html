@@ -10,8 +10,7 @@
             <ul class="list" style="overflow: hidden; width: auto; height: calc(100vh - 65px);">
                 <li>
                     <div class="user-info">
-                        <a class="image waves-effect waves-block"><img
-                                src="./assets/images/profile_av.jpg"></a>
+                        <a class="image waves-effect waves-block"><img src="./assets/images/profile_av.jpg"></a>
                         <div class="detail">
                             <h4>&nbsp;&nbsp;{{firstName}}</h4>
                             <small>Admin</small>
@@ -20,8 +19,7 @@
                 </li>
                 <li class="open"><a routerLink="/admin/admin-dashboard" class="toggled waves-effect waves-block"><i
                             class="zmdi zmdi-home"></i><span>Dashboard</span></a></li>
-                <li><a class="menu-toggle waves-effect waves-block"><i
-                            class="zmdi zmdi-apps"></i><span>Roles</span></a>
+                <li><a class="menu-toggle waves-effect waves-block"><i class="zmdi zmdi-apps"></i><span>Roles</span></a>
                     <ul class="ml-menu">
                         <li><a routerLink="/admin/addrole" class=" waves-effect waves-block">Add Role</a></li>
                         <li><a routerLink="/admin/listrole" class=" waves-effect waves-block">Role List</a></li>
@@ -32,9 +30,20 @@
                     <ul class="ml-menu">
                         <li><a routerLink="/admin/addproject" class=" waves-effect waves-block">Add Project</a></li>
                         <li><a routerLink="/admin/listproject" class=" waves-effect waves-block">Projects List</a></li>
-                        <li><a routerLink="/admin/list-projectTeam" class=" waves-effect waves-block">Projects Team</a></li>
+                        <li><a routerLink="/admin/pending-project" class=" waves-effect waves-block">Pending
+                                Projects</a></li>
+                        <li><a routerLink="/admin/competed-project" class=" waves-effect waves-block">Completed
+                                Projects</a></li>
                     </ul>
                 </li>
+                <li> <a class="menu-toggle waves-effect waves-block"><i
+                            class="zmdi zmdi-assignment"></i><span>Project Teams</span></a>
+                    <ul class="ml-menu">
+                        <li><a routerLink="/admin/add-projectTeam" class=" waves-effect waves-block">Add Projects Team</a></li>
+                        <li><a routerLink="/admin/list-projectTeam" class=" waves-effect waves-block">List Projects Team</a></li>
+                    </ul>
+                </li>
+               
                 <li> <a class="menu-toggle waves-effect waves-block"><i
                             class="zmdi zmdi-assignment"></i><span>Modules</span></a>
                     <ul class="ml-menu">
@@ -50,11 +59,11 @@
                     </ul>
                 </li>
 
-                <li><a class="menu-toggle waves-effect waves-block"><i
-                            class="ti-user"></i><span>Users</span></a>
+                <li><a class="menu-toggle waves-effect waves-block"><i class="ti-user"></i><span>Users</span></a>
                     <ul class="ml-menu">
                         <li><a routerLink="/admin/listuser" class=" waves-effect waves-block">User List</a></li>
-                        <li><a routerLink="/admin/pending-approval" class=" waves-effect waves-block">Pending Approval</a>
+                        <li><a routerLink="/admin/pending-approval" class=" waves-effect waves-block">Pending
+                                Approval</a>
                         </li>
 
                     </ul>
