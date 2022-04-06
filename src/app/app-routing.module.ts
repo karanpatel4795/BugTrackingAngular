@@ -22,6 +22,8 @@ import { ListTaskComponent } from './admin/list-task/list-task.component';
 import { ListUserComponent } from './admin/list-user/list-user.component';
 import { PendingApprovalComponent } from './admin/pending-approval/pending-approval.component';
 import { PendingProjectComponent } from './admin/pending-project/pending-project.component';
+import { ProjectReportComponent } from './admin/reports/project-report/project-report.component';
+import { UserReportComponent } from './admin/reports/user-report/user-report.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { ChangepasswordComponent } from './changepassword/changepassword.component';
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
@@ -72,7 +74,11 @@ const routes: Routes = [
       { path: "change-password", component: ChangePasswordComponent },//panel -> change password
       { path: "forgot-password", component: ForgotPasswordComponent },
       { path: "add-projectTeam", component: AddProjectTeamComponent },
-      { path: "list-projectTeam", component: ListProjectTeamComponent }
+      { path: "list-projectTeam", component: ListProjectTeamComponent },
+      
+      //reports
+      { path: "user-report",component:UserReportComponent},
+      {path:"project-report",component:ProjectReportComponent}
     ]
   },
   {

@@ -49,6 +49,8 @@ import { CompletedProjectComponent } from './admin/completed-project/completed-p
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { ForgotPasswordComponent } from './admin/forgot-password/forgot-password.component';
 import { AddProjectTeamComponent } from './admin/add-project-team/add-project-team.component';
+import { UserReportComponent } from './admin/reports/user-report/user-report.component';
+import { ProjectReportComponent } from './admin/reports/project-report/project-report.component';
 
 @NgModule({
   declarations: [
@@ -95,6 +97,8 @@ import { AddProjectTeamComponent } from './admin/add-project-team/add-project-te
     ChangePasswordComponent,
     ForgotPasswordComponent,
     AddProjectTeamComponent,
+    UserReportComponent,
+    ProjectReportComponent,
    
   ],
   imports: [

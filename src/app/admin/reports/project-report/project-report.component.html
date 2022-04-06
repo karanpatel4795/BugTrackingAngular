@@ -1,0 +1,120 @@
+<section class="content">
+    <div class="body_scroll">
+        <div class="block-header">
+            <div class="row">
+                <div class="col-lg-7 col-md-6 col-sm-12">
+                    <h2>Project Report</h2>
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a routerLink="/admin/admin-dashboard"><i
+                                    class="zmdi zmdi-home"></i>Home</a></li>
+                        <li class="breadcrumb-item"><a>Report</a></li>
+                        <li class="breadcrumb-item active">Project Report</li>
+                    </ul>
+                    <button class="btn btn-primary btn-icon mobile_menu" type="button"><i
+                            class="zmdi zmdi-sort-amount-desc"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="row clearfix">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="card">
+                    <div class="body">
+                        <div class="form-horizontal">
+                            <div class="row clearfix">
+                                <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
+                                    <label for="email_address_2">Status</label>
+                                </div>
+                                <div class="col-lg-10 col-md-10 col-sm-8">
+                                    <div class="form-group">
+                                        <select [(ngModel)]="projects" class="form-control"
+                                            (change)="getprojectbyStatus($event)">
+                                            <option *ngFor="let s of status" value="{{s._id}}"> {{s.statusName}}
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content">
+    <div class="body_scroll">
+        <div class="row clearfix">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="body">
+                        <div class="table-responsive">
+                            <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <table
+                                            class="table table-bordered table-striped table-hover js-basic-example dataTable"
+                                            id="DataTables_Table_0" role="grid"
+                                            aria-describedby="DataTables_Table_0_info">
+                                            <thead>
+                                                <tr role="row">
+                                                    <th class="sorting_asc" tabindex="0"
+                                                        aria-controls="DataTables_Table_0" rowspan="1" colspan="1"
+                                                        aria-sort="ascending"
+                                                        aria-label="Name: activate to sort column descending"
+                                                        style="width:50.203px;"> Sr.</th>
+                                                    <th class="sorting_asc" tabindex="0"
+                                                        aria-controls="DataTables_Table_0" rowspan="1" colspan="1"
+                                                        aria-sort="ascending"
+                                                        aria-label="Name: activate to sort column descending"
+                                                        style="width: 139.203px;"> Project Name</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0"
+                                                        rowspan="1" colspan="1"
+                                                        aria-label="Position: activate to sort column ascending"
+                                                        style="width: 90.203px;">Project Manager</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0"
+                                                        rowspan="1" colspan="1"
+                                                        aria-label="Office: activate to sort column ascending"
+                                                        style="width: 250px;">Description</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0"
+                                                        rowspan="1" colspan="1"
+                                                        aria-label="Age: activate to sort column ascending"
+                                                        style="width: 35.0781px;">Technology</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0"
+                                                        rowspan="1" colspan="1"
+                                                        aria-label="Start date: activate to sort column ascending"
+                                                        style="width: 125.0938px;">Estimated Hours</th>
+                                                    <!-- <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0"
+                                                        rowspan="1" colspan="1"
+                                                        aria-label="Start date: activate to sort column ascending"
+                                                        style="width: 90.0938px;">Action</th> -->
+                                                    
+                                                </tr>
+                                            </thead>
+
+                                            <tbody>
+                                                <tr *ngFor="let project of projects, let i = index">
+                                                    <td>{{i+1}}</td>
+                                                    <td>{{project.projectTitle}}</td>
+                                                    <td>{{project.projectManagerID.firstName}}</td>
+                                                    <td>{{project.description}}</td>
+                                                    <td>{{project.technology}}</td>
+                                                    <td>{{project.estimatedHours}}</td>
+                                                    <!-- <td><button class="btn btn-primary" style="width: 100%;"
+                                                            (click)="editProject(project._id)">Edit</button><button
+                                                            class="btn btn-danger" style="width: 100%;"
+                                                            (click)="deleteProject(project._id)">Delete</button></td>
+                                                    <td>{{project.statusId.statusName}}</td> -->
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

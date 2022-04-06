@@ -1,18 +1,101 @@
+<section class="content">
+  <div class="body_scroll">
+      <div class="block-header">
+          <div class="row">
+              <div class="col-lg-7 col-md-6 col-sm-12">
+                  <h2>Add Project</h2>
+                  <ul class="breadcrumb">
+                      <li class="breadcrumb-item"><a routerLink="/admin/admin-dashboard"><i
+                                  class="zmdi zmdi-home"></i>Home</a></li>
+                      <li class="breadcrumb-item"><a href="javascript:void(0);">Users</a></li>
+                      <li class="breadcrumb-item active">Add Users</li>
+                  </ul>
+                  <button class="btn btn-primary btn-icon mobile_menu" type="button"><i
+                          class="zmdi zmdi-sort-amount-desc"></i></button>
+              </div>
+          </div>
+      </div>
+      <div class="row clearfix">
+          <div class="col-lg-12 col-md-12 col-sm-12">
+              <div class="card">
+                  <div class="body">
+                      <div class="form-horizontal">
 
-FirstName : <input type="text" [(ngModel)]="firstName"/><br><br>
-Email : <input type="text" [(ngModel)]="email"/><br><br>
-Password : <input type="password" [(ngModel)]="password"/><br><br>
+                          <div class="row clearfix">
+                              <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
+                                  <label for="email_address_2">User Name</label>
+                              </div>
+                              <div class="col-lg-10 col-md-10 col-sm-8">
+                                  <div class="form-group">
+                                      <input type="text" [(ngModel)]="firstName" id="email_address_2"
+                                          class="form-control" placeholder="Enter User Name">
+                                  </div>
+                              </div>
+                          </div>
 
-Gender :   Male <input type="radio" [(ngModel)]="gender" name="gender" value="male"/>
-           Female <input type="radio" [(ngModel)]="gender" name="gender" value="female"/>
+                          <div class="row clearfix">
+                              <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
+                                  <label for="email_address_2">Email</label>
+                              </div>
+                              <div class="col-lg-10 col-md-10 col-sm-8">
+                                  <div class="form-group">
+                                      <input type="text" [(ngModel)]="email" id="email_address_2" class="form-control"
+                                          placeholder="Enter User Email">
+                                  </div>
+                              </div>
+                          </div>
 
-          <br><br> 
+                          <div class="row clearfix">
+                              <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
+                                  <label for="email_address_2">Gender</label>
+                              </div>
+                              <div class="col-lg-10 col-md-10 col-sm-8">
+                                  <div class="form-group">&nbsp;&nbsp;
+                                      <input type="radio" class="" [(ngModel)]="gender" value="Male" required>&nbsp;Male
+                              &nbsp;&nbsp;&nbsp;
+                              <input type="radio" class="" [(ngModel)]="gender" value="Female" required>&nbsp;Female
+                                  </div>
+                              </div>
+                             
+                          </div>
+                          <div class="row clearfix">
+                              <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
+                                  <label for="email_address_2">Contact Number</label>
+                              </div>
+                              <div class="col-lg-10 col-md-10 col-sm-8">
+                                  <div class="form-group">
+                                      <input type="text" [(ngModel)]="contactNumber" id="email_address_2" class="form-control"
+                                          placeholder="Enter Contact Number">
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
 
-Role :  <select [(ngModel)]="role">
-                <option *ngFor="let role of roles"   value="{{role._id}}" > {{role.roleName}} </option>
-        </select>
+                      <div class="row clearfix">
+                          <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
+                              <label for="email_address_2">Role</label>
+                          </div>
+                          <div class="col-lg-10 col-md-10 col-sm-8">
+                              <div class="form-group">
+                                  <select [(ngModel)]="role" placeholder="Role">
+                                      <option value="6228efec12209b8603f2d882">Developer</option>
+                                      <option value="6228eff112209b8603f2d884">Tester</option>
+                                  </select>
+                              </div>
+                          </div>
+                      </div>
 
-          <br><br>
-Contact Number : <input type="text" [(ngModel)]="contactNumber"/><br><br>
-           
-           <button  (click)="addUser()" >Add User</button>
+
+
+                      <div class="row clearfix">
+                          <div class="col-sm-8 offset-sm-2">
+                              <button type="button" (click)="adduser()"
+                                  class="btn btn-raised btn-primary btn-round waves-effect">Add User</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>

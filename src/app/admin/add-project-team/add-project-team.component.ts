@@ -10,33 +10,61 @@ import { ProjectService } from '../project.service';
 })
 export class AddProjectTeamComponent implements OnInit {
 
-  constructor(private projectService:ProjectService,private router:Router,private toastrService:ToastrService) { }
-  projectId:string=""
-  projectManager:Array<any>=[]
-  developer:Array<any>=[]
-  tester:Array<any>=[]
+  constructor(private projectService: ProjectService, private router: Router, private toastrService: ToastrService) { }
+  projectId: string = ""
+  projectManager: Array<any> = []
+  developer: Array<any> = []
+  tester: Array<any> = []
 
   managers: Array<any> = []
-  developers:Array<any>=[]
-  testers:Array<any>=[]
+  developers: Array<any> = []
+  testers: Array<any> = []
   project: Array<any> = []
   ngOnInit(): void {
     this.projectService.getAllProject().subscribe(resp => {
       this.project = resp.data
-    })  
+    })
     this.projectService.getAllManager().subscribe(resp => {
-        this.managers = resp.data  
-      })
-      this.projectService.getAllDeveloper().subscribe(resp => {
-        this.developers = resp.data  
-      })
-      this.projectService.getAllTester().subscribe(resp => {
-        this.testers = resp.data  
+      this.managers = resp.data
+    })
+    this.projectService.getAllDeveloper().subscribe(resp => {
+      this.developers = resp.data
+    })
+    this.projectService.getAllTester().subscribe(resp => {
+      this.testers = resp.data
+    })
+  }
+
+  addProjectTeam() {
+    let project = { projectId: this.projectId, }
+    console.log(this.developer);
+    console.log(this.tester);
+    console.log(this.projectManager);
+
+    for (let i = 0; i < this.developer.length; i++) {
+      this.projectService.addProjectTeam({
+        projectId: this.projectId,
+        projectTeamMember: this.developer[i]
       })
     }
 
-    addProjectTeam(){
-    
+    for (let i = 0; i < this.projectManager.length; i++) {
+      this.projectService.addProjectTeam({
+        projectId: this.projectId,
+        projectTeamMember: this.projectManager[i]
+      })
+    }
+
+    for (let i = 0; i < this.tester.length; i++) {
+      this.projectService.addProjectTeam({
+        projectId: this.projectId,
+        projectTeamMember: this.tester[i]
+      })
+    }
+
+    this.router.navigateByUrl("/admin/list-projectTeam")
+
+     
   }
 
 }

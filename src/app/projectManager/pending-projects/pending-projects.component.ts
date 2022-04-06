@@ -24,7 +24,7 @@ export class PendingProjectsComponent implements OnInit {
         
     this.projectService.getAllPendingProject(this.projectManagerId).subscribe(resp => {
       this.projects = resp.data
-      console.log(resp);
+     // console.log(resp);
     })
   }
 

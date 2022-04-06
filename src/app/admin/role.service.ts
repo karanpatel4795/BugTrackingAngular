@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { AnyForUntypedForms } from '@angular/forms';
+import { Observable, ObservedValueOf } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -65,5 +66,13 @@ export class RoleService {
   updatePassword(password: any): Observable<any> {
     return this.httpClient.put("http://localhost:3000/changePassword", password)
   }
-  
+  getUserbyRole(role:any): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/getUserbyRole/"+role)
+  }
+  getAllStatus():Observable<any>{
+    return this.httpClient.get("http://localhost:3000/status")
+  }
+  getprojectbyStatus(status:any): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/getprojectbyStatus/"+status)
+  }
 }

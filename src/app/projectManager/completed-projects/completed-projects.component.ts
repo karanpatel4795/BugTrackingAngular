@@ -18,11 +18,11 @@ export class CompletedProjectsComponent implements OnInit {
 
   getAllCompletedProject() {
     this.projectManagerId = localStorage.getItem("userId") as string
-    //console.log(this.projectManagerId);
+
         
     this.projectService.getAllCompletedProject(this.projectManagerId).subscribe(resp => {
       this.projects = resp.data
-      console.log(resp);
+  
     })
   }
 

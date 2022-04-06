@@ -89,10 +89,16 @@ export class ProjectService {
   getAllModulesForProjectManager(projectManagerId:any):Observable<any>{
     return this.httpClient.get("http://localhost:3000/getAllModulesForProjectManager/"+projectManagerId)
   }
+  
+  //------------------------------- Project Team ----------------------------------
   getAllDeveloper():Observable<any>{
     return this.httpClient.get("http://localhost:3000/getAllDeveloper")
   }
   getAllTester():Observable<any>{
     return this.httpClient.get("http://localhost:3000/getAllTester")
   }
+  addProjectTeam(project:any):Observable<any>{
+    return this.httpClient.post("http://localhost:3000/projectTeam",project)
+  }
+  
 }
