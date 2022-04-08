@@ -27,8 +27,19 @@
                                 <div class="col-lg-10 col-md-10 col-sm-8">
                                     <div class="form-group">
                                         <select [(ngModel)]="projectId" class="form-control"
-                                            (change)="getTaskbyProject($event)">
+                                            (change)="getTaskbyProject()">
                                             <option *ngFor="let p of projects" value="{{p._id}}"> {{p.projectTitle}}
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
+                                    <label for="email_address_2">Status</label>
+                                </div>
+                                <div class="col-lg-10 col-md-10 col-sm-8">
+                                    <div class="form-group">
+                                        <select [(ngModel)]="statusId" class="form-control">
+                                            <option *ngFor="let s of status" value="{{s._id}}"> {{s.statusName}}
                                             </option>
                                         </select>
                                     </div>

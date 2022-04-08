@@ -28,7 +28,7 @@ export class RoleService {
     return this.httpClient.delete("http://localhost:3000/roles/" + roleId)
   }
   changeStatus(roleId: any): Observable<any> {
-    return this.httpClient.delete("http://localhost:3000/roleStatus/" + roleId)
+    return this.httpClient.get("http://localhost:3000/roleStatus/" + roleId)
   }
   getRoleById(roleId: any): Observable<any> {
     return this.httpClient.get("http://localhost:3000/roles/" + roleId)
@@ -76,6 +76,6 @@ export class RoleService {
     return this.httpClient.get("http://localhost:3000/getprojectbyStatus/" + status)
   }
   getTaskbyProject(project: any): Observable<any> {
-    return this.httpClient.get("http://localhost:3000/getTaskbyProject/" + project)
+    return this.httpClient.get("http://localhost:3000/getTaskbyProject", project)
   }
 }

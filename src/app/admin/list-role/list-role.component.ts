@@ -29,6 +29,8 @@ export class ListRoleComponent implements OnInit {
     })
   }
   changeStatus(roleId: any) {
+    console.log("called");
+    
     this.roleService.changeStatus(roleId).subscribe(resp => {
       if (resp.status = 200) {
         this.toastrService.success("", resp.msg, { timeOut: 3000 })
@@ -45,14 +47,8 @@ export class ListRoleComponent implements OnInit {
   }
   getAllRoles() {
     this.roleService.getAllRoles().subscribe(resp => {
-      console.log(resp);
+      //console.log(resp);
       this.roles = resp.data
-      if (resp.data.isActive == true) {
-        this.status = "Active"
-      }
-      else if (resp.data.isActive == false) {
-        this.status = "In-Active"
-      }
     })
   }
 

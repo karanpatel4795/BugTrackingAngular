@@ -13,18 +13,22 @@ export class TaskReportComponent implements OnInit {
 
   constructor(private roleService: RoleService, private projectService: ProjectService, private router: Router, private toastrService: ToastrService) { }
   projectId: string = ""
+  statusId: string = ""
   projects: Array<any> = []
+  status: Array<any> = []
   tasks: Array<any> = []
-
   ngOnInit(): void {
     this.projectService.getAllProject().subscribe(resp => {
       this.projects = resp.data
     })
+    this.roleService.getAllStatus().subscribe(resp => {
+      this.status = resp.data
+    })
   }
 
-  getTaskbyProject(event: any) {
-    const project = event.target.value;
-    //console.log(project);
+  getTaskbyProject() {
+   let project = {projectId: this.projectId,statusId: this.statusId}
+    console.log(project);
 
     this.roleService.getTaskbyProject(project).subscribe(resp => {
       console.log(resp);

@@ -61,11 +61,11 @@
                                                         <th class="sorting" tabindex="0"
                                                             aria-controls="DataTables_Table_0" rowspan="1" colspan="1"
                                                             aria-label="Position: activate to sort column ascending"
-                                                            style="width: 227.094px;">Role Name</th>
+                                                            style="width: 150.094px;">Role Name</th>
                                                         <th class="sorting" tabindex="0"
                                                             aria-controls="DataTables_Table_0" rowspan="1" colspan="1"
                                                             aria-label="Office: activate to sort column ascending"
-                                                            style="width: 100.0156px;;">Action</th>
+                                                            style="width: 150.0156px;;">Action</th>
                                                         <th class="sorting" tabindex="0"
                                                             aria-controls="DataTables_Table_0" rowspan="1" colspan="1"
                                                             aria-label="Office: activate to sort column ascending"
@@ -77,12 +77,14 @@
                                                         *ngFor="let role of roles, let i = index">
                                                         <td class="sorting_1">{{i+1}}</td>
                                                         <td>{{role.roleName}}</td>
-                                                        <td><button class="btn btn-primary" style="width: 48%;"
+                                                        <td><button class="btn btn-primary" style="width:30%;"
                                                                 (click)="editRole(role._id)">Edit</button><button
-                                                                class="btn btn-danger" style="width: 48%;"
-                                                                (click)="deleteRole(role._id)">Delete</button></td>
+                                                                class="btn btn-danger" style="width: 30%;"
+                                                                (click)="deleteRole(role._id)">Delete</button><button
+                                                                class="btn btn" style="width: 30%;"
+                                                                (click)="changeStatus(role._id)">{{role.isActive==true?'Disable':'Active'}}</button></td>
                                                         <!-- <td>{{role.isActive}}</td> -->
-                                                        <td>Active</td>
+                                                        <td>{{role.isActive==true?'Activate':'Inactive'}}</td>
                                                     </tr>
 
                                                 </tbody>

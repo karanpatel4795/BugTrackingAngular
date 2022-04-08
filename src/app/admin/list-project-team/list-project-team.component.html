@@ -7,7 +7,7 @@
                     <ul class="breadcrumb">
                         <li class="breadcrumb-item"><a routerLink="/admin/admin-dashboard"><i
                                     class="zmdi zmdi-home"></i>Home</a></li>
-                        <li class="breadcrumb-item"><a >Project Team</a></li>
+                        <li class="breadcrumb-item"><a>Project Team</a></li>
                         <li class="breadcrumb-item active">Project Team List</li>
                     </ul>
                     <button class="btn btn-primary btn-icon mobile_menu" type="button"><i
@@ -26,7 +26,8 @@
                                 </div>
                                 <div class="col-lg-10 col-md-10 col-sm-8">
                                     <div class="form-group">
-                                        <select [(ngModel)]="projectId" class="form-control" (change)="getProjectTeambyProject($event)">
+                                        <select [(ngModel)]="projectId" class="form-control"
+                                            (change)="getProjectTeambyProject()">
                                             <option *ngFor="let p of projects" value="{{p._id}}"> {{p.projectTitle}}
                                             </option>
                                         </select>
@@ -49,7 +50,7 @@
                     <div class="body">
                         <div class="table-responsive">
                             <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap4">
-                                
+
                                 <div class="row">
                                     <div class="col-sm-12">
                                         <table
@@ -63,10 +64,10 @@
                                                         aria-sort="ascending"
                                                         aria-label="Name: activate to sort column descending"
                                                         style="width: 50.203px;"> Sr.</th>
-                                                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0"
+                                                    <!-- <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0"
                                                         rowspan="1" colspan="1"
                                                         aria-label="Position: activate to sort column ascending"
-                                                        style="width: 120.203px;">Project Name</th>
+                                                        style="width: 120.203px;">Project Name</th> -->
                                                     <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0"
                                                         rowspan="1" colspan="1"
                                                         aria-label="Office: activate to sort column ascending"
@@ -75,28 +76,27 @@
                                                         rowspan="1" colspan="1"
                                                         aria-label="Age: activate to sort column ascending"
                                                         style="width: 35.0781px;">Role</th>
-                                                   
-                                                    <!-- <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0"
-                                                        rowspan="1" colspan="1"
-                                                        aria-label="Start date: activate to sort column ascending"
-                                                        style="width: 100.0938px;">Status</th> -->
+
                                                     <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0"
                                                         rowspan="1" colspan="1"
                                                         aria-label="Start date: activate to sort column ascending"
-                                                        style="width: 170.0938px;">Action</th>
+                                                        style="width: 100.0938px;">Status</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0"
+                                                        rowspan="1" colspan="1"
+                                                        aria-label="Start date: activate to sort column ascending"
+                                                        style="width: 100.0938px;">Action</th>
                                                 </tr>
                                             </thead>
 
                                             <tbody>
                                                 <tr *ngFor="let p of projectTeam, let i = index">
                                                     <td>{{i+1}}</td>
-                                                   <!--  <td>{{p.projectId.projectTitle}}</td>
+                                                    <!-- <td>{{p.projectId.projectTitle}}</td> -->
                                                     <td>{{p.projectTeamMember.firstName}}</td>
-                                                    <td>{{p.role.roleName}}</td> -->
-                                                    <!-- <td>{{member.status}}</td> -->
-                                                    <!-- <td><button class="btn btn-primary" (click)="disableUser(user._id)">
-                                                            Disable </button>&nbsp;<button class="btn btn-danger"
-                                                            (click)="deleteUser(user._id)" disabled> Delete </button></td> -->
+                                                    <td>{{p.role.roleName}}</td>
+                                                    <td>{{p.projectTeamStatus==true?'active':'inactive'}}</td>
+                                                    <td style="align-items: center;"><button class="btn btn-primary" style="width: 100%;" (click)="action(p._id)">
+                                                        {{p.projectTeamStatus==true?'Revoke':'ReAssign'}} </button>
                                                 </tr>
                                             </tbody>
                                         </table>

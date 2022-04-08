@@ -109,5 +109,8 @@ export class ProjectService {
   getProjectTeambyProject(project: any): Observable<any> {
     return this.httpClient.get("http://localhost:3000/projectTeams/" + project)
   }
+  disableUserForProject(user: any): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/disableUserForProject/" + user)
+  }
 
 }

@@ -66,8 +66,7 @@ export class AddProjectTeamComponent implements OnInit {
         role: "6228eff112209b8603f2d884"
       }).subscribe()
     }
-
-    // this.router.navigateByUrl("/admin/list-projectTeam")
+    this.router.navigateByUrl("/admin/list-projectTeam")
 
 
   }

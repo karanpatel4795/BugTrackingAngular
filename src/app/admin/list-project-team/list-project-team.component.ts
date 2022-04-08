@@ -10,25 +10,34 @@ import { ProjectService } from '../project.service';
 })
 export class ListProjectTeamComponent implements OnInit {
   projectId: string = ""
-  project: string = ""
+  status: string = ""
+  button: string = ""
   projects: Array<any> = []
-  projectTeam:string=""
+  projectTeam: Array<any> = []
   constructor(private projectService: ProjectService, private toastrService: ToastrService, private route: Router) { }
 
-  ngOnInit(): void {
+   ngOnInit(): void {
     this.projectService.getAllProject().subscribe(resp => {
       this.projects = resp.data
     })
   }
 
-  getProjectTeambyProject(event: any) {
-    const project = event.target.value;
-    this.projectService.getProjectTeambyProject(project).subscribe(resp => {
+  getProjectTeambyProject() {
+    // const project = event.target.value;
+    // this.projectId = project 
+    this.projectService.getProjectTeambyProject(this.projectId).subscribe(resp => {
       this.projectTeam = resp.data
-      console.log(resp.data[0].projectId.projectTitle);
-      
-      console.log(resp.data.projectId);
-      
+    })
+  }
+  action(user: any) {
+    this.projectService.disableUserForProject(user).subscribe(resp => {
+      if (resp.status == 200) {
+        this.toastrService.success("", resp.msg, { timeOut: 3000 })
+        this.getProjectTeambyProject();
+      }
+      else {
+        this.toastrService.error("", resp.msg, { timeOut: 3000 })
+      }
     })
   }
 
