@@ -66,13 +66,16 @@ export class RoleService {
   updatePassword(password: any): Observable<any> {
     return this.httpClient.put("http://localhost:3000/changePassword", password)
   }
-  getUserbyRole(role:any): Observable<any> {
-    return this.httpClient.get("http://localhost:3000/getUserbyRole/"+role)
+  getUserbyRole(role: any): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/getUserbyRole/" + role)
   }
-  getAllStatus():Observable<any>{
+  getAllStatus(): Observable<any> {
     return this.httpClient.get("http://localhost:3000/status")
   }
-  getprojectbyStatus(status:any): Observable<any> {
-    return this.httpClient.get("http://localhost:3000/getprojectbyStatus/"+status)
+  getprojectbyStatus(status: any): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/getprojectbyStatus/" + status)
+  }
+  getTaskbyProject(project: any): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/getTaskbyProject/" + project)
   }
 }

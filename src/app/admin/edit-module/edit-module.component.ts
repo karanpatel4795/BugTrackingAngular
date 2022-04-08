@@ -34,6 +34,8 @@ export class EditModuleComponent implements OnInit {
 
   getModuleById() {
     this.projectService.getModuleById(this.moduleId).subscribe(resp => {
+      // console.log(resp);
+      
       this.moduleName = resp.data.moduleName
       this.moduleId = resp.data._id
        this.description = resp.data.description

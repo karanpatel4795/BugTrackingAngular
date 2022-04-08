@@ -7,98 +7,107 @@ import { Observable } from 'rxjs';
 })
 export class ProjectService {
 
-  constructor(private httpClient:HttpClient) { }
-  ngInit():void{
+  constructor(private httpClient: HttpClient) { }
+  ngInit(): void {
 
   }
   //----------------------------- Project ---------------------------------
-  addProject(project:any):Observable<any>{
-    return this.httpClient.post("http://localhost:3000/projects",project)
+  addProject(project: any): Observable<any> {
+    return this.httpClient.post("http://localhost:3000/projects", project)
   }
-  getAllProject():Observable<any>{
+  getAllProject(): Observable<any> {
     return this.httpClient.get("http://localhost:3000/projects")
   }
-  deleteProject(projectId:any):Observable<any>{
-    return this.httpClient.delete("http://localhost:3000/projects/"+projectId)
-  }  
-  getAllManager():Observable<any>{
+  deleteProject(projectId: any): Observable<any> {
+    return this.httpClient.delete("http://localhost:3000/projects/" + projectId)
+  }
+  getAllManager(): Observable<any> {
     return this.httpClient.get("http://localhost:3000/managers")
   }
-  getProjectById(projectId:any):Observable<any>{
-    return this.httpClient.get("http://localhost:3000/projects/"+projectId)
+  getProjectById(projectId: any): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/projects/" + projectId)
   }
-  updateProject(project:any):Observable<any>{
-    return this.httpClient.put("http://localhost:3000/projects",project)
+  updateProject(project: any): Observable<any> {
+    return this.httpClient.put("http://localhost:3000/projects", project)
   }
-  getAllPriority():Observable<any>{
+  getAllPriority(): Observable<any> {
     return this.httpClient.get("http://localhost:3000/priority")
   }
-  getAllPendingProjects():Observable<any>{
+  getAllPendingProjects(): Observable<any> {
     return this.httpClient.get("http://localhost:3000/pendingProjects")
   }
-  getAllCompletedProjects():Observable<any>{
+  getAllCompletedProjects(): Observable<any> {
     return this.httpClient.get("http://localhost:3000/completedProjects")
   }
-
-  //-------------------------- modules --------------------------------------
-  addModule(module:any):Observable<any>{
-    return this.httpClient.post("http://localhost:3000/modules",module)
+  getAllDevs(): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/getAllDevs")
   }
-  getAllModule():Observable<any>{
+  //-------------------------- modules --------------------------------------
+  addModule(module: any): Observable<any> {
+    return this.httpClient.post("http://localhost:3000/modules", module)
+  }
+  getAllModule(): Observable<any> {
     return this.httpClient.get("http://localhost:3000/modules")
   }
-  deleteModule(moduleId:any):Observable<any>{
-    return this.httpClient.delete("http://localhost:3000/modules/"+moduleId)
-  }  
-  getModuleById(moduleId:any):Observable<any>{
-    return this.httpClient.get("http://localhost:3000/modules/"+moduleId)
+  deleteModule(moduleId: any): Observable<any> {
+    return this.httpClient.delete("http://localhost:3000/modules/" + moduleId)
   }
-  updateModule(module:any):Observable<any>{
-    return this.httpClient.put("http://localhost:3000/modules",module)
+  getModuleById(moduleId: any): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/modules/" + moduleId)
   }
-  getModulebyproject(project:any):Observable<any>{
-    return this.httpClient.get("http://localhost:3000/module/"+project)
+  updateModule(module: any): Observable<any> {
+    return this.httpClient.put("http://localhost:3000/modules", module)
+  }
+  getModulebyproject(project: any): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/module/" + project)
   }
 
   //------------------------------- Task ----------------------------------
-  addTask(task:any):Observable<any>{
-    return this.httpClient.post("http://localhost:3000/tasks",task)
+  addTask(task: any): Observable<any> {
+    return this.httpClient.post("http://localhost:3000/tasks", task)
   }
-  getAllTask():Observable<any>{
+  getAllTask(): Observable<any> {
     return this.httpClient.get("http://localhost:3000/tasks")
   }
-  deleteTask(taskId:any):Observable<any>{
-    return this.httpClient.delete("http://localhost:3000/tasks/"+taskId)
-  } 
-  getTaskById(taskId:any):Observable<any>{
-    return this.httpClient.get("http://localhost:3000/tasks/"+taskId)
+  deleteTask(taskId: any): Observable<any> {
+    return this.httpClient.delete("http://localhost:3000/tasks/" + taskId)
   }
-  updateTask(task:any):Observable<any>{
-    return this.httpClient.put("http://localhost:3000/tasks",task)
-  } 
+  getTaskById(taskId: any): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/tasks/" + taskId)
+  }
+  updateTask(task: any): Observable<any> {
+    return this.httpClient.put("http://localhost:3000/tasks", task)
+  }
   //-------------------- project Manager ------------------------
-  getAllProjects(projectManagerId:any):Observable<any>{
-    return this.httpClient.get("http://localhost:3000/getAllprojects/"+projectManagerId)
+  getAllProjects(projectManagerId: any): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/getAllprojects/" + projectManagerId)
   }
-  getAllPendingProject(projectManagerId:any):Observable<any>{
-    return this.httpClient.get("http://localhost:3000/getAllPendingProject/"+projectManagerId)
+  getAllPendingProject(projectManagerId: any): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/getAllPendingProject/" + projectManagerId)
   }
-  getAllCompletedProject(projectManagerId:any):Observable<any>{
-    return this.httpClient.get("http://localhost:3000/getAllCompletedProject/"+projectManagerId)
+  getAllCompletedProject(projectManagerId: any): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/getAllCompletedProject/" + projectManagerId)
   }
-  getAllModulesForProjectManager(projectManagerId:any):Observable<any>{
-    return this.httpClient.get("http://localhost:3000/getAllModulesForProjectManager/"+projectManagerId)
+  getAllModulesForProjectManager(projectManagerId: any): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/getAllModulesForProjectManager/" + projectManagerId)
   }
-  
+
   //------------------------------- Project Team ----------------------------------
-  getAllDeveloper():Observable<any>{
+  getAllDeveloper(): Observable<any> {
     return this.httpClient.get("http://localhost:3000/getAllDeveloper")
   }
-  getAllTester():Observable<any>{
+  getAllTester(): Observable<any> {
     return this.httpClient.get("http://localhost:3000/getAllTester")
   }
-  addProjectTeam(project:any):Observable<any>{
-    return this.httpClient.post("http://localhost:3000/projectTeam",project)
+
+  addProjectTeam(project: any): Observable<any> {
+    return this.httpClient.post("http://localhost:3000/projectTeams", project)
   }
-  
+  // getAllprojectTeam(): Observable<any> {
+  //   return this.httpClient.get("http://localhost:3000/projectTeams")
+  // }
+  getProjectTeambyProject(project: any): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/projectTeams/" + project)
+  }
+
 }

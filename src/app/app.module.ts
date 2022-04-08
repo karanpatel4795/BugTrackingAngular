@@ -51,6 +51,8 @@ import { ForgotPasswordComponent } from './admin/forgot-password/forgot-password
 import { AddProjectTeamComponent } from './admin/add-project-team/add-project-team.component';
 import { UserReportComponent } from './admin/reports/user-report/user-report.component';
 import { ProjectReportComponent } from './admin/reports/project-report/project-report.component';
+import { TaskReportComponent } from './admin/reports/task-report/task-report.component';
+import { DevloperReportComponent } from './admin/reports/devloper-report/devloper-report.component';
 
 @NgModule({
   declarations: [
@@ -99,6 +101,8 @@ import { ProjectReportComponent } from './admin/reports/project-report/project-r
     AddProjectTeamComponent,
     UserReportComponent,
     ProjectReportComponent,
+    TaskReportComponent,
+    DevloperReportComponent,
    
   ],
   imports: [

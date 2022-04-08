@@ -22,7 +22,9 @@ import { ListTaskComponent } from './admin/list-task/list-task.component';
 import { ListUserComponent } from './admin/list-user/list-user.component';
 import { PendingApprovalComponent } from './admin/pending-approval/pending-approval.component';
 import { PendingProjectComponent } from './admin/pending-project/pending-project.component';
+import { DevloperReportComponent } from './admin/reports/devloper-report/devloper-report.component';
 import { ProjectReportComponent } from './admin/reports/project-report/project-report.component';
+import { TaskReportComponent } from './admin/reports/task-report/task-report.component';
 import { UserReportComponent } from './admin/reports/user-report/user-report.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { ChangepasswordComponent } from './changepassword/changepassword.component';
@@ -78,7 +80,9 @@ const routes: Routes = [
       
       //reports
       { path: "user-report",component:UserReportComponent},
-      {path:"project-report",component:ProjectReportComponent}
+      {path:"project-report",component:ProjectReportComponent},
+      {path:"task-report",component:TaskReportComponent},
+      {path:"developer-report",component:DevloperReportComponent}
     ]
   },
   {

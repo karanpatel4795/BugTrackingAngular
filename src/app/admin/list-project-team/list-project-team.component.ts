@@ -9,36 +9,27 @@ import { ProjectService } from '../project.service';
   styleUrls: ['./list-project-team.component.css']
 })
 export class ListProjectTeamComponent implements OnInit {
-
-  projects:Array<any> = []
-  constructor(private projectService:ProjectService, private toastrService:ToastrService, private route:Router) { }
+  projectId: string = ""
+  project: string = ""
+  projects: Array<any> = []
+  projectTeam:string=""
+  constructor(private projectService: ProjectService, private toastrService: ToastrService, private route: Router) { }
 
   ngOnInit(): void {
-          this.getAllProject()
-  }
-  deleteProject(projectId:any){
-    this.projectService.deleteProject(projectId).subscribe(resp=>{
-      if(resp.status=200){
-        this.toastrService.success("",resp.msg,{timeOut:3000})
-        this.getAllProject()
-      }
-      else{
-        this.toastrService.error("",resp.msg,{timeOut:3000})
-      }
+    this.projectService.getAllProject().subscribe(resp => {
+      this.projects = resp.data
     })
   }
-  
-  editProject(projectId:any){
-    this.route.navigateByUrl("/admin/editproject/"+projectId)
-  }
-  getAllProject(){
-    this.projectService.getAllProject().subscribe(resp=>{
-      this.projects =  resp.data
+
+  getProjectTeambyProject(event: any) {
+    const project = event.target.value;
+    this.projectService.getProjectTeambyProject(project).subscribe(resp => {
+      this.projectTeam = resp.data
+      console.log(resp.data[0].projectId.projectTitle);
       
-      //console.log(resp);
-      //console.log(this.projects);
+      console.log(resp.data.projectId);
       
-    }) 
+    })
   }
 
 }
