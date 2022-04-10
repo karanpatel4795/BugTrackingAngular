@@ -29,9 +29,7 @@ export class AddTeamMemberComponent implements OnInit {
 
     this.projectService.getProjectTitle(this.projectId).subscribe(resp=>{
       this.projectTitle = resp.data[0].projectTitle
-      //console.log(this.projectTitle);
-      
-      
+      //console.log(this.projectTitle); 
     })
     this.projectService.getAllManagers().subscribe(resp => {
       this.managers = resp.data

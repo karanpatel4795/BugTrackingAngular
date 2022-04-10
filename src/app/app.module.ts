@@ -55,6 +55,7 @@ import { TaskReportComponent } from './admin/reports/task-report/task-report.com
 import { DevloperReportComponent } from './admin/reports/devloper-report/devloper-report.component';
 import { BugReportComponent } from './admin/reports/bug-report/bug-report.component';
 import { AddTeamMemberComponent } from './admin/add-team-member/add-team-member.component';
+import { AssignTaskComponent } from './admin/assign-task/assign-task.component';
 
 @NgModule({
   declarations: [
@@ -107,6 +108,7 @@ import { AddTeamMemberComponent } from './admin/add-team-member/add-team-member.
     DevloperReportComponent,
     BugReportComponent,
     AddTeamMemberComponent,
+    AssignTaskComponent,
    
   ],
   imports: [

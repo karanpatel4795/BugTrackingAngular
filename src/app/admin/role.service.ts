@@ -84,4 +84,7 @@ export class RoleService {
   getTaskbyDevelop(devloper: any): Observable<any> {
     return this.httpClient.post("http://localhost:3000/getTaskbyDevelop", devloper)
   }
+  getuserName(userId: any): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/getuserName/" +userId)
+  }
 }

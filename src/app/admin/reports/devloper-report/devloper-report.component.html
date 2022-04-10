@@ -26,8 +26,7 @@
                                 </div>
                                 <div class="col-lg-10 col-md-10 col-sm-8">
                                     <div class="form-group">
-                                        <select [(ngModel)]="devId" class="form-control"
-                                            (change)="getTaskbyDev()">
+                                        <select [(ngModel)]="devId" class="form-control" (change)="getTaskbyDev()">
                                             <option *ngFor="let d of devlopers" value="{{d._id}}"> {{d.firstName}}
                                             </option>
                                         </select>
@@ -69,15 +68,15 @@
                                             aria-describedby="DataTables_Table_0_info">
                                             <thead>
                                                 <tr role="row">
-                                                    <th class="sorting_asc" tabindex="0"
+                                                    <!-- <th class="sorting_asc" tabindex="0"
                                                         aria-controls="DataTables_Table_0" rowspan="1" colspan="1"
                                                         aria-sort="ascending"
                                                         aria-label="Name: activate to sort column descending"
-                                                        style="width: 90.203px;"> Project Name</th>
+                                                        style="width: 90.203px;"> Project Name</th> -->
                                                     <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0"
                                                         rowspan="1" colspan="1"
                                                         aria-label="Position: activate to sort column ascending"
-                                                        style="width: 90.203px;"> Moduel Name</th>
+                                                        style="width: 90.203px;"> User Name</th>
                                                     <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0"
                                                         rowspan="1" colspan="1"
                                                         aria-label="Position: activate to sort column ascending"
@@ -86,10 +85,10 @@
                                                         rowspan="1" colspan="1"
                                                         aria-label="Office: activate to sort column ascending"
                                                         style="width: 200px;">Description</th>
-                                                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0"
+                                                    <!-- <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0"
                                                         rowspan="1" colspan="1"
                                                         aria-label="Age: activate to sort column ascending"
-                                                        style="width: 35.0781px;">Priority</th>
+                                                        style="width: 35.0781px;">Priority</th>-->
                                                     <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0"
                                                         rowspan="1" colspan="1"
                                                         aria-label="Start date: activate to sort column ascending"
@@ -98,26 +97,26 @@
                                                         rowspan="1" colspan="1"
                                                         aria-label="Start date: activate to sort column ascending"
                                                         style="width: 140.0938px;">Action</th> -->
-                                                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0"
+                                                    <!-- <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0"
                                                         rowspan="1" colspan="1"
                                                         aria-label="Salary: activate to sort column ascending"
-                                                        style="width: 58.5156px;">Status</th>
+                                                        style="width: 58.5156px;">Status</th> -->
                                                 </tr>
                                             </thead>
 
                                             <tbody>
                                                 <tr *ngFor="let task of tasks">
-                                                    <td>{{task.projectId.projectTitle}}</td>
-                                                    <td>{{task.moduleId.moduleName}}</td>
-                                                    <td>{{task.taskName}}</td>
-                                                    <td>{{task.description}}</td>
-                                                    <td>{{task.priorityId.priorityName}}</td>
-                                                    <td>{{task.totalTime}}</td>
+                                                    <!-- <td>{{task.projectId.projectTitle}}</td> -->
+                                                    <td>{{task.taskUser.firstName}}</td>
+                                                    <td>{{task.taskId.taskName}}</td>
+                                                    <td>{{task.taskId.description}}</td>
+                                                    <!-- <td>{{task.priorityId.priorityName}}</td> -->
+                                                    <td>{{task.taskId.totalTime}}</td>
                                                     <!-- <td><button class="btn btn-primary" style="width: 100%;"
                                                             (click)="editTask(task._id)">Edit</button><button
                                                             class="btn btn-danger" style="width: 100%;"
                                                             (click)="deleteTask(task._id)">Delete</button></td> -->
-                                                    <td>{{task.statusId.statusName}}</td>
+                                                    <!-- <td>{{task.statusId.statusName}}</td> -->
                                                 </tr>
                                             </tbody>
                                         </table>

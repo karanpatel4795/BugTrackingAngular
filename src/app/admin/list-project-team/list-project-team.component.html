@@ -93,7 +93,7 @@
                                                     <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0"
                                                         rowspan="1" colspan="1"
                                                         aria-label="Start date: activate to sort column ascending"
-                                                        style="width: 100.0938px;">Action</th>
+                                                        style="width: 150.0938px;">Action</th>
                                                 </tr>
                                             </thead>
 
@@ -104,9 +104,10 @@
                                                     <td>{{p.projectTeamMember.firstName}}</td>
                                                     <td>{{p.role.roleName}}</td>
                                                     <td>{{p.projectTeamStatus==true?'active':'inactive'}}</td>
-                                                    <td style="align-items: center;"><button class="btn btn-primary"
-                                                            style="width: 100%;" (click)="action(p._id)">
-                                                            {{p.projectTeamStatus==true?'Revoke':'ReAssign'}} </button>
+                                                    <td style="align-items: center;"><button class="btn btn-danger"
+                                                            style="width: 49%;" (click)="action(p._id)">
+                                                            {{p.projectTeamStatus==true?'Revoke':'ReAssign'}}</button><button class="btn btn-success"
+                                                            style="width: 49%;" (click)="assignTask(p.projectTeamMember)">Assign Task</button>
                                                 </tr>
                                             </tbody>
                                         </table>

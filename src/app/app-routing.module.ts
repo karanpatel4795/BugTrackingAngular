@@ -9,6 +9,7 @@ import { AddTeamMemberComponent } from './admin/add-team-member/add-team-member.
 import { AddUserComponent } from './admin/add-user/add-user.component';
 import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
 import { AdminComponent } from './admin/admin/admin.component';
+import { AssignTaskComponent } from './admin/assign-task/assign-task.component';
 import { CompletedProjectComponent } from './admin/completed-project/completed-project.component';
 import { EditModuleComponent } from './admin/edit-module/edit-module.component';
 import { EditProjectComponent } from './admin/edit-project/edit-project.component';
@@ -80,6 +81,7 @@ const routes: Routes = [
       { path: "add-projectTeam", component: AddProjectTeamComponent },
       { path: "list-projectTeam", component: ListProjectTeamComponent },
       { path: "addTeamMember/:projectId", component: AddTeamMemberComponent },
+      {path:"assignTask/:user",component:AssignTaskComponent},
       //reports
       { path: "user-report", component: UserReportComponent },
       { path: "project-report", component: ProjectReportComponent },

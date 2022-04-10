@@ -28,12 +28,9 @@ export class DevloperReportComponent implements OnInit {
   }
 
   getTaskbyDev() {
-    let devloper = {
-      devId: this.devId,
-      status: this.status
-    }
+    let devloper = {devId: this.devId,status: this.status}
     this.roleService.getTaskbyDevelop(devloper).subscribe(resp => {
-      console.log(resp);
+     // console.log(resp);
       this.tasks = resp.data
     })
   }

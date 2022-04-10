@@ -106,7 +106,7 @@ export class ProjectService {
   addProjectTeam(project: any): Observable<any> {
     return this.httpClient.post("http://localhost:3000/projectTeams", project)
   }
-  addTeamMember(project:any):Observable<any>{
+  addTeamMember(project: any): Observable<any> {
     return this.httpClient.post("http://localhost:3000/addTeamMember", project)
   }
   // getAllprojectTeam(): Observable<any> {
@@ -120,6 +120,12 @@ export class ProjectService {
   }
   getProjectTitle(projectId: any): Observable<any> {
     return this.httpClient.get("http://localhost:3000/getProjectTitle/" + projectId)
+  }
+  getTaskbyProject(projectId: any): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/getTaskbyProject/" + projectId)
+  }
+  assignTask(task: any): Observable<any> {
+    return this.httpClient.post("http://localhost:3000/taskusers", task)
   }
 
 }

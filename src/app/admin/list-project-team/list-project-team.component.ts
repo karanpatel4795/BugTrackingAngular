@@ -48,4 +48,11 @@ export class ListProjectTeamComponent implements OnInit {
       this.route.navigateByUrl("/admin/addTeamMember/" + this.projectId)
     }
   }
+  assignTask(user: any) {
+    //console.log(user._id);
+    localStorage.setItem("projectId", this.projectId)
+    this.route.navigateByUrl("/admin/assignTask/" + user._id)
+  }
+
+
 }
