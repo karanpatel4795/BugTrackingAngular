@@ -16,7 +16,7 @@ export class ListProjectTeamComponent implements OnInit {
   projectTeam: Array<any> = []
   constructor(private projectService: ProjectService, private toastrService: ToastrService, private route: Router) { }
 
-   ngOnInit(): void {
+  ngOnInit(): void {
     this.projectService.getAllProject().subscribe(resp => {
       this.projects = resp.data
     })
@@ -40,5 +40,12 @@ export class ListProjectTeamComponent implements OnInit {
       }
     })
   }
-
+  addMemberTeam() {
+    if (this.projectId == "") {
+      this.toastrService.error("", "Please Choose Project", { timeOut: 3000 })
+    }
+    else {
+      this.route.navigateByUrl("/admin/addTeamMember/" + this.projectId)
+    }
+  }
 }

@@ -13,20 +13,26 @@ export class DevloperReportComponent implements OnInit {
 
   constructor(private roleService: RoleService, private projectService: ProjectService, private router: Router, private toastrService: ToastrService) { }
   devId: string = ""
+  statusId: string = ""
   devlopers: Array<any> = []
   tasks: Array<any> = []
+  status: Array<any> = []
 
   ngOnInit(): void {
     this.projectService.getAllDevs().subscribe(resp => {
       this.devlopers = resp.data
     })
+    this.roleService.getAllStatus().subscribe(resp => {
+      this.status = resp.data
+    })
   }
 
-  getTaskbyDev(event: any) {
-    const project = event.target.value;
-    //console.log(project);
-
-    this.roleService.getTaskbyProject(project).subscribe(resp => {
+  getTaskbyDev() {
+    let devloper = {
+      devId: this.devId,
+      status: this.status
+    }
+    this.roleService.getTaskbyDevelop(devloper).subscribe(resp => {
       console.log(resp);
       this.tasks = resp.data
     })

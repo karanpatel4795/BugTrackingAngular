@@ -3,7 +3,7 @@
       <div class="block-header">
           <div class="row">
               <div class="col-lg-7 col-md-6 col-sm-12">
-                  <h2>Add Project</h2>
+                  <h2>Add User</h2>
                   <ul class="breadcrumb">
                       <li class="breadcrumb-item"><a routerLink="/admin/admin-dashboard"><i
                                   class="zmdi zmdi-home"></i>Home</a></li>
@@ -58,6 +58,17 @@
                               </div>
                              
                           </div>
+
+                          <div class="row clearfix">
+                            <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
+                                <label for="email_address_2">Password</label>
+                            </div>
+                            <div class="col-lg-10 col-md-10 col-sm-8">
+                                <div class="form-group">
+                                    <input type="password" class="form-control" [(ngModel)]="password" value="Password" placeholder="Password (default)" required>
+                            </div>
+                            </div>
+                        </div>
                           <div class="row clearfix">
                               <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
                                   <label for="email_address_2">Contact Number</label>

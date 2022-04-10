@@ -19,10 +19,11 @@ export class ProjectManagerDashboardComponent implements OnInit {
   constructor(private roleService: RoleService, private projectService: ProjectService) { }
 
   ngOnInit(): void {
+    this.projectManagerId = localStorage.getItem("userId") as string
     this.roleService.getAllUser().subscribe(resp => {
       this.users = resp.data.length
     })
-    this.projectService.getAllProject().subscribe(resp => {
+    this.projectService.getAllProjects(this.projectManagerId).subscribe(resp => {
       this.projects = resp.data.length
     })
     this.projectService.getAllModule().subscribe(resp => {

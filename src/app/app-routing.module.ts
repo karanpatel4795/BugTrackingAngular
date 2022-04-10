@@ -5,6 +5,7 @@ import { AddProjectTeamComponent } from './admin/add-project-team/add-project-te
 import { AddProjectComponent } from './admin/add-project/add-project.component';
 import { AddRoleComponent } from './admin/add-role/add-role.component';
 import { AddTaskComponent } from './admin/add-task/add-task.component';
+import { AddTeamMemberComponent } from './admin/add-team-member/add-team-member.component';
 import { AddUserComponent } from './admin/add-user/add-user.component';
 import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
 import { AdminComponent } from './admin/admin/admin.component';
@@ -22,6 +23,7 @@ import { ListTaskComponent } from './admin/list-task/list-task.component';
 import { ListUserComponent } from './admin/list-user/list-user.component';
 import { PendingApprovalComponent } from './admin/pending-approval/pending-approval.component';
 import { PendingProjectComponent } from './admin/pending-project/pending-project.component';
+import { BugReportComponent } from './admin/reports/bug-report/bug-report.component';
 import { DevloperReportComponent } from './admin/reports/devloper-report/devloper-report.component';
 import { ProjectReportComponent } from './admin/reports/project-report/project-report.component';
 import { TaskReportComponent } from './admin/reports/task-report/task-report.component';
@@ -77,12 +79,13 @@ const routes: Routes = [
       { path: "forgot-password", component: ForgotPasswordComponent },
       { path: "add-projectTeam", component: AddProjectTeamComponent },
       { path: "list-projectTeam", component: ListProjectTeamComponent },
-      
+      { path: "addTeamMember/:projectId", component: AddTeamMemberComponent },
       //reports
-      { path: "user-report",component:UserReportComponent},
-      {path:"project-report",component:ProjectReportComponent},
-      {path:"task-report",component:TaskReportComponent},
-      {path:"developer-report",component:DevloperReportComponent}
+      { path: "user-report", component: UserReportComponent },
+      { path: "project-report", component: ProjectReportComponent },
+      { path: "task-report", component: TaskReportComponent },
+      { path: "developer-report", component: DevloperReportComponent },
+      { path: "bug-report", component: BugReportComponent }
     ]
   },
   {

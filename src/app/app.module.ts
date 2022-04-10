@@ -53,6 +53,8 @@ import { UserReportComponent } from './admin/reports/user-report/user-report.com
 import { ProjectReportComponent } from './admin/reports/project-report/project-report.component';
 import { TaskReportComponent } from './admin/reports/task-report/task-report.component';
 import { DevloperReportComponent } from './admin/reports/devloper-report/devloper-report.component';
+import { BugReportComponent } from './admin/reports/bug-report/bug-report.component';
+import { AddTeamMemberComponent } from './admin/add-team-member/add-team-member.component';
 
 @NgModule({
   declarations: [
@@ -103,6 +105,8 @@ import { DevloperReportComponent } from './admin/reports/devloper-report/devlope
     ProjectReportComponent,
     TaskReportComponent,
     DevloperReportComponent,
+    BugReportComponent,
+    AddTeamMemberComponent,
    
   ],
   imports: [

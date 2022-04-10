@@ -93,6 +93,9 @@ export class ProjectService {
   }
 
   //------------------------------- Project Team ----------------------------------
+  getAllManagers(): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/getAllManagers")
+  }
   getAllDeveloper(): Observable<any> {
     return this.httpClient.get("http://localhost:3000/getAllDeveloper")
   }
@@ -103,6 +106,9 @@ export class ProjectService {
   addProjectTeam(project: any): Observable<any> {
     return this.httpClient.post("http://localhost:3000/projectTeams", project)
   }
+  addTeamMember(project:any):Observable<any>{
+    return this.httpClient.post("http://localhost:3000/addTeamMember", project)
+  }
   // getAllprojectTeam(): Observable<any> {
   //   return this.httpClient.get("http://localhost:3000/projectTeams")
   // }
@@ -111,6 +117,9 @@ export class ProjectService {
   }
   disableUserForProject(user: any): Observable<any> {
     return this.httpClient.get("http://localhost:3000/disableUserForProject/" + user)
+  }
+  getProjectTitle(projectId: any): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/getProjectTitle/" + projectId)
   }
 
 }

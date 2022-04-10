@@ -72,10 +72,16 @@ export class RoleService {
   getAllStatus(): Observable<any> {
     return this.httpClient.get("http://localhost:3000/status")
   }
+  getAllBugStatus(): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/bugStatus")
+  }
   getprojectbyStatus(status: any): Observable<any> {
     return this.httpClient.get("http://localhost:3000/getprojectbyStatus/" + status)
   }
   getTaskbyProject(project: any): Observable<any> {
-    return this.httpClient.get("http://localhost:3000/getTaskbyProject", project)
+    return this.httpClient.post("http://localhost:3000/getTaskbyProject", project)
+  }
+  getTaskbyDevelop(devloper: any): Observable<any> {
+    return this.httpClient.post("http://localhost:3000/getTaskbyDevelop", devloper)
   }
 }

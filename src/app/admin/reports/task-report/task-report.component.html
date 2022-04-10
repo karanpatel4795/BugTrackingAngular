@@ -38,7 +38,7 @@
                                 </div>
                                 <div class="col-lg-10 col-md-10 col-sm-8">
                                     <div class="form-group">
-                                        <select [(ngModel)]="statusId" class="form-control">
+                                        <select [(ngModel)]="statusId" class="form-control" (change)="getTaskbyProject()">
                                             <option *ngFor="let s of status" value="{{s._id}}"> {{s.statusName}}
                                             </option>
                                         </select>
