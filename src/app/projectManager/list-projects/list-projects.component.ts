@@ -29,16 +29,20 @@ export class ListProjectsComponent implements OnInit {
   }
 
   editProject(projectId: any) {
-    this.route.navigateByUrl("/admin/editproject/" + projectId)
+    this.route.navigateByUrl("/project-manager/edit-projects/" + projectId)
   }
   getAllProject() {
     this.projectManagerId = localStorage.getItem("userId") as string
     //console.log(this.projectManagerId);
-        
+
     this.projectService.getAllProjects(this.projectManagerId).subscribe(resp => {
       this.projects = resp.data
-      console.log(resp);
+      //console.log(resp);
     })
+  }
+  ViewTeam(projectId: any) {
+    // console.log(projectId);
+    this.route.navigateByUrl("/project-manager/viewTeam/" + projectId)
   }
 
 }

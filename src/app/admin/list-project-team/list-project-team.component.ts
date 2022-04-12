@@ -23,8 +23,6 @@ export class ListProjectTeamComponent implements OnInit {
   }
 
   getProjectTeambyProject() {
-    // const project = event.target.value;
-    // this.projectId = project 
     this.projectService.getProjectTeambyProject(this.projectId).subscribe(resp => {
       this.projectTeam = resp.data
     })
@@ -49,9 +47,19 @@ export class ListProjectTeamComponent implements OnInit {
     }
   }
   assignTask(user: any) {
-    //console.log(user._id);
-    localStorage.setItem("projectId", this.projectId)
-    this.route.navigateByUrl("/admin/assignTask/" + user._id)
+    //console.log(user);
+    if (user.role == "6228efec12209b8603f2d882") {
+      localStorage.setItem("projectId", this.projectId)
+      this.route.navigateByUrl("/admin/assignTask/" + user._id)
+    }
+    else if(user.role == "6228f0b812209b8603f2d88c") {
+      localStorage.setItem("projectId", this.projectId)
+      this.route.navigateByUrl("/admin/assignModule/" + user._id)
+    }
+    else{
+      this.toastrService.error("","You can not assign Task to Tester!",{timeOut:3000})
+    }
+
   }
 
 

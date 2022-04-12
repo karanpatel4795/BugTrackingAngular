@@ -44,6 +44,7 @@ export class AssignTaskComponent implements OnInit {
     let task={taskId:this.taskId,taskUser:this.userId}
     this.projectService.assignTask(task).subscribe(resp => {
       if(resp.status == 200){
+        this.route.navigateByUrl("/admin/list-projectTeam")
         this.toastrService.success("",resp.msg,{timeOut:3000})
       }else{
         this.toastrService.error("",resp.msg,{timeOut:3000})

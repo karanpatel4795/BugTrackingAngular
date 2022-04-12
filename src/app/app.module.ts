@@ -56,6 +56,19 @@ import { DevloperReportComponent } from './admin/reports/devloper-report/devlope
 import { BugReportComponent } from './admin/reports/bug-report/bug-report.component';
 import { AddTeamMemberComponent } from './admin/add-team-member/add-team-member.component';
 import { AssignTaskComponent } from './admin/assign-task/assign-task.component';
+import { AssignModuleComponent } from './admin/assign-module/assign-module.component';
+import { ViewTeamComponent } from './projectManager/view-team/view-team.component';
+import { AddTeamMembersComponent } from './projectManager/add-team-members/add-team-members.component';
+import { EditProjectsComponent } from './projectManager/edit-projects/edit-projects.component';
+import { AssignTasksComponent } from './projectManager/assign-tasks/assign-tasks.component';
+import { AddTasksComponent } from './projectManager/add-tasks/add-tasks.component';
+import { ListTasksComponent } from './projectManager/list-tasks/list-tasks.component';
+import { ModulesReportComponent } from './projectManager/modules-report/modules-report.component';
+import { TasksReportComponent } from './projectManager/tasks-report/tasks-report.component';
+import { DeveloperComponent } from './developer/developer/developer.component';
+import { DeveloperDashboardComponent } from './developer/developer-dashboard/developer-dashboard.component';
+import { DeveloperHeaderComponent } from './developer/developer-header/developer-header.component';
+import { DeveloperSlidebarComponent } from './developer/developer-slidebar/developer-slidebar.component';
 
 @NgModule({
   declarations: [
@@ -109,6 +122,19 @@ import { AssignTaskComponent } from './admin/assign-task/assign-task.component';
     BugReportComponent,
     AddTeamMemberComponent,
     AssignTaskComponent,
+    AssignModuleComponent,
+    ViewTeamComponent,
+    AddTeamMembersComponent,
+    EditProjectsComponent,
+    AssignTasksComponent,
+    AddTasksComponent,
+    ListTasksComponent,
+    ModulesReportComponent,
+    TasksReportComponent,
+    DeveloperComponent,
+    DeveloperDashboardComponent,
+    DeveloperHeaderComponent,
+    DeveloperSlidebarComponent,
    
   ],
   imports: [

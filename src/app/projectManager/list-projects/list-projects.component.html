@@ -88,11 +88,11 @@
                                                     <td>{{project.startDate}}</td>
                                                     <td>{{project.estimatedHours}}</td>
                                                     <td><button class="btn btn-primary"
-                                                            (click)="editProject(project._id)">Edit</button>&nbsp;<button
-                                                            class="btn btn-danger" (click)="deleteProject(project._id)"
-                                                            disabled>Delete</button>&nbsp;<button
+                                                            (click)="editProject(project._id)" style="width: 48%;">Edit</button><button
+                                                            class="btn btn-danger" style="width: 48%;" (click)="deleteProject(project._id)"
+                                                            disabled>Delete</button><button style="width: 100%;"
                                                             class="btn btn-success"
-                                                            (click)="deleteProject(project._id)" disabled>View Team</button></td>
+                                                            (click)="ViewTeam(project._id)">View Team</button></td>
                                                     <td>{{project.statusId.statusName}}</td>
                                                 </tr>
                                             </tbody>

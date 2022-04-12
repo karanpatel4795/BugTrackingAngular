@@ -87,4 +87,13 @@ export class RoleService {
   getuserName(userId: any): Observable<any> {
     return this.httpClient.get("http://localhost:3000/getuserName/" +userId)
   }
+  getModulesbyStatus(statusId: any): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/getModulebyStatus/" +statusId)
+  }
+  getTaskbyStatus(statusId: any): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/getTaskbyStatus/" +statusId)
+  }
+  getUsersById(userId: any): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/getUsersById/" +userId)
+  }
 }

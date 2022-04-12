@@ -9,6 +9,7 @@ import { AddTeamMemberComponent } from './admin/add-team-member/add-team-member.
 import { AddUserComponent } from './admin/add-user/add-user.component';
 import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
 import { AdminComponent } from './admin/admin/admin.component';
+import { AssignModuleComponent } from './admin/assign-module/assign-module.component';
 import { AssignTaskComponent } from './admin/assign-task/assign-task.component';
 import { CompletedProjectComponent } from './admin/completed-project/completed-project.component';
 import { EditModuleComponent } from './admin/edit-module/edit-module.component';
@@ -31,19 +32,29 @@ import { TaskReportComponent } from './admin/reports/task-report/task-report.com
 import { UserReportComponent } from './admin/reports/user-report/user-report.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { ChangepasswordComponent } from './changepassword/changepassword.component';
+import { DeveloperDashboardComponent } from './developer/developer-dashboard/developer-dashboard.component';
+import { DeveloperComponent } from './developer/developer/developer.component';
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
 import { AddModulesComponent } from './projectManager/add-modules/add-modules.component';
+import { AddTasksComponent } from './projectManager/add-tasks/add-tasks.component';
+import { AddTeamMembersComponent } from './projectManager/add-team-members/add-team-members.component';
 import { AddUsersComponent } from './projectManager/add-users/add-users.component';
+import { AssignTasksComponent } from './projectManager/assign-tasks/assign-tasks.component';
 import { CompletedProjectsComponent } from './projectManager/completed-projects/completed-projects.component';
 import { EditModulesComponent } from './projectManager/edit-modules/edit-modules.component';
+import { EditProjectsComponent } from './projectManager/edit-projects/edit-projects.component';
 import { ListModulesComponent } from './projectManager/list-modules/list-modules.component';
 import { ListProjectsComponent } from './projectManager/list-projects/list-projects.component';
+import { ListTasksComponent } from './projectManager/list-tasks/list-tasks.component';
 import { ListUsersComponent } from './projectManager/list-users/list-users.component';
+import { ModulesReportComponent } from './projectManager/modules-report/modules-report.component';
 import { PendingProjectsComponent } from './projectManager/pending-projects/pending-projects.component';
 import { ProjectManagerDashboardComponent } from './projectManager/project-manager-dashboard/project-manager-dashboard.component';
 import { ProjectManagerComponent } from './projectManager/project-manager/project-manager.component';
+import { TasksReportComponent } from './projectManager/tasks-report/tasks-report.component';
+import { ViewTeamComponent } from './projectManager/view-team/view-team.component';
 import { SignupComponent } from './signup/signup.component';
 
 
@@ -81,7 +92,8 @@ const routes: Routes = [
       { path: "add-projectTeam", component: AddProjectTeamComponent },
       { path: "list-projectTeam", component: ListProjectTeamComponent },
       { path: "addTeamMember/:projectId", component: AddTeamMemberComponent },
-      {path:"assignTask/:user",component:AssignTaskComponent},
+      { path: "assignTask/:user", component: AssignTaskComponent },
+      { path: "assignModule/:user", component: AssignModuleComponent },
       //reports
       { path: "user-report", component: UserReportComponent },
       { path: "project-report", component: ProjectReportComponent },
@@ -96,13 +108,29 @@ const routes: Routes = [
       { path: "add-users", component: AddUsersComponent },
       { path: "list-users", component: ListUsersComponent },
       { path: "list-projects", component: ListProjectsComponent },
+      { path: "edit-projects/:projectId", component: EditProjectsComponent },
       { path: "pending-projects", component: PendingProjectsComponent },
       { path: "completed-projects", component: CompletedProjectsComponent },
       { path: "add-modules", component: AddModulesComponent },
       { path: "list-modules", component: ListModulesComponent },
-      { path: "edit-modules/:modulesId", component: EditModulesComponent }
+      { path: "edit-modules/:moduleId", component: EditModulesComponent },
+      { path: "viewTeam/:projectId", component: ViewTeamComponent },
+      { path: "addTeamMember/:projectId", component: AddTeamMembersComponent },
+      { path: "assign-Tasks/:user", component: AssignTasksComponent },
+      { path: "add-tasks", component: AddTasksComponent },
+      { path: "list-tasks", component: ListTasksComponent },
+      { path: "modules-report", component: ModulesReportComponent },
+      { path: "tasks-report", component: TasksReportComponent },
+      { path: "change-Password", component: ChangePasswordComponent }
     ]
-  }
+  },
+  {
+    path: "developer", component: DeveloperComponent, children: [
+      { path: "developer-dashboard", component: DeveloperDashboardComponent },
+      { path: "change-password", component: ChangePasswordComponent }
+
+    ]
+  },
 ];
 
 @NgModule({

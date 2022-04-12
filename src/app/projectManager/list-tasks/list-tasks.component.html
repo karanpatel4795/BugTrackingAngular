@@ -1,0 +1,119 @@
+<section class="content">
+    <div class="body_scroll">
+        <div class="row clearfix">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="card">
+                    <div class="body">
+                        <div class="form-horizontal">
+                            <div class="row clearfix">
+                                <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
+                                    <label for="email_address_2">Project</label>
+                                </div>
+                                <div class="col-lg-10 col-md-10 col-sm-8">
+                                    <div class="form-group">
+                                        <select [(ngModel)]="projectId" class="form-control"
+                                            (change)="getModulebyproject($event)">
+                                            <option *ngFor="let p of projects" value="{{p._id}}"> {{p.projectTitle}}
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
+                                    <label for="email_address_2">Module</label>
+                                </div>
+                                <div class="col-lg-10 col-md-10 col-sm-8">
+                                    <div class="form-group">
+                                        <select [(ngModel)]="moduleId" class="form-control"
+                                            (change)="getTaskbyModule()">
+                                            <option *ngFor="let m of modules" value="{{m._id}}"> {{m.moduleName}}
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content">
+    <div class="body_scroll">
+        <div class="row clearfix">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="body">
+                        <div class="table-responsive">
+                            <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <table
+                                            class="table table-bordered table-striped table-hover js-basic-example dataTable"
+                                            id="DataTables_Table_0" role="grid"
+                                            aria-describedby="DataTables_Table_0_info">
+                                            <thead>
+                                                <tr role="row">
+                                                    <th class="sorting_asc" tabindex="0"
+                                                        aria-controls="DataTables_Table_0" rowspan="1" colspan="1"
+                                                        aria-sort="ascending"
+                                                        aria-label="Name: activate to sort column descending"
+                                                        style="width: 90.203px;"> Project Name</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0"
+                                                        rowspan="1" colspan="1"
+                                                        aria-label="Position: activate to sort column ascending"
+                                                        style="width: 90.203px;"> Module Name</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0"
+                                                        rowspan="1" colspan="1"
+                                                        aria-label="Position: activate to sort column ascending"
+                                                        style="width: 90.203px;"> Task Name</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0"
+                                                        rowspan="1" colspan="1"
+                                                        aria-label="Office: activate to sort column ascending"
+                                                        style="width: 200px;">Description</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0"
+                                                        rowspan="1" colspan="1"
+                                                        aria-label="Age: activate to sort column ascending"
+                                                        style="width: 35.0781px;">Priority</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0"
+                                                        rowspan="1" colspan="1"
+                                                        aria-label="Start date: activate to sort column ascending"
+                                                        style="width: 80.0938px;">Estimate Hours</th>
+                                                    <!-- <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0"
+                                                        rowspan="1" colspan="1"
+                                                        aria-label="Start date: activate to sort column ascending"
+                                                        style="width: 140.0938px;">Action</th> -->
+                                                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0"
+                                                        rowspan="1" colspan="1"
+                                                        aria-label="Salary: activate to sort column ascending"
+                                                        style="width: 58.5156px;">Status</th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody>
+                                                <tr *ngFor="let task of tasks">
+                                                    <td>{{task.projectId.projectTitle}}</td>
+                                                    <td>{{task.moduleId.moduleName}}</td>
+                                                    <td>{{task.taskName}}</td>
+                                                    <td>{{task.description}}</td>
+                                                    <td>{{task.priorityId.priorityName}}</td>
+                                                    <td>{{task.totalTime}}</td>
+                                                    <!-- <td><button class="btn btn-primary" style="width: 100%;"
+                                                            (click)="editTask(task._id)">Edit</button><button
+                                                            class="btn btn-danger" style="width: 100%;"
+                                                            (click)="deleteTask(task._id)">Delete</button></td> -->
+                                                    <td>{{task.statusId.statusName}}</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

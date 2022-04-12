@@ -52,6 +52,9 @@ export class ProjectService {
   deleteModule(moduleId: any): Observable<any> {
     return this.httpClient.delete("http://localhost:3000/modules/" + moduleId)
   }
+  deleteModules(moduleId: any): Observable<any> {
+    return this.httpClient.delete("http://localhost:3000/deleteUserModules/" + moduleId)
+  }
   getModuleById(moduleId: any): Observable<any> {
     return this.httpClient.get("http://localhost:3000/modules/" + moduleId)
   }
@@ -59,6 +62,8 @@ export class ProjectService {
     return this.httpClient.put("http://localhost:3000/modules", module)
   }
   getModulebyproject(project: any): Observable<any> {
+    console.log(project);
+    
     return this.httpClient.get("http://localhost:3000/module/" + project)
   }
 
@@ -78,6 +83,9 @@ export class ProjectService {
   updateTask(task: any): Observable<any> {
     return this.httpClient.put("http://localhost:3000/tasks", task)
   }
+  getTaskbyModule(moduleId: any): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/getTaskbyModule/" + moduleId)
+  }
   //-------------------- project Manager ------------------------
   getAllProjects(projectManagerId: any): Observable<any> {
     return this.httpClient.get("http://localhost:3000/getAllprojects/" + projectManagerId)
@@ -88,9 +96,10 @@ export class ProjectService {
   getAllCompletedProject(projectManagerId: any): Observable<any> {
     return this.httpClient.get("http://localhost:3000/getAllCompletedProject/" + projectManagerId)
   }
-  getAllModulesForProjectManager(projectManagerId: any): Observable<any> {
-    return this.httpClient.get("http://localhost:3000/getAllModulesForProjectManager/" + projectManagerId)
+  getAllModulesForPM(projectManagerId: any): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/getModulebyPM/" + projectManagerId)
   }
+
 
   //------------------------------- Project Team ----------------------------------
   getAllManagers(): Observable<any> {
@@ -127,5 +136,20 @@ export class ProjectService {
   assignTask(task: any): Observable<any> {
     return this.httpClient.post("http://localhost:3000/taskusers", task)
   }
-
+  getModulebyProject(projectId: any): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/getModulebyProject/" + projectId)
+  }
+  assignModule(module: any): Observable<any> {
+    return this.httpClient.post("http://localhost:3000/moduleusers", module)
+  }
+   //------------------------------- Developer ----------------------------------
+   getProjectforDev(devId: any): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/getProjectforDev/" + devId)
+  }
+  getModuleforDev(devId: any): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/getModuleforDev/" + devId)
+  }
+  getPendingTaskforDev(devId: any): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/getPendingTaskforDev/" + devId)
+  }
 }
