@@ -22,11 +22,7 @@ export class DeveloperDashboardComponent implements OnInit {
 
     this.projectService.getProjectforDev(this.devId).subscribe(resp => {
       this.projects = resp.data.length
-
-      for (let i = 0; i < resp.data.length; i++) {
-        this.projectTitle = resp.data[i].projectId.projectTitle
-      }
-
+        //this.projectTitle = resp.data.projectId.projectTitle     
     })
     let devId = { devId: this.devId }
     this.roleService.getTaskbyDevelop(devId).subscribe(resp => {

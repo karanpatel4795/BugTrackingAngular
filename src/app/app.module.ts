@@ -69,6 +69,21 @@ import { DeveloperComponent } from './developer/developer/developer.component';
 import { DeveloperDashboardComponent } from './developer/developer-dashboard/developer-dashboard.component';
 import { DeveloperHeaderComponent } from './developer/developer-header/developer-header.component';
 import { DeveloperSlidebarComponent } from './developer/developer-slidebar/developer-slidebar.component';
+import { DeveloperListProjectsComponent } from './developer/developer-list-projects/developer-list-projects.component';
+import { DeveloperViewTaskComponent } from './developer/developer-view-task/developer-view-task.component';
+import { SubmitTaskComponent } from './developer/submit-task/submit-task.component';
+import { ListAllTaskComponent } from './developer/list-all-task/list-all-task.component';
+import { ListPendingTaskComponent } from './developer/list-pending-task/list-pending-task.component';
+import { TesterComponent } from './tester/tester/tester.component';
+import { TesterDashboardComponent } from './tester/tester-dashboard/tester-dashboard.component';
+import { TesterHeaderComponent } from './tester/tester-header/tester-header.component';
+import { TesterSlidebarComponent } from './tester/tester-slidebar/tester-slidebar.component';
+import { AddBugComponent } from './tester/add-bug/add-bug.component';
+import { ListBugComponent } from './tester/list-bug/list-bug.component';
+import { EditBugComponent } from './tester/edit-bug/edit-bug.component';
+import { TesterListAllTaskComponent } from './tester/tester-list-all-task/tester-list-all-task.component';
+import { TestTaskComponent } from './tester/test-task/test-task.component';
+import { BugAssignComponent } from './tester/bug-assign/bug-assign.component';
 
 @NgModule({
   declarations: [
@@ -135,6 +150,21 @@ import { DeveloperSlidebarComponent } from './developer/developer-slidebar/devel
     DeveloperDashboardComponent,
     DeveloperHeaderComponent,
     DeveloperSlidebarComponent,
+    DeveloperListProjectsComponent,
+    DeveloperViewTaskComponent,
+    SubmitTaskComponent,
+    ListAllTaskComponent,
+    ListPendingTaskComponent,
+    TesterComponent,
+    TesterDashboardComponent,
+    TesterHeaderComponent,
+    TesterSlidebarComponent,
+    AddBugComponent,
+    ListBugComponent,
+    EditBugComponent,
+    TesterListAllTaskComponent,
+    TestTaskComponent,
+    BugAssignComponent,
    
   ],
   imports: [

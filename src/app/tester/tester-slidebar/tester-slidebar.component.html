@@ -1,0 +1,40 @@
+<aside id="leftsidebar" class="sidebar">
+    <div class="navbar-brand">
+        <button class="btn-menu ls-toggle-btn" type="button"><i class="zmdi zmdi-menu"></i></button>
+        <a routerLink="/admin/admin-dashboard"><img src="assets/images/BS_Logo.png" width="50" alt="BugTracking"><span
+                class="m-l-10">BugTracking</span></a>
+    </div>
+    <div class="menu">
+        <div class="slimScrollDiv" style="position: relative; width: auto; height: calc(100vh - 65px);">
+            <ul class="list" style="overflow: auto; width: auto; height: calc(100vh - 65px);">
+                <li>
+                    <div class="user-info">
+                        <a class="image waves-effect waves-block"><img src="./assets/images/profile_av.jpg"></a>
+                        <div class="detail">
+                            <h6>&nbsp;{{firstName}}</h6>
+                            <small>Tester</small>
+                        </div>
+                    </div>
+                </li>
+                <li class="open"><a routerLink="/tester/tester-dashboard" class="toggled waves-effect waves-block"><i
+                            class="zmdi zmdi-home"></i><span>Dashboard</span></a></li>
+                            <li> <a class=" waves-effect" routerLink="/tester/list-all-task"><i
+                                class="zmdi zmdi-assignment"></i><span>Tasks</span></a>
+                    </li>
+                <li> <a class="menu-toggle waves-effect waves-block"><i
+                            class="zmdi zmdi-assignment"></i><span>Bug</span></a>
+                    <ul class="ml-menu">
+                        <li><a routerLink="/tester/add-bug" class=" waves-effect waves-block">Add Bug</a></li>
+                        <li><a routerLink="/tester/list-bug" class=" waves-effect waves-block">List Bug</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="slimScrollBar"
+                style="background: rgb(238, 238, 238); width: 1px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 3px; z-index: 99; right: 1px; height: 356.89px;">
+            </div>
+            <div class="slimScrollRail"
+                style="width: 1px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 0px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;">
+            </div>
+        </div>
+    </div>
+</aside>

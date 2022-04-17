@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { ProjectManagerSlidebarComponent } from 'src/app/projectManager/project-manager-slidebar/project-manager-slidebar.component';
 import { ProjectService } from '../project.service';
 import { RoleService } from '../role.service';
 
@@ -18,8 +17,10 @@ export class AssignTaskComponent implements OnInit {
   button: string = ""
   projectId: string = ""
   projectTitle: string = ""
+  moduleId: String = ""
   taskId: string = ""
   tasks: Array<any> = []
+  modules: Array<any> = []
   constructor(private roleService: RoleService, private activatedRoute: ActivatedRoute, private projectService: ProjectService, private toastrService: ToastrService, private route: Router) { }
 
   ngOnInit(): void {
@@ -33,21 +34,27 @@ export class AssignTaskComponent implements OnInit {
     this.roleService.getuserName(this.userId).subscribe(resp => {
       this.userName = resp.data[0].firstName
     })
-    this.projectService.getTaskbyProject(this.projectId).subscribe(resp => {
-      //console.log(resp);
-      this.tasks = resp.data
+    const project = this.projectId;
+    this.projectService.getModulebyproject(project).subscribe(resp => {
+      this.modules = resp.data
     })
 
   }
+  getTaskbyModule(){
+  this.projectService.getTaskbyModule(this.moduleId).subscribe(resp => {
+    //console.log(resp);
+    this.tasks = resp.data
+  })
+}
 
   assignTasktoUser() {
-    let task={taskId:this.taskId,taskUser:this.userId}
+    let task = { taskId: this.taskId, taskUser: this.userId, projectId: this.projectId, moduleId: this.moduleId }
     this.projectService.assignTask(task).subscribe(resp => {
-      if(resp.status == 200){
+      if (resp.status == 200) {
         this.route.navigateByUrl("/admin/list-projectTeam")
-        this.toastrService.success("",resp.msg,{timeOut:3000})
-      }else{
-        this.toastrService.error("",resp.msg,{timeOut:3000})
+        this.toastrService.success("", resp.msg, { timeOut: 3000 })
+      } else {
+        this.toastrService.error("", resp.msg, { timeOut: 3000 })
       }
 
     })

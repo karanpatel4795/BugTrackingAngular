@@ -63,7 +63,7 @@ export class ProjectService {
   }
   getModulebyproject(project: any): Observable<any> {
     console.log(project);
-    
+
     return this.httpClient.get("http://localhost:3000/module/" + project)
   }
 
@@ -142,8 +142,8 @@ export class ProjectService {
   assignModule(module: any): Observable<any> {
     return this.httpClient.post("http://localhost:3000/moduleusers", module)
   }
-   //------------------------------- Developer ----------------------------------
-   getProjectforDev(devId: any): Observable<any> {
+  //------------------------------- Developer ----------------------------------
+  getProjectforDev(devId: any): Observable<any> {
     return this.httpClient.get("http://localhost:3000/getProjectforDev/" + devId)
   }
   getModuleforDev(devId: any): Observable<any> {
@@ -151,5 +151,42 @@ export class ProjectService {
   }
   getPendingTaskforDev(devId: any): Observable<any> {
     return this.httpClient.get("http://localhost:3000/getPendingTaskforDev/" + devId)
+  }
+  getTaskbyProjectforDev(project: any): Observable<any> {
+    return this.httpClient.post("http://localhost:3000/getTaskbyProjectforDev", project)
+  }
+  getTesterbyProject(projectId: any): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/getTesterbyProject/" + projectId)
+  }
+  submitTask(task: any): Observable<any> {
+    return this.httpClient.post("http://localhost:3000/submitTask", task)
+  }
+  //------------------------------- Tester ----------------------------------
+  getBugforTester(testerId: any): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/getBugforTester/" + testerId)
+  }
+  getTaskbyTester(testerId: any): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/getTaskbyTester/" + testerId)
+  }
+  getPendingTaskforTester(testerId: any): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/getPendingTaskforTester/" + testerId)
+  }
+  addBug(bug: any): Observable<any> {
+    return this.httpClient.post("http://localhost:3000/addBugs", bug)
+  }
+  getAllBugs(): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/ListBugs")
+  }
+  deleteBug(bugId: any): Observable<any> {
+    return this.httpClient.delete("http://localhost:3000/deleteBugs/" + bugId)
+  }
+  getBugById(bugId: any): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/getBugbyId/" + bugId)
+  }
+  updatebugs(bug: any): Observable<any> {
+    return this.httpClient.put("http://localhost:3000/updatebugs", bug)
+  }
+  noBug(bug: any): Observable<any> {
+    return this.httpClient.post("http://localhost:3000/noBug", bug)
   }
 }

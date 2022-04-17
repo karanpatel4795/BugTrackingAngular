@@ -1,0 +1,90 @@
+<div class="page-loader-wrapper" style="display: none;">
+    <div class="loader">
+        <div class="m-t-30"><img class="zmdi-hc-spin" src="./assets/images/BS_Logo.png" width="48" height="48"
+                alt="Aero"></div>
+        <p>Please wait...</p>
+    </div>
+</div>
+<div class="overlay"></div>
+<div id="search">
+    <button id="close" type="button" class="close btn btn-primary btn-icon btn-icon-mini btn-round">x</button>
+    <form>
+        <input type="search" value="" placeholder="Search...">
+        <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+</div>
+<section class="content">
+    <div class="">
+        <div class="block-header">
+            <div class="row">
+                <div class="col-lg-7 col-md-6 col-sm-12">
+                    <h2>Dashboard</h2>
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a routerLink="/developer/devloper-dashboard"><i
+                                    class="zmdi zmdi-home"></i> BugTrackingSystem</a></li>
+                        <li class="breadcrumb-item active">Tester - Dashboard</li>
+                    </ul>
+                    <button class="btn btn-primary btn-icon mobile_menu" type="button"><i
+                            class="zmdi zmdi-sort-amount-desc"></i></button>
+                </div>
+                <div class="col-lg-5 col-md-6 col-sm-12">
+                    <button class="btn btn-primary btn-icon float-right right_icon_toggle_btn" type="button"><i
+                            class="zmdi zmdi-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row clearfix">
+
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="card w_data_1">
+                        <div class="body">
+                            <div class="w_icon indigo"><i class="zmdi zmdi-settings"></i></div>
+                            <h4 class="mt-3"><a routerLink="/tester/list-all-task">{{tasks}}</a></h4>
+                            <span class="text-muted">Total Tasks</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="card w_data_1">
+                        <div class="body">
+                            <div class="w_icon dark"><i class="zmdi zmdi-card"></i></div>
+                            <h4 class="mt-3"><a routerLink="/tester/list-pending-task">{{pendingTasks}}</a></h4>
+                            <span class="text-muted">Pending Tasks</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="card w_data_1">
+                        <div class="body">
+                            <div class="w_icon orange"><i class="zmdi zmdi-shopping-cart"></i></div>
+                            <h4 class="mt-3"><a routerLink="/tester/list-all-bugs">{{bugs}}</a></h4>
+                            <span class="text-muted">Total Bugs</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- <section class="content">
+    <div class="" >
+        <div class="container-fluid">
+            <div class="row clearfix">
+                <div class="col-lg-3 col-md-6 col-sm-12" >
+                    <div class="card" >
+                        <div class="body text-center" >
+                            <h3 class="m-b-0">{{projectTitle}}</h3>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+        </div>
+    </div>
+</section> -->
+<div class="jvectormap-tip"></div>
+

@@ -33,7 +33,13 @@ import { UserReportComponent } from './admin/reports/user-report/user-report.com
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { ChangepasswordComponent } from './changepassword/changepassword.component';
 import { DeveloperDashboardComponent } from './developer/developer-dashboard/developer-dashboard.component';
+import { DeveloperListProjectsComponent } from './developer/developer-list-projects/developer-list-projects.component';
+import { DeveloperViewTaskComponent } from './developer/developer-view-task/developer-view-task.component';
 import { DeveloperComponent } from './developer/developer/developer.component';
+import { ListAllTaskComponent } from './developer/list-all-task/list-all-task.component';
+import { ListPendingTaskComponent } from './developer/list-pending-task/list-pending-task.component';
+import { SubmitTaskComponent } from './developer/submit-task/submit-task.component';
+import { TesterListAllTaskComponent } from './tester/tester-list-all-task/tester-list-all-task.component';
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
@@ -56,6 +62,13 @@ import { ProjectManagerComponent } from './projectManager/project-manager/projec
 import { TasksReportComponent } from './projectManager/tasks-report/tasks-report.component';
 import { ViewTeamComponent } from './projectManager/view-team/view-team.component';
 import { SignupComponent } from './signup/signup.component';
+import { AddBugComponent } from './tester/add-bug/add-bug.component';
+import { EditBugComponent } from './tester/edit-bug/edit-bug.component';
+import { ListBugComponent } from './tester/list-bug/list-bug.component';
+import { TesterDashboardComponent } from './tester/tester-dashboard/tester-dashboard.component';
+import { TesterComponent } from './tester/tester/tester.component';
+import { TestTaskComponent } from './tester/test-task/test-task.component';
+import { BugAssignComponent } from './tester/bug-assign/bug-assign.component';
 
 
 const routes: Routes = [
@@ -121,16 +134,31 @@ const routes: Routes = [
       { path: "list-tasks", component: ListTasksComponent },
       { path: "modules-report", component: ModulesReportComponent },
       { path: "tasks-report", component: TasksReportComponent },
-      { path: "change-Password", component: ChangePasswordComponent }
+      { path: "change-Password", component: ChangePasswordComponent },
+      { path: "list-projects", component: DeveloperListProjectsComponent }
     ]
   },
   {
     path: "developer", component: DeveloperComponent, children: [
       { path: "developer-dashboard", component: DeveloperDashboardComponent },
-      { path: "change-password", component: ChangePasswordComponent }
-
+      { path: "change-password", component: ChangePasswordComponent },
+      { path: "list-projects", component: DeveloperListProjectsComponent },
+      { path: "viewTask/:projectId", component: DeveloperViewTaskComponent },
+      { path: "submit-task/:taskId", component: SubmitTaskComponent },
+      { path: "list-all-task", component: ListAllTaskComponent },
+      { path: "list-pending-task", component: ListPendingTaskComponent },
     ]
   },
+  {path:"tester",component:TesterComponent,children:[
+    {path:"tester-dashboard",component:TesterDashboardComponent},
+    {path:"change-password",component:ChangePasswordComponent},
+    {path:"add-bug",component:AddBugComponent},
+    {path:"list-bug",component:ListBugComponent},
+    {path:"edit-bug/:bugId",component:EditBugComponent},
+    {path:"list-all-task",component:TesterListAllTaskComponent},
+    {path:"test-task/:taskId",component:TestTaskComponent},
+    {path:"bug-Assign/:taskId",component:BugAssignComponent}
+  ]}
 ];
 
 @NgModule({

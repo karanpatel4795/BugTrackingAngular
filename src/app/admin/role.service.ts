@@ -96,4 +96,10 @@ export class RoleService {
   getUsersById(userId: any): Observable<any> {
     return this.httpClient.get("http://localhost:3000/getUsersById/" +userId)
   }
+  getStatusName(statusId: any): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/getStatusName/" +statusId)
+  }
+  getpriorityName(priorityId: any): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/getpriorityName/" +priorityId)
+  }
 }

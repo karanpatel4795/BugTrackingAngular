@@ -3,7 +3,7 @@
         <div class="block-header">
             <div class="row">
                 <div class="col-lg-7 col-md-6 col-sm-12">
-                    <h2>Assign Task |  Developer</h2>
+                    <h2>Assign Task | Developer</h2>
                     <ul class="breadcrumb">
                         <li class="breadcrumb-item"><a routerLink="/admin/admin-dashboard"><i
                                     class="zmdi zmdi-home"></i>Home</a></li>
@@ -23,6 +23,15 @@
                             <div class="row clearfix">
 
                                 <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
+                                    <label for="email_address_2">Developer</label>
+                                </div>
+                                <div class="col-lg-10 col-md-10 col-sm-8">
+                                    <div class="form-group">
+                                        <input type="text" [(ngModel)]="userName" class="form-control" readonly>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
                                     <label for="email_address_2">Project</label>
                                 </div>
                                 <div class="col-lg-10 col-md-10 col-sm-8">
@@ -31,12 +40,16 @@
                                     </div>
                                 </div>
 
+
                                 <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
-                                    <label for="email_address_2">Developer</label>
+                                    <label for="email_address_2">Module</label>
                                 </div>
                                 <div class="col-lg-10 col-md-10 col-sm-8">
                                     <div class="form-group">
-                                        <input type="text" [(ngModel)]="userName" class="form-control" readonly>
+                                        <select [(ngModel)]="moduleId" class="form-control" (change)="getTaskbyModule()">
+                                            <option *ngFor="let m of modules" value="{{m._id}}"> {{m.moduleName}}
+                                            </option>
+                                        </select>
                                     </div>
                                 </div>
 
@@ -52,7 +65,7 @@
                                     </div>
                                 </div>
                                 <button type="button" (click)="assignTasktoUser()"
-                                class="btn btn-raised btn-primary btn-round waves-effect">Assign Task</button>
+                                    class="btn btn-raised btn-primary btn-round waves-effect">Assign Task</button>
 
                             </div>
                         </div>
