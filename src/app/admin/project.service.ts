@@ -161,6 +161,9 @@ export class ProjectService {
   submitTask(task: any): Observable<any> {
     return this.httpClient.post("http://localhost:3000/submitTask", task)
   }
+  getbugTaskforDev(devId: any): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/getbugTaskforDev/" + devId)
+  }
   //------------------------------- Tester ----------------------------------
   getBugforTester(testerId: any): Observable<any> {
     return this.httpClient.get("http://localhost:3000/getBugforTester/" + testerId)
@@ -188,5 +191,11 @@ export class ProjectService {
   }
   noBug(bug: any): Observable<any> {
     return this.httpClient.post("http://localhost:3000/noBug", bug)
+  }
+  BugFound(bug: any): Observable<any> {
+    return this.httpClient.post("http://localhost:3000/bugs", bug)
+  }
+  getStatusName(statusId: any): Observable<any> {
+    return this.httpClient.get("http://localhost:3000/getStatusNameforTester/" + statusId)
   }
 }

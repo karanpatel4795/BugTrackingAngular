@@ -21,7 +21,7 @@ export class TestTaskComponent implements OnInit {
   tester: Array<any> = []
   projectId: string = ""
   moduleId: string = ""
-  testerName:string=""
+  DevName:string=""
   status:string=""
   constructor(private roleService: RoleService, private activatedRoute: ActivatedRoute, private projectService: ProjectService, private toastrService: ToastrService, private route: Router) { }
 
@@ -36,7 +36,7 @@ export class TestTaskComponent implements OnInit {
       this.TaskName = resp.data.taskName
       this.projectId = resp.data.projectId._id
       this.moduleId=resp.data.moduleId._id
-      this.testerName=resp.data.testerId.firstName
+      this.DevName=resp.data.developerId.firstName
       this.projectService.getTesterbyProject(resp.data.projectId._id).subscribe(resp => {
         this.tester = resp.data
       })

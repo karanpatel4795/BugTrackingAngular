@@ -69,6 +69,9 @@ import { TesterDashboardComponent } from './tester/tester-dashboard/tester-dashb
 import { TesterComponent } from './tester/tester/tester.component';
 import { TestTaskComponent } from './tester/test-task/test-task.component';
 import { BugAssignComponent } from './tester/bug-assign/bug-assign.component';
+import { TesterListPendingTaskComponent } from './tester/tester-list-pending-task/tester-list-pending-task.component';
+import { TesterListAllBugsComponent } from './tester/tester-list-all-bugs/tester-list-all-bugs.component';
+import { ListBugTaskComponent } from './developer/list-bug-task/list-bug-task.component';
 
 
 const routes: Routes = [
@@ -147,18 +150,23 @@ const routes: Routes = [
       { path: "submit-task/:taskId", component: SubmitTaskComponent },
       { path: "list-all-task", component: ListAllTaskComponent },
       { path: "list-pending-task", component: ListPendingTaskComponent },
+      { path: "list-bug-task", component: ListBugTaskComponent }
     ]
   },
-  {path:"tester",component:TesterComponent,children:[
-    {path:"tester-dashboard",component:TesterDashboardComponent},
-    {path:"change-password",component:ChangePasswordComponent},
-    {path:"add-bug",component:AddBugComponent},
-    {path:"list-bug",component:ListBugComponent},
-    {path:"edit-bug/:bugId",component:EditBugComponent},
-    {path:"list-all-task",component:TesterListAllTaskComponent},
-    {path:"test-task/:taskId",component:TestTaskComponent},
-    {path:"bug-Assign/:taskId",component:BugAssignComponent}
-  ]}
+  {
+    path: "tester", component: TesterComponent, children: [
+      { path: "tester-dashboard", component: TesterDashboardComponent },
+      { path: "change-password", component: ChangePasswordComponent },
+      { path: "add-bug", component: AddBugComponent },
+      { path: "list-bug", component: ListBugComponent },
+      { path: "edit-bug/:bugId", component: EditBugComponent },
+      { path: "list-all-task", component: TesterListAllTaskComponent },
+      { path: "test-task/:taskId", component: TestTaskComponent },
+      { path: "bug-Assign/:taskId", component: BugAssignComponent },
+      { path: "list-pending-task", component: TesterListPendingTaskComponent },
+      { path: "list-all-bugs", component: TesterListAllBugsComponent }
+    ]
+  }
 ];
 
 @NgModule({

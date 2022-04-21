@@ -20,14 +20,20 @@ export class BugAssignComponent implements OnInit {
   tester: Array<any> = []
   projectId: string = ""
   moduleId: string = ""
-  testerName:string=""
+  DevName:string=""
   status:string=""
+  bugList:Array<any>=[]
+  bugNameId:string=""
+  developerId:string=""
   constructor(private activatedRoute: ActivatedRoute, private projectService: ProjectService, private toastrService: ToastrService, private route: Router) { }
 
   ngOnInit(): void {
 
     this.taskId = this.activatedRoute.snapshot.params['taskId']
     this.userId = localStorage.getItem('userId') as string
+    this.projectService.getAllBugs().subscribe(resp=>{
+      this.bugList = resp.data
+    })
     this.projectService.getTaskById(this.taskId).subscribe(resp => {
       //console.log(resp);
       this.projectTitle = resp.data.projectId.projectTitle
@@ -35,7 +41,8 @@ export class BugAssignComponent implements OnInit {
       this.TaskName = resp.data.taskName
       this.projectId = resp.data.projectId._id
       this.moduleId=resp.data.moduleId._id
-      this.testerName=resp.data.testerId.firstName
+      this.developerId=resp.data.developerId._id
+      this.DevName=resp.data.developerId.firstName
       this.projectService.getTesterbyProject(resp.data.projectId._id).subscribe(resp => {
         this.tester = resp.data
       })
@@ -44,8 +51,8 @@ export class BugAssignComponent implements OnInit {
   }
 
   AssignBug() {
-    let task = { taskId: this.taskId, taskUser: this.userId}
-    this.projectService.noBug(task).subscribe(resp => {
+    let task = { taskId: this.taskId,developerId:this.developerId ,testerId: this.userId,bugName:this.bugNameId}
+    this.projectService.BugFound(task).subscribe(resp => {
       if (resp.status == 200) {
         this.route.navigateByUrl("/tester/list-all-task")
         this.toastrService.success("", resp.msg, { timeOut: 3000 })

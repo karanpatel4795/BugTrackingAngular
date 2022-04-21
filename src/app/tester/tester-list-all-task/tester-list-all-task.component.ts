@@ -25,7 +25,7 @@ export class TesterListAllTaskComponent implements OnInit {
   getAllTasks() {
     
     this.projectService.getTaskbyTester(this.testerId).subscribe(resp => {
-      console.log(resp)
+      //console.log(resp)
       this.tasks = resp.data
     })
   }
@@ -33,7 +33,9 @@ export class TesterListAllTaskComponent implements OnInit {
   
   submitTask(taskId:any) {
     this.projectService.getTaskById(taskId).subscribe(resp => {
-      if(resp.data.bugStatus!="625030ca592b3cd09e3a96df"){
+      console.log(resp);
+      
+      if(resp.data.statusId=="620fbb47afe355342d2bd547"){
         this.toastrService.error("", "Already Submitted!", { timeOut: 3000 })
       }
       else{

@@ -50,15 +50,26 @@
                                 </div>
 
                                 <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
-                                    <label for="email_address_2">Tester Name</label>
+                                    <label for="email_address_2">Developer Name</label>
                                 </div>
                                 <div class="col-lg-10 col-md-10 col-sm-8">
                                     <div class="form-group">
-                                        <input type="text" [(ngModel)]="testerName" class="form-control" readonly>
+                                        <input type="text" [(ngModel)]="DevName" class="form-control" readonly>
                                     </div>
                                 </div>
 
-                                
+                                <div class="col-lg-2 col-md-2 col-sm-4 form-control-label">
+                                    <label for="email_address_2">Bug</label>
+                                </div>
+                                <div class="col-lg-10 col-md-10 col-sm-8">
+                                    <div class="form-group">
+                                        <select [(ngModel)]="bugNameId" class="form-control">
+                                            <option *ngFor="let b of bugList" value="{{b._id}}"> {{b.bugName}}
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+
                                 <button type="button" (click)="AssignBug()"
                                     class="btn btn-raised btn-primary btn-round waves-effect">Assign Bug</button>
                             </div>

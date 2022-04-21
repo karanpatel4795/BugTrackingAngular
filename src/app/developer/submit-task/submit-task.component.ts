@@ -44,7 +44,7 @@ export class SubmitTaskComponent implements OnInit {
 
   submitTask() {
 
-    let task = { taskId: this.taskId, taskUser: this.userId, projectId: this.projectId, moduleId: this.moduleId, testerId: this.testerId,time:this.time }
+    let task = { taskId: this.taskId, developerId: this.userId, projectId: this.projectId, moduleId: this.moduleId, testerId: this.testerId,time:this.time }
     //console.log(this.testerId);
     
     this.projectService.submitTask(task).subscribe(resp => {
