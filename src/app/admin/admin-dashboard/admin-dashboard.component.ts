@@ -14,6 +14,8 @@ export class AdminDashboardComponent implements OnInit {
   tasks: Array<any> = []
   pendingProject:Array<any>=[]
   completedProject:Array<any>=[]
+  bugFound:Array<any>=[]
+  fixedBugs:Array<any>=[]
   constructor(private roleService: RoleService,private projectService:ProjectService) { }
 
   ngOnInit(): void {
@@ -34,6 +36,12 @@ export class AdminDashboardComponent implements OnInit {
     })
     this.projectService.getAllCompletedProjects().subscribe(resp => {
       this.completedProject = resp.data.length
+    })
+    this.projectService.getAllFoundedBugs().subscribe(resp=>{
+      this.bugFound = resp.data.length
+    })
+    this.projectService.getfixedBugs().subscribe(resp=>{
+      this.fixedBugs = resp.data.length
     })
   }
 

@@ -42,6 +42,12 @@ export class ProjectService {
   getAllDevs(): Observable<any> {
     return this.httpClient.get("http://localhost:3000/getAllDevs")
   }
+  getAllFoundedBugs():Observable<any>{
+    return this.httpClient.get("http://localhost:3000/bugs")
+  }
+  getfixedBugs():Observable<any>{
+    return this.httpClient.get("http://localhost:3000/getfixedBugs")
+  }
   //-------------------------- modules --------------------------------------
   addModule(module: any): Observable<any> {
     return this.httpClient.post("http://localhost:3000/modules", module)
@@ -62,8 +68,6 @@ export class ProjectService {
     return this.httpClient.put("http://localhost:3000/modules", module)
   }
   getModulebyproject(project: any): Observable<any> {
-    console.log(project);
-
     return this.httpClient.get("http://localhost:3000/module/" + project)
   }
 

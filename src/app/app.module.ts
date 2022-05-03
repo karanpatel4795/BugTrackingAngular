@@ -87,6 +87,7 @@ import { BugAssignComponent } from './tester/bug-assign/bug-assign.component';
 import { TesterListPendingTaskComponent } from './tester/tester-list-pending-task/tester-list-pending-task.component';
 import { TesterListAllBugsComponent } from './tester/tester-list-all-bugs/tester-list-all-bugs.component';
 import { ListBugTaskComponent } from './developer/list-bug-task/list-bug-task.component';
+import { BugFoundComponent } from './admin/bug-found/bug-found.component';
 
 @NgModule({
   declarations: [
@@ -171,6 +172,7 @@ import { ListBugTaskComponent } from './developer/list-bug-task/list-bug-task.co
     TesterListPendingTaskComponent,
     TesterListAllBugsComponent,
     ListBugTaskComponent,
+    BugFoundComponent,
    
   ],
   imports: [

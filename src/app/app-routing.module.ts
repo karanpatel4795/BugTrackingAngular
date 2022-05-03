@@ -72,6 +72,7 @@ import { BugAssignComponent } from './tester/bug-assign/bug-assign.component';
 import { TesterListPendingTaskComponent } from './tester/tester-list-pending-task/tester-list-pending-task.component';
 import { TesterListAllBugsComponent } from './tester/tester-list-all-bugs/tester-list-all-bugs.component';
 import { ListBugTaskComponent } from './developer/list-bug-task/list-bug-task.component';
+import { BugFoundComponent } from './admin/bug-found/bug-found.component';
 
 
 const routes: Routes = [
@@ -115,7 +116,8 @@ const routes: Routes = [
       { path: "project-report", component: ProjectReportComponent },
       { path: "task-report", component: TaskReportComponent },
       { path: "developer-report", component: DevloperReportComponent },
-      { path: "bug-report", component: BugReportComponent }
+      { path: "bug-report", component: BugReportComponent },
+      { path: "bugFound", component: BugFoundComponent }
     ]
   },
   {
